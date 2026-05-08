@@ -1,0 +1,156 @@
+import { Check, Clock, Palette, TrendingUp, ChevronDown, ShieldCheck, Mail, CreditCard } from "lucide-react";
+
+const LandingPage = () => {
+  const items = [
+    { name: "51 Recursos Imprimibles", price: "$15.00" },
+    { name: 'Guía "Mi Mundo de Letras"', price: "$10.00" },
+    { name: "Cuaderno de Lectoescritura", price: "$7.00" },
+  ];
+
+  return (
+    <div className="min-h-screen bg-amber-50 text-slate-800">
+      {/* BARRA DE URGENCIA */}
+      <div className="bg-rose-600 text-white text-center py-2 px-4 text-sm font-bold">
+        🔥 ¡OFERTA POR TIEMPO LIMITADO! Acceso de por vida por solo $7.
+      </div>
+
+      {/* HERO */}
+      <section className="bg-gradient-to-br from-amber-100 to-orange-200 py-16 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <span className="inline-block bg-white text-orange-600 px-4 py-1 rounded-full text-sm font-bold shadow mb-6">
+            Método 100% Práctico 🚀
+          </span>
+          <h1 className="text-4xl md:text-6xl font-black text-slate-900 leading-tight mb-6">
+            Tu hijo leyendo y escribiendo con <span className="text-rose-600">Confianza</span> en 15 días
+          </h1>
+          <p className="text-lg md:text-xl text-slate-700 mb-3 max-w-2xl mx-auto">
+            El sistema diseñado para madres que quieren ver a sus hijos triunfar sin batallas ni lágrimas.
+          </p>
+          <p className="text-lg md:text-xl text-slate-700 mb-8 max-w-2xl mx-auto">
+            Con este pack de más de 51 recursos listos para <strong>IMPRIMIR</strong> lo podrás lograr.
+          </p>
+          <a
+            href="#comprar"
+            className="inline-block bg-rose-600 hover:bg-rose-700 text-white text-xl md:text-2xl font-black px-10 py-5 rounded-full shadow-xl animate-bounce-soft"
+          >
+            ¡QUIERO EL PACK POR $7!
+          </a>
+          <div className="flex flex-wrap justify-center gap-6 mt-6 text-sm text-slate-700">
+            <span className="flex items-center gap-1"><ShieldCheck className="w-4 h-4 text-green-600" /> Pago seguro</span>
+            <span className="flex items-center gap-1"><Mail className="w-4 h-4 text-green-600" /> Acceso instantáneo</span>
+            <span className="flex items-center gap-1"><CreditCard className="w-4 h-4 text-green-600" /> Un solo pago</span>
+          </div>
+        </div>
+      </section>
+
+      {/* BENEFICIOS */}
+      <section className="py-16 px-4 bg-white">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-8">
+          {[
+            { Icon: Clock, title: "Ahorra Horas", desc: "Material listo para imprimir. Olvídate de buscar en internet." },
+            { Icon: Palette, title: "100% Lúdico", desc: "Actividades visuales y juegos que mantienen su atención." },
+            { Icon: TrendingUp, title: "Resultados Reales", desc: "Progreso visible desde la primera semana de uso." },
+          ].map(({ Icon, title, desc }) => (
+            <div key={title} className="text-center p-6 rounded-2xl bg-amber-50 shadow-sm">
+              <Icon className="w-12 h-12 mx-auto text-orange-500 mb-4" />
+              <h3 className="text-xl font-extrabold mb-2">{title}</h3>
+              <p className="text-slate-600">{desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* PRODUCTO */}
+      <section className="py-16 px-4 bg-amber-50">
+        <div className="max-w-5xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-black mb-3">¿Qué incluye tu pack "Mi Mundo de Letras"?</h2>
+          <p className="text-slate-600 mb-10">Material visual de alta calidad listo para descargar</p>
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              { emoji: "📚", title: "Guía de Lectoescritura", desc: "Paso a paso para el aprendizaje" },
+              { emoji: "🎲", title: "Juegos Divertidos", desc: "Diversión mientras aprenden" },
+              { emoji: "✏️", title: "Recursos Imprimibles", desc: "Fichas de trazo y caligrafía" },
+            ].map((c) => (
+              <div key={c.title} className="bg-white rounded-2xl shadow-md overflow-hidden">
+                <div className="h-48 flex items-center justify-center text-7xl bg-gradient-to-br from-orange-100 to-rose-100">
+                  {c.emoji}
+                </div>
+                <div className="p-5">
+                  <h3 className="font-extrabold text-lg">{c.title}</h3>
+                  <p className="text-slate-600 text-sm">{c.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* TESTIMONIOS */}
+      <section className="py-16 px-4 bg-white">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-black text-center mb-10">Mamás y maestras felices</h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            {[
+              { quote: "Mi hijo de 5 años lloraba con las tareas. Con este pack ahora él mismo me pide hacer las actividades. ¡Ya lee solo!", who: "Laura M. (Mamá)" },
+              { quote: "Como maestra, me ahorra horas de planificación. Los recursos son visualmente hermosos y efectivos para mis alumnos.", who: "Andrea R. (Maestra)" },
+            ].map((t) => (
+              <div key={t.who} className="bg-amber-50 p-6 rounded-2xl shadow-sm">
+                <p className="text-slate-700 italic mb-3">"{t.quote}"</p>
+                <p className="font-bold text-slate-900">{t.who} <span className="text-yellow-500">★★★★★</span></p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* OFERTA FINAL */}
+      <section id="comprar" className="py-16 px-4 bg-gradient-to-br from-rose-100 to-orange-200">
+        <div className="max-w-2xl mx-auto bg-white rounded-3xl shadow-2xl p-8 text-center">
+          <h2 className="text-2xl md:text-3xl font-black mb-6 text-rose-600">¡Aprovecha el 80% de descuento hoy!</h2>
+          <ul className="text-left space-y-3 mb-6">
+            {items.map((it) => (
+              <li key={it.name} className="flex justify-between border-b border-slate-100 pb-2">
+                <span className="flex items-center gap-2"><Check className="w-5 h-5 text-green-600" /> {it.name}</span>
+                <span className="line-through text-slate-400">{it.price}</span>
+              </li>
+            ))}
+            <li className="flex justify-between font-bold text-slate-900 pt-2">
+              <span>VALOR TOTAL:</span><span className="line-through">$32.00</span>
+            </li>
+          </ul>
+          <p className="text-5xl font-black text-rose-600 mb-6">$7.00 USD</p>
+          <a href="#" className="inline-block bg-green-600 hover:bg-green-700 text-white text-xl font-black px-10 py-4 rounded-full shadow-xl">
+            ¡COMPRAR AHORA!
+          </a>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-16 px-4 bg-white">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-black text-center mb-10">Preguntas Frecuentes</h2>
+          <div className="space-y-4">
+            {[
+              { q: "¿Cómo recibo el material?", a: "Lo recibes al instante en tu correo una vez confirmado el pago. Puedes imprimirlo las veces que quieras." },
+              { q: "¿Qué pasa si no me gusta?", a: "Tienes 7 días de garantía total. Si no estás satisfecha, te devolvemos tu dinero inmediatamente." },
+            ].map((f) => (
+              <details key={f.q} className="group bg-amber-50 rounded-2xl p-5 shadow-sm">
+                <summary className="flex justify-between items-center cursor-pointer font-bold text-lg">
+                  {f.q}
+                  <ChevronDown className="w-5 h-5 transition-transform group-open:rotate-180" />
+                </summary>
+                <p className="mt-3 text-slate-700">{f.a}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <footer className="bg-slate-900 text-slate-300 py-6 text-center text-sm">
+        © 2026 Mi Mundo de Letras | Todos los derechos reservados
+      </footer>
+    </div>
+  );
+};
+
+export default LandingPage;
