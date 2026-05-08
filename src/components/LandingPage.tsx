@@ -70,7 +70,7 @@ const LandingPage = () => {
       {/* SHOWCASE 1 */}
       <section className="py-12 px-4 bg-amber-50">
         <div className="max-w-3xl mx-auto">
-          <img src={pack5} alt="Material lúdico de aprendizaje" className="w-full max-h-[480px] object-cover rounded-3xl shadow-xl" loading="lazy" />
+          <img src={pack1} alt="Mega Pack Numeración Inicial" className="w-full max-h-[480px] object-cover rounded-3xl shadow-xl" loading="lazy" />
         </div>
       </section>
 
@@ -81,7 +81,7 @@ const LandingPage = () => {
           <p className="text-slate-600 mb-10">Material visual de alta calidad listo para descargar</p>
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              { img: pack1, title: "Mega Pack Numeración Inicial", desc: "Material colorido para aprender los números" },
+              { img: pack5, title: "Mega Pack Numeración Inicial", desc: "Material colorido para aprender los números" },
               { img: pack2, title: "Collage Infantil de Aprendizaje", desc: "Sílabas, sonidos y trazos divertidos" },
               { img: pack3, title: "Recursos Imprimibles", desc: "Fichas, tarjetas y actividades listas para usar" },
             ].map((c) => (
