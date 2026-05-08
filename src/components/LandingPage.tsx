@@ -225,7 +225,7 @@ const LandingPage = () => {
             </li>
           </ul>
           <p className="text-5xl font-black text-rose-600 mb-6">$7.00 USD</p>
-          <a href="#" className="inline-block bg-green-600 hover:bg-green-700 text-white text-xl font-black px-10 py-4 rounded-full shadow-xl">
+          <a href="https://pay.hotmart.com/A105742687W?checkoutMode=10" target="_blank" rel="noopener noreferrer" className="inline-block bg-green-600 hover:bg-green-700 text-white text-xl font-black px-10 py-4 rounded-full shadow-xl">
             ¡COMPRAR AHORA!
           </a>
         </div>
