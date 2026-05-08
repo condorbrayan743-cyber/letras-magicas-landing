@@ -70,7 +70,7 @@ const LandingPage = () => {
       {/* SHOWCASE 1 */}
       <section className="py-12 px-4 bg-amber-50">
         <div className="max-w-3xl mx-auto">
-          <img src={pack1} alt="Mega Pack Numeración Inicial" className="w-full max-h-[480px] object-cover rounded-3xl shadow-xl" loading="lazy" />
+          <img src={pack1} alt="Mega Pack Numeración Inicial" className="w-full h-auto rounded-3xl shadow-xl" loading="lazy" />
         </div>
       </section>
 
