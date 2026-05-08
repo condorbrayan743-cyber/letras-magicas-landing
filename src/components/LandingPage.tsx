@@ -1,4 +1,7 @@
 import { Check, Clock, Palette, TrendingUp, ChevronDown, ShieldCheck, Mail, CreditCard } from "lucide-react";
+import pack1 from "@/assets/pack-1.png";
+import pack2 from "@/assets/pack-2.png";
+import pack3 from "@/assets/pack-3.png";
 
 const LandingPage = () => {
   const items = [
@@ -67,13 +70,13 @@ const LandingPage = () => {
           <p className="text-slate-600 mb-10">Material visual de alta calidad listo para descargar</p>
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              { emoji: "📚", title: "Guía de Lectoescritura", desc: "Paso a paso para el aprendizaje" },
-              { emoji: "🎲", title: "Juegos Divertidos", desc: "Diversión mientras aprenden" },
-              { emoji: "✏️", title: "Recursos Imprimibles", desc: "Fichas de trazo y caligrafía" },
+              { img: pack1, title: "Mega Pack Numeración Inicial", desc: "Material colorido para aprender los números" },
+              { img: pack2, title: "Collage Infantil de Aprendizaje", desc: "Sílabas, sonidos y trazos divertidos" },
+              { img: pack3, title: "Recursos Imprimibles", desc: "Fichas, tarjetas y actividades listas para usar" },
             ].map((c) => (
               <div key={c.title} className="bg-white rounded-2xl shadow-md overflow-hidden">
-                <div className="h-48 flex items-center justify-center text-7xl bg-gradient-to-br from-orange-100 to-rose-100">
-                  {c.emoji}
+                <div className="h-56 overflow-hidden bg-gradient-to-br from-orange-100 to-rose-100">
+                  <img src={c.img} alt={c.title} className="w-full h-full object-cover" loading="lazy" />
                 </div>
                 <div className="p-5">
                   <h3 className="font-extrabold text-lg">{c.title}</h3>
