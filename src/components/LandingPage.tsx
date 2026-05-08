@@ -90,21 +90,21 @@ const LandingPage = () => {
           <p className="text-slate-600 mb-10 max-w-2xl mx-auto">
             Así se ve el material en acción: actividades coloridas, divertidas y fáciles de imprimir desde casa.
           </p>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
-            <div className="md:row-span-2 md:col-span-1 rounded-3xl overflow-hidden shadow-lg bg-gradient-to-br from-pink-100 to-rose-100">
-              <img src={extra1} alt="Niño jugando con material imprimible" className="w-full h-full object-cover" loading="lazy" />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="rounded-3xl overflow-hidden shadow-lg bg-gradient-to-br from-pink-100 to-rose-100 md:col-span-2">
+              <img src={extra1} alt="Niño jugando con material imprimible" className="w-full h-auto object-contain" loading="lazy" />
             </div>
-            <div className="rounded-3xl overflow-hidden shadow-lg">
-              <img src={extra2} alt="Niño practicando trazos de números" className="w-full h-full object-cover" loading="lazy" />
+            <div className="rounded-3xl overflow-hidden shadow-lg bg-white">
+              <img src={extra2} alt="Niño practicando trazos de números" className="w-full h-auto object-contain" loading="lazy" />
             </div>
-            <div className="rounded-3xl overflow-hidden shadow-lg">
-              <img src={extra3} alt="Tarjetas de números y conteo" className="w-full h-full object-cover" loading="lazy" />
+            <div className="rounded-3xl overflow-hidden shadow-lg bg-white">
+              <img src={extra3} alt="Tarjetas de números y conteo" className="w-full h-auto object-contain" loading="lazy" />
             </div>
-            <div className="rounded-3xl overflow-hidden shadow-lg col-span-2 md:col-span-1">
-              <img src={extra4} alt="Tarjetas de sílabas con imágenes" className="w-full h-full object-cover" loading="lazy" />
+            <div className="rounded-3xl overflow-hidden shadow-lg bg-white md:col-span-2">
+              <img src={extra4} alt="Tarjetas de sílabas con imágenes" className="w-full h-auto object-contain" loading="lazy" />
             </div>
-            <div className="rounded-3xl overflow-hidden shadow-lg col-span-2 md:col-span-2">
-              <img src={extra5} alt="Aprende a contar con tarjetas divertidas" className="w-full h-full object-cover" loading="lazy" />
+            <div className="rounded-3xl overflow-hidden shadow-lg bg-white md:col-span-2">
+              <img src={extra5} alt="Aprende a contar con tarjetas divertidas" className="w-full h-auto object-contain" loading="lazy" />
             </div>
           </div>
         </div>
