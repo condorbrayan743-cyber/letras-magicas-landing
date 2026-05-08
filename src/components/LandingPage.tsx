@@ -106,28 +106,37 @@ const LandingPage = () => {
           <h2 className="text-3xl md:text-4xl font-black text-center mb-4">Mamás y maestras felices</h2>
           <p className="text-center text-slate-600 mb-10">Cientos de familias ya están viendo resultados</p>
 
-          <div className="mb-10">
+          <div className="mb-10 overflow-hidden rounded-3xl shadow-xl">
             <img
               src={testimonios}
               alt="Reseñas reales de mamás y maestras"
-              className="w-full h-auto rounded-3xl shadow-xl"
+              className="w-full h-auto block"
+              style={{ transform: "rotate(-90deg)", transformOrigin: "center" }}
               loading="lazy"
             />
-            <p className="text-center text-sm text-slate-500 mt-3 italic">Capturas reales de mensajes de nuestras clientas ❤️</p>
           </div>
+          <p className="text-center text-sm text-slate-500 mb-10 italic">Capturas reales de mensajes de nuestras clientas ❤️</p>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { quote: "Mi hijo de 5 años lloraba con las tareas. Con este pack ahora él mismo me pide hacer las actividades. ¡Ya lee solo!", who: "Laura M. (Mamá)" },
-              { quote: "Como maestra, me ahorra horas de planificación. Los recursos son visualmente hermosos y efectivos para mis alumnos.", who: "Andrea R. (Maestra)" },
-              { quote: "En dos semanas mi hija ya reconoce todas las letras. El material es divertido y muy fácil de imprimir.", who: "Camila S. (Mamá)" },
-              { quote: "¡Excelente inversión! Lo uso con mis tres hijos y a todos les encanta. Vale muchísimo más de lo que cuesta.", who: "Patricia G. (Mamá)" },
-              { quote: "Las fichas son hermosas y los niños se enganchan al instante. Lo recomiendo 100% a otras maestras.", who: "Sofía L. (Maestra)" },
-              { quote: "Compré el pack y al día siguiente ya estaba imprimiendo. Mi peque por fin disfruta aprender a leer.", who: "Verónica T. (Mamá)" },
+              { quote: "Mi hijo de 5 años lloraba con las tareas. Con este pack ahora él mismo me pide hacer las actividades. ¡Ya lee solo!", who: "Laura M.", role: "Mamá", color: "bg-rose-500" },
+              { quote: "Como maestra, me ahorra horas de planificación. Los recursos son visualmente hermosos y efectivos para mis alumnos.", who: "Andrea R.", role: "Maestra", color: "bg-orange-500" },
+              { quote: "En dos semanas mi hija ya reconoce todas las letras. El material es divertido y muy fácil de imprimir.", who: "Camila S.", role: "Mamá", color: "bg-emerald-500" },
+              { quote: "¡Excelente inversión! Lo uso con mis tres hijos y a todos les encanta. Vale muchísimo más de lo que cuesta.", who: "Patricia G.", role: "Mamá", color: "bg-sky-500" },
+              { quote: "Las fichas son hermosas y los niños se enganchan al instante. Lo recomiendo 100% a otras maestras.", who: "Sofía L.", role: "Maestra", color: "bg-purple-500" },
+              { quote: "Compré el pack y al día siguiente ya estaba imprimiendo. Mi peque por fin disfruta aprender a leer.", who: "Verónica T.", role: "Mamá", color: "bg-amber-500" },
             ].map((t) => (
               <div key={t.who} className="bg-amber-50 p-6 rounded-2xl shadow-sm">
-                <p className="text-slate-700 italic mb-3">"{t.quote}"</p>
-                <p className="font-bold text-slate-900">{t.who} <span className="text-yellow-500">★★★★★</span></p>
+                <div className="flex items-center gap-3 mb-4">
+                  <div className={`w-12 h-12 rounded-full ${t.color} text-white font-black flex items-center justify-center text-lg shadow-md`}>
+                    {t.who.charAt(0)}
+                  </div>
+                  <div>
+                    <p className="font-bold text-slate-900 leading-tight">{t.who}</p>
+                    <p className="text-xs text-slate-500">{t.role} <span className="text-yellow-500">★★★★★</span></p>
+                  </div>
+                </div>
+                <p className="text-slate-700 italic">"{t.quote}"</p>
               </div>
             ))}
           </div>
