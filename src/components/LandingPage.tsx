@@ -145,11 +145,22 @@ const LandingPage = () => {
 
       {/* GALERÍA */}
       <section className="py-14 px-4 bg-pink-50">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-black text-center mb-8">Una mirada al material</h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            <img src={pack4} alt="Variedad de recursos imprimibles" className="w-full h-80 object-cover rounded-2xl shadow-lg" loading="lazy" />
-            <img src={pack6} alt="Actividades en uso" className="w-full h-80 object-cover rounded-2xl shadow-lg" loading="lazy" />
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-black text-center mb-3">Una mirada al material</h2>
+          <p className="text-center text-slate-600 mb-10">Cada recurso está pensado para que aprender sea un juego</p>
+          <div className="space-y-10">
+            {[
+              { img: pack4, title: "Variedad de recursos imprimibles", desc: "Decenas de fichas, tarjetas y plantillas a todo color para practicar letras, sílabas y palabras desde el primer día." },
+              { img: pack6, title: "Actividades listas para usar", desc: "Material organizado por niveles para que tu hijo avance paso a paso, sin frustraciones y disfrutando cada actividad." },
+            ].map((g) => (
+              <div key={g.title} className="bg-white rounded-3xl shadow-lg overflow-hidden">
+                <img src={g.img} alt={g.title} className="w-full h-auto block" loading="lazy" />
+                <div className="p-6 text-center">
+                  <h3 className="text-xl font-extrabold mb-2 text-slate-900">{g.title}</h3>
+                  <p className="text-slate-600">{g.desc}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
