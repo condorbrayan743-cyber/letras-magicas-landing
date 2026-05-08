@@ -7,6 +7,11 @@ import pack5 from "@/assets/pack-5.png";
 import pack6 from "@/assets/foto-2.png";
 import pack7 from "@/assets/foto-3.png";
 import testimonios from "@/assets/testimonios.png";
+import extra1 from "@/assets/extra-1.png";
+import extra2 from "@/assets/extra-2.png";
+import extra3 from "@/assets/extra-3.png";
+import extra4 from "@/assets/extra-4.png";
+import extra5 from "@/assets/extra-5.png";
 
 const LandingPage = () => {
   const items = [
@@ -72,6 +77,36 @@ const LandingPage = () => {
       <section className="py-12 px-4 bg-pink-50">
         <div className="max-w-3xl mx-auto">
           <img src={pack1} alt="Mega Pack Numeración Inicial" className="w-full h-auto rounded-3xl shadow-xl" loading="lazy" />
+        </div>
+      </section>
+
+      {/* MOMENTOS REALES */}
+      <section className="py-16 px-4 bg-white">
+        <div className="max-w-6xl mx-auto text-center">
+          <span className="inline-block bg-pink-100 text-pink-600 px-4 py-1 rounded-full text-sm font-bold mb-4">
+            Momentos reales ✨
+          </span>
+          <h2 className="text-3xl md:text-4xl font-black mb-3">Niños aprendiendo y disfrutando</h2>
+          <p className="text-slate-600 mb-10 max-w-2xl mx-auto">
+            Así se ve el material en acción: actividades coloridas, divertidas y fáciles de imprimir desde casa.
+          </p>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+            <div className="md:row-span-2 md:col-span-1 rounded-3xl overflow-hidden shadow-lg bg-gradient-to-br from-pink-100 to-rose-100">
+              <img src={extra1} alt="Niño jugando con material imprimible" className="w-full h-full object-cover" loading="lazy" />
+            </div>
+            <div className="rounded-3xl overflow-hidden shadow-lg">
+              <img src={extra2} alt="Niño practicando trazos de números" className="w-full h-full object-cover" loading="lazy" />
+            </div>
+            <div className="rounded-3xl overflow-hidden shadow-lg">
+              <img src={extra3} alt="Tarjetas de números y conteo" className="w-full h-full object-cover" loading="lazy" />
+            </div>
+            <div className="rounded-3xl overflow-hidden shadow-lg col-span-2 md:col-span-1">
+              <img src={extra4} alt="Tarjetas de sílabas con imágenes" className="w-full h-full object-cover" loading="lazy" />
+            </div>
+            <div className="rounded-3xl overflow-hidden shadow-lg col-span-2 md:col-span-2">
+              <img src={extra5} alt="Aprende a contar con tarjetas divertidas" className="w-full h-full object-cover" loading="lazy" />
+            </div>
+          </div>
         </div>
       </section>
 
