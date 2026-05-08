@@ -6,6 +6,7 @@ import pack4 from "@/assets/pack-4.png";
 import pack5 from "@/assets/pack-5.png";
 import pack6 from "@/assets/pack-6.png";
 import pack7 from "@/assets/pack-7.png";
+import testimonios from "@/assets/testimonios.png";
 
 const LandingPage = () => {
   const items = [
