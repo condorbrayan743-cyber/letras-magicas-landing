@@ -2,6 +2,10 @@ import { Check, Clock, Palette, TrendingUp, ChevronDown, ShieldCheck, Mail, Cred
 import pack1 from "@/assets/pack-1.png";
 import pack2 from "@/assets/pack-2.png";
 import pack3 from "@/assets/pack-3.png";
+import pack4 from "@/assets/pack-4.png";
+import pack5 from "@/assets/pack-5.png";
+import pack6 from "@/assets/pack-6.png";
+import pack7 from "@/assets/pack-7.png";
 
 const LandingPage = () => {
   const items = [
@@ -63,6 +67,13 @@ const LandingPage = () => {
         </div>
       </section>
 
+      {/* SHOWCASE 1 */}
+      <section className="py-12 px-4 bg-amber-50">
+        <div className="max-w-3xl mx-auto">
+          <img src={pack5} alt="Material lúdico de aprendizaje" className="w-full max-h-[480px] object-cover rounded-3xl shadow-xl" loading="lazy" />
+        </div>
+      </section>
+
       {/* PRODUCTO */}
       <section className="py-16 px-4 bg-amber-50">
         <div className="max-w-5xl mx-auto text-center">
@@ -103,6 +114,24 @@ const LandingPage = () => {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* GALERÍA */}
+      <section className="py-14 px-4 bg-amber-50">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-black text-center mb-8">Una mirada al material</h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            <img src={pack4} alt="Variedad de recursos imprimibles" className="w-full h-80 object-cover rounded-2xl shadow-lg" loading="lazy" />
+            <img src={pack6} alt="Actividades en uso" className="w-full h-80 object-cover rounded-2xl shadow-lg" loading="lazy" />
+          </div>
+        </div>
+      </section>
+
+      {/* SHOWCASE 2 */}
+      <section className="py-12 px-4 bg-white">
+        <div className="max-w-3xl mx-auto">
+          <img src={pack7} alt="Tarjetas y juegos del pack" className="w-full max-h-[480px] object-cover rounded-3xl shadow-xl" loading="lazy" />
         </div>
       </section>
 
