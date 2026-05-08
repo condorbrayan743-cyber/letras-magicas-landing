@@ -43,7 +43,9 @@ const LandingPage = () => {
             Con este pack de más de 51 recursos listos para <strong>IMPRIMIR</strong> lo podrás lograr.
           </p>
           <a
-            href="#comprar"
+            href="https://pay.hotmart.com/A105742687W?checkoutMode=10"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-block bg-rose-600 hover:bg-rose-700 text-white text-xl md:text-2xl font-black px-10 py-5 rounded-full shadow-xl animate-bounce-soft"
           >
             ¡QUIERO EL PACK POR $7!
