@@ -2,10 +2,10 @@ import { Check, Clock, Palette, TrendingUp, ChevronDown, ShieldCheck, Mail, Cred
 import pack1 from "@/assets/pack-1.png";
 import pack2 from "@/assets/pack-2.png";
 import pack3 from "@/assets/pack-3.png";
-import pack4 from "@/assets/pack-4.png";
+import pack4 from "@/assets/foto-1.png";
 import pack5 from "@/assets/pack-5.png";
-import pack6 from "@/assets/pack-6.png";
-import pack7 from "@/assets/pack-7.png";
+import pack6 from "@/assets/foto-2.png";
+import pack7 from "@/assets/foto-3.png";
 import testimonios from "@/assets/testimonios.png";
 
 const LandingPage = () => {
