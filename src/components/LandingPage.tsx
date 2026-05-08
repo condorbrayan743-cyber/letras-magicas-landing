@@ -16,16 +16,16 @@ const LandingPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-amber-50 text-slate-800">
+    <div className="min-h-screen bg-pink-50 text-slate-800">
       {/* BARRA DE URGENCIA */}
       <div className="bg-rose-600 text-white text-center py-2 px-4 text-sm font-bold">
         🔥 ¡OFERTA POR TIEMPO LIMITADO! Acceso de por vida por solo $7.
       </div>
 
       {/* HERO */}
-      <section className="bg-gradient-to-br from-amber-100 to-orange-200 py-16 px-4">
+      <section className="bg-gradient-to-br from-pink-100 to-rose-200 py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <span className="inline-block bg-white text-orange-600 px-4 py-1 rounded-full text-sm font-bold shadow mb-6">
+          <span className="inline-block bg-white text-pink-600 px-4 py-1 rounded-full text-sm font-bold shadow mb-6">
             Método 100% Práctico 🚀
           </span>
           <h1 className="text-4xl md:text-6xl font-black text-slate-900 leading-tight mb-6">
@@ -59,8 +59,8 @@ const LandingPage = () => {
             { Icon: Palette, title: "100% Lúdico", desc: "Actividades visuales y juegos que mantienen su atención." },
             { Icon: TrendingUp, title: "Resultados Reales", desc: "Progreso visible desde la primera semana de uso." },
           ].map(({ Icon, title, desc }) => (
-            <div key={title} className="text-center p-6 rounded-2xl bg-amber-50 shadow-sm">
-              <Icon className="w-12 h-12 mx-auto text-orange-500 mb-4" />
+            <div key={title} className="text-center p-6 rounded-2xl bg-pink-50 shadow-sm">
+              <Icon className="w-12 h-12 mx-auto text-pink-500 mb-4" />
               <h3 className="text-xl font-extrabold mb-2">{title}</h3>
               <p className="text-slate-600">{desc}</p>
             </div>
@@ -69,14 +69,14 @@ const LandingPage = () => {
       </section>
 
       {/* SHOWCASE 1 */}
-      <section className="py-12 px-4 bg-amber-50">
+      <section className="py-12 px-4 bg-pink-50">
         <div className="max-w-3xl mx-auto">
           <img src={pack1} alt="Mega Pack Numeración Inicial" className="w-full h-auto rounded-3xl shadow-xl" loading="lazy" />
         </div>
       </section>
 
       {/* PRODUCTO */}
-      <section className="py-16 px-4 bg-amber-50">
+      <section className="py-16 px-4 bg-pink-50">
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-black mb-3">¿Qué incluye tu pack "Mi Mundo de Letras"?</h2>
           <p className="text-slate-600 mb-10">Material visual de alta calidad listo para descargar</p>
@@ -87,7 +87,7 @@ const LandingPage = () => {
               { img: pack3, title: "Recursos Imprimibles", desc: "Fichas, tarjetas y actividades listas para usar" },
             ].map((c) => (
               <div key={c.title} className="bg-white rounded-2xl shadow-md overflow-hidden">
-                <div className="h-56 overflow-hidden bg-gradient-to-br from-orange-100 to-rose-100">
+                <div className="h-56 overflow-hidden bg-gradient-to-br from-pink-100 to-rose-100">
                   <img src={c.img} alt={c.title} className="w-full h-full object-cover" loading="lazy" />
                 </div>
                 <div className="p-5">
@@ -124,9 +124,9 @@ const LandingPage = () => {
               { quote: "En dos semanas mi hija ya reconoce todas las letras. El material es divertido y muy fácil de imprimir.", who: "Camila S.", role: "Mamá", color: "bg-emerald-500" },
               { quote: "¡Excelente inversión! Lo uso con mis tres hijos y a todos les encanta. Vale muchísimo más de lo que cuesta.", who: "Patricia G.", role: "Mamá", color: "bg-sky-500" },
               { quote: "Las fichas son hermosas y los niños se enganchan al instante. Lo recomiendo 100% a otras maestras.", who: "Sofía L.", role: "Maestra", color: "bg-purple-500" },
-              { quote: "Compré el pack y al día siguiente ya estaba imprimiendo. Mi peque por fin disfruta aprender a leer.", who: "Verónica T.", role: "Mamá", color: "bg-amber-500" },
+              { quote: "Compré el pack y al día siguiente ya estaba imprimiendo. Mi peque por fin disfruta aprender a leer.", who: "Verónica T.", role: "Mamá", color: "bg-pink-500" },
             ].map((t) => (
-              <div key={t.who} className="bg-amber-50 p-6 rounded-2xl shadow-sm">
+              <div key={t.who} className="bg-pink-50 p-6 rounded-2xl shadow-sm">
                 <div className="flex items-center gap-3 mb-4">
                   <div className={`w-12 h-12 rounded-full ${t.color} text-white font-black flex items-center justify-center text-lg shadow-md`}>
                     {t.who.charAt(0)}
@@ -144,7 +144,7 @@ const LandingPage = () => {
       </section>
 
       {/* GALERÍA */}
-      <section className="py-14 px-4 bg-amber-50">
+      <section className="py-14 px-4 bg-pink-50">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-black text-center mb-8">Una mirada al material</h2>
           <div className="grid md:grid-cols-2 gap-6">
@@ -192,7 +192,7 @@ const LandingPage = () => {
               { q: "¿Cómo recibo el material?", a: "Lo recibes al instante en tu correo una vez confirmado el pago. Puedes imprimirlo las veces que quieras." },
               { q: "¿Qué pasa si no me gusta?", a: "Tienes 7 días de garantía total. Si no estás satisfecha, te devolvemos tu dinero inmediatamente." },
             ].map((f) => (
-              <details key={f.q} className="group bg-amber-50 rounded-2xl p-5 shadow-sm">
+              <details key={f.q} className="group bg-pink-50 rounded-2xl p-5 shadow-sm">
                 <summary className="flex justify-between items-center cursor-pointer font-bold text-lg">
                   {f.q}
                   <ChevronDown className="w-5 h-5 transition-transform group-open:rotate-180" />
