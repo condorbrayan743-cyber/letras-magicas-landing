@@ -72,18 +72,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "mi mundo de letras" },
-      { name: "description", content: "Landing page for 'Mi Mundo de Letras' educational pack." },
+      { title: "Lovable App" },
+      { name: "description", content: "Lovable Generated Project" },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "mi mundo de letras" },
-      { property: "og:description", content: "Landing page for 'Mi Mundo de Letras' educational pack." },
+      { property: "og:title", content: "Lovable App" },
+      { property: "og:description", content: "Lovable Generated Project" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
-      { name: "twitter:title", content: "mi mundo de letras" },
-      { name: "twitter:description", content: "Landing page for 'Mi Mundo de Letras' educational pack." },
-      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/dllPPpCBZVSRCMeJLF3FugU66Ty2/social-images/social-1778295355167-1kzVN.webp" },
-      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/dllPPpCBZVSRCMeJLF3FugU66Ty2/social-images/social-1778295355167-1kzVN.webp" },
     ],
     links: [
       {
@@ -119,15 +115,6 @@ function RootShell({ children }: { children: React.ReactNode }) {
         <HeadContent />
       </head>
       <body>
-        <noscript>
-          <img
-            height="1"
-            width="1"
-            style={{ display: "none" }}
-            src="https://www.facebook.com/tr?id=944471494865580&ev=PageView&noscript=1"
-            alt=""
-          />
-        </noscript>
         {children}
         <Scripts />
       </body>
