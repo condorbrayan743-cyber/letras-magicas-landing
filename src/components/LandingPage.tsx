@@ -137,6 +137,24 @@ const LandingPage = () => {
         </div>
       </section>
 
+      {/* CTA INTERMEDIO */}
+      <section className="py-12 px-4 bg-gradient-to-br from-pink-200 to-rose-300">
+        <div className="max-w-2xl mx-auto text-center">
+          <h2 className="text-2xl md:text-3xl font-black text-slate-900 mb-3">
+            ¿Lista para ver a tu hijo leer y escribir? 💖
+          </h2>
+          <p className="text-slate-700 mb-6">Llévate el pack completo hoy por solo $7.</p>
+          <a
+            href="https://pay.hotmart.com/A105742687W?checkoutMode=10"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-rose-600 hover:bg-rose-700 text-white text-xl font-black px-10 py-4 rounded-full shadow-xl animate-bounce-soft"
+          >
+            ¡QUIERO MI PACK AHORA!
+          </a>
+        </div>
+      </section>
+
       {/* TESTIMONIOS */}
       <section className="py-16 px-4 bg-white">
         <div className="max-w-5xl mx-auto">
