@@ -72,14 +72,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "mi mundo de letras" },
+      { name: "description", content: "Landing page for 'Mi Mundo de Letras' educational pack." },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "mi mundo de letras" },
+      { property: "og:description", content: "Landing page for 'Mi Mundo de Letras' educational pack." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "mi mundo de letras" },
+      { name: "twitter:description", content: "Landing page for 'Mi Mundo de Letras' educational pack." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/dllPPpCBZVSRCMeJLF3FugU66Ty2/social-images/social-1778295355167-1kzVN.webp" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/dllPPpCBZVSRCMeJLF3FugU66Ty2/social-images/social-1778295355167-1kzVN.webp" },
     ],
     links: [
       {
