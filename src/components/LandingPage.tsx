@@ -209,7 +209,7 @@ const LandingPage = () => {
               { img: pack6, title: "Actividades listas para usar", desc: "Material organizado por niveles para que tu hijo avance paso a paso, sin frustraciones y disfrutando cada actividad." },
             ].map((g) => (
               <div key={g.title} className="bg-white rounded-3xl shadow-lg overflow-hidden">
-                <img src={g.img} alt={g.title} className="w-full h-auto block" loading="lazy" />
+                <img src={g.img} alt={g.title} className="py-16 bg-white px-[10px]" loading="lazy" />
                 <div className="p-6 text-center">
                   <h3 className="text-xl font-extrabold mb-2 text-slate-900">{g.title}</h3>
                   <p className="text-slate-600">{g.desc}</p>
