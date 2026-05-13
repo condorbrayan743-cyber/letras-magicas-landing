@@ -165,7 +165,7 @@ const LandingPage = () => {
             <img
               src={testimonios}
               alt="Reseñas reales de mamás y maestras"
-              className="w-full h-auto block text-center"
+              className="w-full h-auto block text-justify"
               style={{ transform: "rotate(-90deg)", transformOrigin: "center" }}
               loading="lazy"
             />
