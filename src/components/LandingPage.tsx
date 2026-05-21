@@ -43,6 +43,14 @@ const LandingPage = () => {
           <p className="text-lg md:text-xl text-slate-700 mb-8 max-w-2xl mx-auto">
             Con este pack de más de 51 recursos listos para <strong>IMPRIMIR</strong> lo podrás lograr.
           </p>
+          <div className="max-w-xs sm:max-w-md mx-auto mb-8">
+            <img
+              src={heroShowcase}
+              alt="Vista previa del pack Mi Mundo de Letras con material imprimible"
+              className="w-full h-auto rounded-2xl shadow-xl"
+              loading="eager"
+            />
+          </div>
           <a
             href="https://pay.hotmart.com/A105742687W?checkoutMode=10"
             target="_blank"
