@@ -7,6 +7,7 @@ import pack5 from "@/assets/pack-5.png";
 import pack6 from "@/assets/foto-2.png";
 import pack7 from "@/assets/foto-3.png";
 import testimonios from "@/assets/testimonios.png";
+import heroShowcase from "@/assets/hero-showcase.png";
 import extra1 from "@/assets/extra-1.png";
 import extra2 from "@/assets/extra-2.png";
 import extra3 from "@/assets/extra-3.png";
