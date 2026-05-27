@@ -36,7 +36,7 @@ const LandingPage = () => {
           </span>
           <h1 className="text-4xl md:text-6xl font-black text-slate-900 leading-tight mb-6">
             Tu hijo leyendo y escribiendo con <span className="text-rose-600">Confianza</span> DESDE HOY
-            <span className="block mt-3 font-black text-rose-600">¡Últimas horas antes de que duplique su precio de lanzamiento!</span>
+            <span className="block mt-3 font-black text-rose-600 my-px">{"\n"}</span>
           </h1>
           <ul className="text-lg md:text-xl text-slate-700 mb-8 max-w-2xl mx-auto space-y-3 text-left list-none">
             <li>⏳ <strong>ÚLTIMOS CUPOS:</strong> Acceso de por vida con <strong>70% de descuento</strong> antes del aumento de precio.</li>
