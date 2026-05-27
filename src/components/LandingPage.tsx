@@ -38,7 +38,8 @@ const LandingPage = () => {
             Tu hijo leyendo y escribiendo con <span className="text-rose-600">Confianza</span> en 15 días
           </h1>
           <ul className="text-lg md:text-xl text-slate-700 mb-8 max-w-2xl mx-auto space-y-3 text-left list-none">
-            <li>✨ <strong>Olvídate de buscar material aburrido en internet.</strong></li>
+            <li>⏳ <strong>ÚLTIMOS CUPOS:</strong> Acceso de por vida con <strong>70% de descuento</strong> antes del aumento de precio.</li>
+            <li>🧠 <strong>MÉTODO COMPROBADO:</strong> Para que tu hijo <strong>destaque en su salón</strong> sin gritos ni frustración.</li>
             <li>📥 <strong>DESCARGA INMEDIATA:</strong> Más de <strong>51 recursos interactivos</strong> listos para imprimir hoy.</li>
             <li>👇 <strong>Desplaza hacia abajo</strong> para ver el material completo por dentro <strong>antes de que expire la oferta.</strong></li>
           </ul>
