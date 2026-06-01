@@ -1,4 +1,4 @@
-import { Check, Clock, Palette, TrendingUp, ChevronDown, ShieldCheck, Mail, CreditCard } from "lucide-react";
+import { Check, ChevronDown, ShieldCheck, Mail, CreditCard, FolderOpen, Clock, Lightbulb, Handshake, Heart, Infinity as InfinityIcon } from "lucide-react";
 import pack1 from "@/assets/pack-1.png";
 import pack2 from "@/assets/pack-2.png";
 import pack3 from "@/assets/pack-3.png";
