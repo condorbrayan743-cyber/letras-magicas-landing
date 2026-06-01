@@ -66,20 +66,84 @@ const LandingPage = () => {
         </div>
       </section>
 
-      {/* BENEFICIOS */}
-      <section className="py-16 px-4 bg-white">
-        <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-8">
-          {[
-            { Icon: Clock, title: "Ahorra Horas", desc: "Material listo para imprimir. Olvídate de buscar en internet." },
-            { Icon: Palette, title: "100% Lúdico", desc: "Actividades visuales y juegos que mantienen su atención." },
-            { Icon: TrendingUp, title: "Resultados Reales", desc: "Progreso visible desde la primera semana de uso." },
-          ].map(({ Icon, title, desc }) => (
-            <div key={title} className="text-center p-6 rounded-2xl bg-pink-50 shadow-sm">
-              <Icon className="w-12 h-12 mx-auto text-pink-500 mb-4" />
-              <h3 className="text-xl font-extrabold mb-2">{title}</h3>
-              <p className="text-slate-600">{desc}</p>
-            </div>
-          ))}
+      {/* BENEFICIOS — Sticker style */}
+      <section className="py-16 px-4 bg-gradient-to-b from-white to-pink-50 relative overflow-hidden">
+        <div className="max-w-6xl mx-auto relative z-10">
+          <h2 className="text-3xl md:text-4xl font-black text-center mb-3 text-slate-900">
+            Todo lo que recibes <span className="text-rose-600">hoy</span> 🎁
+          </h2>
+          <p className="text-center text-slate-600 mb-12 max-w-2xl mx-auto">
+            Beneficios pensados para mamás y maestras que quieren resultados reales sin complicaciones.
+          </p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+            {[
+              {
+                title: "+50 RECURSOS ÚNICOS",
+                bg: "bg-yellow-200",
+                icon: (
+                  <div className="relative w-20 h-20 mx-auto">
+                    <div className="absolute inset-0 bg-yellow-400 border-[3px] border-black rounded-xl rotate-[-6deg] shadow-[3px_3px_0_#000]" />
+                    <FolderOpen className="absolute inset-0 m-auto w-10 h-10 text-black" strokeWidth={2.5} />
+                  </div>
+                ),
+              },
+              {
+                title: "AHORRA TIEMPO EN PLANIFICACIÓN",
+                bg: "bg-rose-100",
+                icon: (
+                  <div className="relative w-20 h-20 mx-auto">
+                    <div className="absolute inset-0 bg-red-500 border-[3px] border-black rounded-full shadow-[3px_3px_0_#000]" />
+                    <div className="absolute inset-2 bg-white border-[3px] border-black rounded-full" />
+                    <Clock className="absolute inset-0 m-auto w-10 h-10 text-black" strokeWidth={2.5} />
+                  </div>
+                ),
+              },
+              {
+                title: "APRENDIZAJE CREATIVO Y DIVERTIDO",
+                bg: "bg-amber-100",
+                icon: (
+                  <div className="relative w-20 h-20 mx-auto">
+                    <span className="absolute top-1 left-0 text-black font-black text-xl rotate-[-25deg]">/</span>
+                    <span className="absolute top-1 right-0 text-black font-black text-xl rotate-[25deg]">\</span>
+                    <span className="absolute top-3 left-1/2 -translate-x-1/2 text-black font-black text-xl">|</span>
+                    <div className="absolute inset-x-3 top-5 bottom-2 bg-yellow-300 border-[3px] border-black rounded-t-full shadow-[3px_3px_0_#000]" />
+                    <Lightbulb className="absolute inset-0 m-auto mt-3 w-9 h-9 text-black" strokeWidth={2.5} />
+                  </div>
+                ),
+              },
+              {
+                title: "ENTREGA GARANTIZADA",
+                bg: "bg-sky-100",
+                icon: (
+                  <div className="relative w-20 h-20 mx-auto">
+                    <Heart className="absolute -top-1 left-1/2 -translate-x-1/2 w-5 h-5 text-red-500 fill-red-500 stroke-black" strokeWidth={2.5} />
+                    <div className="absolute inset-x-1 bottom-1 top-5 bg-gradient-to-r from-blue-500 from-50% to-red-500 to-50% border-[3px] border-black rounded-xl shadow-[3px_3px_0_#000]" />
+                    <Handshake className="absolute inset-0 m-auto mt-3 w-10 h-10 text-white" strokeWidth={2.5} />
+                  </div>
+                ),
+              },
+              {
+                title: "ACCESO ILIMITADO PARA SIEMPRE",
+                bg: "bg-purple-100",
+                icon: (
+                  <div className="relative w-20 h-20 mx-auto">
+                    <div className="absolute inset-x-0 top-3 bottom-3 bg-purple-500 border-[3px] border-black rounded-full shadow-[3px_3px_0_#000] flex items-center justify-center">
+                      <InfinityIcon className="w-10 h-10 text-white" strokeWidth={3} />
+                    </div>
+                  </div>
+                ),
+              },
+            ].map((b) => (
+              <div
+                key={b.title}
+                className={`${b.bg} border-[3px] border-black rounded-2xl p-5 text-center shadow-[5px_5px_0_#000] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[7px_7px_0_#000] transition-transform`}
+              >
+                <div className="mb-4 mt-1">{b.icon}</div>
+                <h3 className="text-sm font-black text-slate-900 leading-tight uppercase">{b.title}</h3>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
