@@ -9,8 +9,8 @@ import pack7 from "@/assets/foto-3.webp";
 import testimonios from "@/assets/testimonios.png";
 import heroShowcase from "@/assets/hero-showcase.webp.asset.json";
 import extra1 from "@/assets/extra-1.webp";
-import extra2 from "@/assets/extra-2.png";
-import extra3 from "@/assets/extra-3.png";
+
+
 import extra4 from "@/assets/extra-4.webp";
 import extra5 from "@/assets/extra-5.webp";
 import benefitsBanner from "@/assets/benefits-banner.webp.asset.json";
@@ -107,12 +107,6 @@ const LandingPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="rounded-3xl overflow-hidden shadow-lg bg-gradient-to-br from-pink-100 to-rose-100 md:col-span-2">
               <img src={extra1} alt="Niño jugando con material imprimible" className="w-full h-auto object-contain" loading="lazy" />
-            </div>
-            <div className="rounded-3xl overflow-hidden shadow-lg bg-white">
-              <img src={extra2} alt="Niño practicando trazos de números" className="w-full h-auto object-contain" loading="lazy" />
-            </div>
-            <div className="rounded-3xl overflow-hidden shadow-lg bg-white">
-              <img src={extra3} alt="Tarjetas de números y conteo" className="w-full h-auto object-contain" loading="lazy" />
             </div>
             <div className="rounded-3xl overflow-hidden shadow-lg bg-white md:col-span-2">
               <img src={extra4} alt="Tarjetas de sílabas con imágenes" className="w-full h-auto object-contain" loading="lazy" />
