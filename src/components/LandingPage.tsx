@@ -234,7 +234,7 @@ const LandingPage = () => {
       {/* SHOWCASE 2 */}
       <section className="py-12 px-4 bg-white">
         <div className="max-w-3xl mx-auto">
-          <img src={pack7} alt="Tarjetas y juegos del pack" className="w-full max-h-[480px] object-cover rounded-3xl shadow-xl" loading="lazy" />
+          <img src={pack7} alt="Tarjetas y juegos del pack" width={864} height={935} className="w-full max-h-[480px] object-cover rounded-3xl shadow-xl" loading="lazy" />
         </div>
       </section>
 
