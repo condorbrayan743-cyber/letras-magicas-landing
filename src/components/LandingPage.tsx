@@ -38,12 +38,14 @@ const LandingPage = () => {
           <h1 className="text-4xl md:text-6xl font-black text-slate-900 leading-tight mb-6">
             Tu hijo leyendo y escribiendo con <span className="text-rose-600">Confianza</span> en 15 días
           </h1>
-          <p className="text-lg md:text-xl text-slate-700 mb-3 max-w-2xl mx-auto">
-            El sistema diseñado para madres que quieren ver a sus hijos triunfar sin batallas ni lágrimas.
-          </p>
-          <p className="text-lg md:text-xl text-slate-700 mb-8 max-w-2xl mx-auto">
-            Con este pack de más de 51 recursos listos para <strong>IMPRIMIR</strong> lo podrás lograr.
-          </p>
+          <div className="max-w-3xl mx-auto mb-8">
+            <img
+              src={benefitsBanner.url}
+              alt="Beneficios del pack: +51 recursos únicos, ahorra tiempo, aprendizaje creativo, entrega garantizada, acceso ilimitado"
+              className="w-full h-auto rounded-2xl"
+              loading="eager"
+            />
+          </div>
           <div className="max-w-xs sm:max-w-md mx-auto mb-8">
             <img
               src={heroShowcase}
