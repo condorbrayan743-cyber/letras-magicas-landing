@@ -42,6 +42,8 @@ const LandingPage = () => {
             <img
               src={benefitsBanner.url}
               alt="Beneficios del pack: +51 recursos únicos, ahorra tiempo, aprendizaje creativo, entrega garantizada, acceso ilimitado"
+              width={1969}
+              height={446}
               className="w-full h-auto rounded-2xl"
               loading="eager"
             />
@@ -50,6 +52,8 @@ const LandingPage = () => {
             <img
               src={heroShowcase.url}
               alt="Vista previa del pack Mi Mundo de Letras con material imprimible"
+              width={1376}
+              height={768}
               className="w-full h-auto rounded-2xl shadow-xl"
               loading="eager"
             />
