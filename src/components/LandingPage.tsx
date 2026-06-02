@@ -108,12 +108,6 @@ const LandingPage = () => {
             <div className="rounded-3xl overflow-hidden shadow-lg bg-gradient-to-br from-pink-100 to-rose-100 md:col-span-2">
               <img src={extra1} alt="Niño jugando con material imprimible" className="w-full h-auto object-contain" loading="lazy" />
             </div>
-            <div className="rounded-3xl overflow-hidden shadow-lg bg-white">
-              <img src={extra2} alt="Niño practicando trazos de números" className="w-full h-auto object-contain" loading="lazy" />
-            </div>
-            <div className="rounded-3xl overflow-hidden shadow-lg bg-white">
-              <img src={extra3} alt="Tarjetas de números y conteo" className="w-full h-auto object-contain" loading="lazy" />
-            </div>
             <div className="rounded-3xl overflow-hidden shadow-lg bg-white md:col-span-2">
               <img src={extra4} alt="Tarjetas de sílabas con imágenes" className="w-full h-auto object-contain" loading="lazy" />
             </div>
