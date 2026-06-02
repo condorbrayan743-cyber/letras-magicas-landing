@@ -216,11 +216,11 @@ const LandingPage = () => {
           <p className="text-center text-slate-600 mb-10">Cada recurso está pensado para que aprender sea un juego</p>
           <div className="space-y-10">
             {[
-              { img: pack4, title: "Variedad de recursos imprimibles", desc: "Decenas de fichas, tarjetas y plantillas a todo color para practicar letras, sílabas y palabras desde el primer día." },
-              { img: pack6, title: "Actividades listas para usar", desc: "Material organizado por niveles para que tu hijo avance paso a paso, sin frustraciones y disfrutando cada actividad." },
+              { img: pack4, w: 784, h: 1260, title: "Variedad de recursos imprimibles", desc: "Decenas de fichas, tarjetas y plantillas a todo color para practicar letras, sílabas y palabras desde el primer día." },
+              { img: pack6, w: 832, h: 1184, title: "Actividades listas para usar", desc: "Material organizado por niveles para que tu hijo avance paso a paso, sin frustraciones y disfrutando cada actividad." },
             ].map((g) => (
               <div key={g.title} className="bg-white rounded-3xl shadow-lg overflow-hidden">
-                <img src={g.img} alt={g.title} className="py-16 bg-white px-[10px]" loading="lazy" />
+                <img src={g.img} alt={g.title} width={g.w} height={g.h} className="w-full h-auto py-16 bg-white px-[10px]" loading="lazy" />
                 <div className="p-6 text-center">
                   <h3 className="text-xl font-extrabold mb-2 text-slate-900">{g.title}</h3>
                   <p className="text-slate-600">{g.desc}</p>
