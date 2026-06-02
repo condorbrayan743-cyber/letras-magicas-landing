@@ -7,7 +7,7 @@ import pack5 from "@/assets/pack-5.png";
 import pack6 from "@/assets/foto-2.png";
 import pack7 from "@/assets/foto-3.png";
 import testimonios from "@/assets/testimonios.png";
-import heroShowcase from "@/assets/hero-showcase.png";
+import heroShowcase from "@/assets/hero-showcase.webp.asset.json";
 import extra1 from "@/assets/extra-1.png";
 import extra2 from "@/assets/extra-2.png";
 import extra3 from "@/assets/extra-3.png";
@@ -48,7 +48,7 @@ const LandingPage = () => {
           </div>
           <div className="max-w-xs sm:max-w-md mx-auto mb-8">
             <img
-              src={heroShowcase}
+              src={heroShowcase.url}
               alt="Vista previa del pack Mi Mundo de Letras con material imprimible"
               className="w-full h-auto rounded-2xl shadow-xl"
               loading="eager"
