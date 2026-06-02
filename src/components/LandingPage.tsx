@@ -129,13 +129,13 @@ const LandingPage = () => {
           <p className="text-slate-600 mb-10">Material visual de alta calidad listo para descargar</p>
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              { img: pack5, title: "Mega Pack Numeración Inicial", desc: "Material colorido para aprender los números" },
-              { img: pack2, title: "Collage Infantil de Aprendizaje", desc: "Sílabas, sonidos y trazos divertidos" },
-              { img: pack3, title: "Recursos Imprimibles", desc: "Fichas, tarjetas y actividades listas para usar" },
+              { img: pack5, w: 784, h: 662, title: "Mega Pack Numeración Inicial", desc: "Material colorido para aprender los números" },
+              { img: pack2, w: 768, h: 681, title: "Collage Infantil de Aprendizaje", desc: "Sílabas, sonidos y trazos divertidos" },
+              { img: pack3, w: 1169, h: 800, title: "Recursos Imprimibles", desc: "Fichas, tarjetas y actividades listas para usar" },
             ].map((c) => (
               <div key={c.title} className="bg-white rounded-2xl shadow-md overflow-hidden">
                 <div className="h-56 overflow-hidden bg-gradient-to-br from-pink-100 to-rose-100">
-                  <img src={c.img} alt={c.title} className="w-full h-full object-cover" loading="lazy" />
+                  <img src={c.img} alt={c.title} width={c.w} height={c.h} className="w-full h-full object-cover" loading="lazy" />
                 </div>
                 <div className="p-5">
                   <h3 className="font-extrabold text-lg">{c.title}</h3>
