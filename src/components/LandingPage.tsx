@@ -175,8 +175,9 @@ const LandingPage = () => {
             <img
               src={testimonios}
               alt="Reseñas reales de mamás y maestras"
+              width={2000}
+              height={1545}
               className="w-full h-auto block text-justify px-[15px]"
-              
               loading="lazy"
             />
           </div>
