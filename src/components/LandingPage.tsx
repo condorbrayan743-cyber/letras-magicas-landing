@@ -42,6 +42,8 @@ const LandingPage = () => {
             <img
               src={benefitsBanner.url}
               alt="Beneficios del pack: +51 recursos únicos, ahorra tiempo, aprendizaje creativo, entrega garantizada, acceso ilimitado"
+              width={1969}
+              height={446}
               className="w-full h-auto rounded-2xl"
               loading="eager"
             />
@@ -50,6 +52,8 @@ const LandingPage = () => {
             <img
               src={heroShowcase.url}
               alt="Vista previa del pack Mi Mundo de Letras con material imprimible"
+              width={1376}
+              height={768}
               className="w-full h-auto rounded-2xl shadow-xl"
               loading="eager"
             />
@@ -90,7 +94,7 @@ const LandingPage = () => {
       {/* SHOWCASE 1 */}
       <section className="py-12 px-4 bg-pink-50">
         <div className="max-w-3xl mx-auto">
-          <img src={pack1} alt="Mega Pack Numeración Inicial" className="w-full h-auto rounded-3xl shadow-xl" loading="lazy" />
+          <img src={pack1} alt="Mega Pack Numeración Inicial" width={768} height={1186} className="w-full h-auto rounded-3xl shadow-xl" loading="lazy" />
         </div>
       </section>
 
@@ -106,13 +110,13 @@ const LandingPage = () => {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="rounded-3xl overflow-hidden shadow-lg bg-gradient-to-br from-pink-100 to-rose-100 md:col-span-2">
-              <img src={extra1} alt="Niño jugando con material imprimible" className="w-full h-auto object-contain" loading="lazy" />
+              <img src={extra1} alt="Niño jugando con material imprimible" width={938} height={1041} className="w-full h-auto object-contain" loading="lazy" />
             </div>
             <div className="rounded-3xl overflow-hidden shadow-lg bg-white md:col-span-2">
-              <img src={extra4} alt="Tarjetas de sílabas con imágenes" className="w-full h-auto object-contain" loading="lazy" />
+              <img src={extra4} alt="Tarjetas de sílabas con imágenes" width={944} height={879} className="w-full h-auto object-contain" loading="lazy" />
             </div>
             <div className="rounded-3xl overflow-hidden shadow-lg bg-white md:col-span-2">
-              <img src={extra5} alt="Aprende a contar con tarjetas divertidas" className="w-full h-auto object-contain" loading="lazy" />
+              <img src={extra5} alt="Aprende a contar con tarjetas divertidas" width={896} height={1198} className="w-full h-auto object-contain" loading="lazy" />
             </div>
           </div>
         </div>
@@ -125,13 +129,13 @@ const LandingPage = () => {
           <p className="text-slate-600 mb-10">Material visual de alta calidad listo para descargar</p>
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              { img: pack5, title: "Mega Pack Numeración Inicial", desc: "Material colorido para aprender los números" },
-              { img: pack2, title: "Collage Infantil de Aprendizaje", desc: "Sílabas, sonidos y trazos divertidos" },
-              { img: pack3, title: "Recursos Imprimibles", desc: "Fichas, tarjetas y actividades listas para usar" },
+              { img: pack5, w: 784, h: 662, title: "Mega Pack Numeración Inicial", desc: "Material colorido para aprender los números" },
+              { img: pack2, w: 768, h: 681, title: "Collage Infantil de Aprendizaje", desc: "Sílabas, sonidos y trazos divertidos" },
+              { img: pack3, w: 1169, h: 800, title: "Recursos Imprimibles", desc: "Fichas, tarjetas y actividades listas para usar" },
             ].map((c) => (
               <div key={c.title} className="bg-white rounded-2xl shadow-md overflow-hidden">
                 <div className="h-56 overflow-hidden bg-gradient-to-br from-pink-100 to-rose-100">
-                  <img src={c.img} alt={c.title} className="w-full h-full object-cover" loading="lazy" />
+                  <img src={c.img} alt={c.title} width={c.w} height={c.h} className="w-full h-full object-cover" loading="lazy" />
                 </div>
                 <div className="p-5">
                   <h3 className="font-extrabold text-lg">{c.title}</h3>
@@ -171,8 +175,9 @@ const LandingPage = () => {
             <img
               src={testimonios}
               alt="Reseñas reales de mamás y maestras"
+              width={2000}
+              height={1545}
               className="w-full h-auto block text-justify px-[15px]"
-              
               loading="lazy"
             />
           </div>
@@ -211,11 +216,11 @@ const LandingPage = () => {
           <p className="text-center text-slate-600 mb-10">Cada recurso está pensado para que aprender sea un juego</p>
           <div className="space-y-10">
             {[
-              { img: pack4, title: "Variedad de recursos imprimibles", desc: "Decenas de fichas, tarjetas y plantillas a todo color para practicar letras, sílabas y palabras desde el primer día." },
-              { img: pack6, title: "Actividades listas para usar", desc: "Material organizado por niveles para que tu hijo avance paso a paso, sin frustraciones y disfrutando cada actividad." },
+              { img: pack4, w: 784, h: 1260, title: "Variedad de recursos imprimibles", desc: "Decenas de fichas, tarjetas y plantillas a todo color para practicar letras, sílabas y palabras desde el primer día." },
+              { img: pack6, w: 832, h: 1184, title: "Actividades listas para usar", desc: "Material organizado por niveles para que tu hijo avance paso a paso, sin frustraciones y disfrutando cada actividad." },
             ].map((g) => (
               <div key={g.title} className="bg-white rounded-3xl shadow-lg overflow-hidden">
-                <img src={g.img} alt={g.title} className="py-16 bg-white px-[10px]" loading="lazy" />
+                <img src={g.img} alt={g.title} width={g.w} height={g.h} className="w-full h-auto py-16 bg-white px-[10px]" loading="lazy" />
                 <div className="p-6 text-center">
                   <h3 className="text-xl font-extrabold mb-2 text-slate-900">{g.title}</h3>
                   <p className="text-slate-600">{g.desc}</p>
@@ -229,7 +234,7 @@ const LandingPage = () => {
       {/* SHOWCASE 2 */}
       <section className="py-12 px-4 bg-white">
         <div className="max-w-3xl mx-auto">
-          <img src={pack7} alt="Tarjetas y juegos del pack" className="w-full max-h-[480px] object-cover rounded-3xl shadow-xl" loading="lazy" />
+          <img src={pack7} alt="Tarjetas y juegos del pack" width={864} height={935} className="w-full max-h-[480px] object-cover rounded-3xl shadow-xl" loading="lazy" />
         </div>
       </section>
 
