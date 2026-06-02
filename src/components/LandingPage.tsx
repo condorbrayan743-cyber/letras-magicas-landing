@@ -110,13 +110,13 @@ const LandingPage = () => {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="rounded-3xl overflow-hidden shadow-lg bg-gradient-to-br from-pink-100 to-rose-100 md:col-span-2">
-              <img src={extra1} alt="Niño jugando con material imprimible" className="w-full h-auto object-contain" loading="lazy" />
+              <img src={extra1} alt="Niño jugando con material imprimible" width={938} height={1041} className="w-full h-auto object-contain" loading="lazy" />
             </div>
             <div className="rounded-3xl overflow-hidden shadow-lg bg-white md:col-span-2">
-              <img src={extra4} alt="Tarjetas de sílabas con imágenes" className="w-full h-auto object-contain" loading="lazy" />
+              <img src={extra4} alt="Tarjetas de sílabas con imágenes" width={944} height={879} className="w-full h-auto object-contain" loading="lazy" />
             </div>
             <div className="rounded-3xl overflow-hidden shadow-lg bg-white md:col-span-2">
-              <img src={extra5} alt="Aprende a contar con tarjetas divertidas" className="w-full h-auto object-contain" loading="lazy" />
+              <img src={extra5} alt="Aprende a contar con tarjetas divertidas" width={896} height={1198} className="w-full h-auto object-contain" loading="lazy" />
             </div>
           </div>
         </div>
