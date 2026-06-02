@@ -1,6 +1,6 @@
 import { Check, Clock, Palette, TrendingUp, ChevronDown, ShieldCheck, Mail, CreditCard } from "lucide-react";
 import pack1 from "@/assets/pack-1.png";
-import pack2 from "@/assets/pack-2.png";
+import pack2 from "@/assets/pack-2.webp";
 import pack3 from "@/assets/pack-3.png";
 import pack4 from "@/assets/foto-1.png";
 import pack5 from "@/assets/pack-5.webp";
