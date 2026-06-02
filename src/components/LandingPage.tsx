@@ -13,6 +13,7 @@ import extra2 from "@/assets/extra-2.png";
 import extra3 from "@/assets/extra-3.png";
 import extra4 from "@/assets/extra-4.png";
 import extra5 from "@/assets/extra-5.png";
+import benefitsBanner from "@/assets/benefits-banner.webp.asset.json";
 
 const LandingPage = () => {
   const items = [
