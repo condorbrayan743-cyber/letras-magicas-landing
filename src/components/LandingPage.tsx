@@ -48,7 +48,7 @@ const LandingPage = () => {
           </div>
           <div className="max-w-xs sm:max-w-md mx-auto mb-8">
             <img
-              src={heroShowcase}
+              src={heroShowcase.url}
               alt="Vista previa del pack Mi Mundo de Letras con material imprimible"
               className="w-full h-auto rounded-2xl shadow-xl"
               loading="eager"
