@@ -64,13 +64,17 @@ const LandingPage = () => {
           <span className="inline-block bg-pink-100 text-[#FF4D8D] px-4 py-1 rounded-full text-sm font-bold mb-6">
             Momentos reales ✨
           </span>
-          <div className="max-w-[80%] mx-auto">
+          <div className="max-w-full md:max-w-[75%] mx-auto">
+            <span className="inline-block bg-[#FF4D8D] text-white text-[13px] font-bold px-4 py-1.5 rounded-full mb-4">
+              📦 Esto es lo que recibes
+            </span>
             <img
               src={heroShowcase.url}
               alt="Vista del pack Mi Mundo de Letras con material colorido listo para imprimir"
               width={1376}
               height={768}
-              className="w-full h-auto rounded-2xl shadow-lg"
+              className="w-full h-auto"
+              style={{ borderRadius: "16px", boxShadow: "0 20px 60px rgba(0,0,0,0.15)", border: "2px solid #FFB6D9" }}
               loading="eager"
             />
           </div>
