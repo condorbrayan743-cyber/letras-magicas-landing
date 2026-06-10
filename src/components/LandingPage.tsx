@@ -234,10 +234,14 @@ const LandingPage = () => {
             <p className="text-[20px] text-slate-400 line-through mb-6">Valor total real: $32.00</p>
             <p className="text-sm font-bold text-[#FF4D8D] mb-1">🔥 Precio especial de lanzamiento</p>
             <p className="leading-none mb-3">
-              <span className="text-[64px] font-black text-[#FF4D8D]">$7</span>
+              <span style={{ fontSize: "64px", fontWeight: 900, color: "#EF4444" }}>$7</span>
               <span className="text-xl text-slate-600 font-bold ml-2">USD</span>
             </p>
-            <p className="text-green-600 font-bold text-sm mb-2">✅ Ahorras $25 — 78% de descuento</p>
+            <div className="flex justify-center mb-2">
+              <span className="inline-block font-bold" style={{ background: "#DCFCE7", color: "#16A34A", padding: "8px 16px", borderRadius: "20px" }}>
+                ✅ Ahorras $25 — 78% de descuento
+              </span>
+            </div>
             <p className="text-slate-500 italic text-sm">Un café cuesta más que esto.</p>
           </div>
 
