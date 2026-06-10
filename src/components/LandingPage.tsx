@@ -27,7 +27,7 @@ const LandingPage = () => {
     <div className="min-h-screen bg-[#FFF0F5] text-slate-800">
       {/* BARRA DE URGENCIA */}
       <div className="bg-[#FF4D8D] text-white text-center py-2 px-4 text-sm font-bold">
-        🔥 ¡OFERTA POR TIEMPO LIMITADO! Acceso de por vida por solo $7.
+        🔥 Solo por lanzamiento: Tu hijo leyendo en 15 días por $7 — después vuelve a $32. ⏰ Precio limitado
       </div>
 
       {/* ═══ SECCIÓN 1 — HERO ═══ */}
@@ -64,13 +64,17 @@ const LandingPage = () => {
           <span className="inline-block bg-pink-100 text-[#FF4D8D] px-4 py-1 rounded-full text-sm font-bold mb-6">
             Momentos reales ✨
           </span>
-          <div className="max-w-[80%] mx-auto">
+          <div className="max-w-full md:max-w-[75%] mx-auto">
+            <span className="inline-block bg-[#FF4D8D] text-white text-[13px] font-bold px-4 py-1.5 rounded-full mb-4">
+              📦 Esto es lo que recibes
+            </span>
             <img
               src={heroShowcase.url}
               alt="Vista del pack Mi Mundo de Letras con material colorido listo para imprimir"
               width={1376}
               height={768}
-              className="w-full h-auto rounded-2xl shadow-lg"
+              className="w-full h-auto"
+              style={{ borderRadius: "16px", boxShadow: "0 20px 60px rgba(0,0,0,0.15)", border: "2px solid #FFB6D9" }}
               loading="eager"
             />
           </div>
@@ -83,14 +87,12 @@ const LandingPage = () => {
       <section className="py-20 px-4 bg-white">
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="text-[32px] md:text-[36px] font-black text-slate-900 mb-8">Imagina esto...</h2>
-          <p className="text-[18px] md:text-[20px] text-[#444] leading-[1.8]">
+          <p className="leading-[1.8]" style={{ color: "#1a1a1a", fontSize: "22px" }}>
             Tu hijo agarra una ficha solo.<br />
             Sin que se lo pidas.<br />
             Y empieza a leer en voz alta.<br /><br />
-            Sin llantos. Sin "mamá no puedo".<br />
-            Sin frustraciones.<br /><br />
-            Solo él — aprendiendo y disfrutando<br />
-            como si fuera un juego.
+            <strong>Sin llantos. Sin "mamá no puedo". Sin frustraciones.</strong><br /><br />
+            <strong style={{ color: "#FF4D8D" }}>Solo él — aprendiendo y disfrutando como si fuera un juego.</strong>
           </p>
           <div className="w-20 h-[2px] bg-[#FF4D8D] mx-auto my-8" />
           <p className="text-[18px] font-bold text-[#FF4D8D]">
@@ -219,7 +221,7 @@ const LandingPage = () => {
                   <h3 className="font-extrabold text-[18px] text-slate-900 mb-1">{it.title}</h3>
                   <p className="text-slate-600 text-[15px] leading-relaxed">{it.desc}</p>
                 </div>
-                <span className="text-slate-400 line-through font-bold whitespace-nowrap">{it.price}</span>
+                <span className="font-bold whitespace-nowrap" style={{ color: "#888888", fontSize: "16px", textDecoration: "line-through" }}>{it.price}</span>
               </div>
             ))}
           </div>
@@ -232,10 +234,14 @@ const LandingPage = () => {
             <p className="text-[20px] text-slate-400 line-through mb-6">Valor total real: $32.00</p>
             <p className="text-sm font-bold text-[#FF4D8D] mb-1">🔥 Precio especial de lanzamiento</p>
             <p className="leading-none mb-3">
-              <span className="text-[64px] font-black text-[#FF4D8D]">$7</span>
+              <span style={{ fontSize: "64px", fontWeight: 900, color: "#EF4444" }}>$7</span>
               <span className="text-xl text-slate-600 font-bold ml-2">USD</span>
             </p>
-            <p className="text-green-600 font-bold text-sm mb-2">✅ Ahorras $25 — 78% de descuento</p>
+            <div className="flex justify-center mb-2">
+              <span className="inline-block font-bold" style={{ background: "#DCFCE7", color: "#16A34A", padding: "8px 16px", borderRadius: "20px" }}>
+                ✅ Ahorras $25 — 78% de descuento
+              </span>
+            </div>
             <p className="text-slate-500 italic text-sm">Un café cuesta más que esto.</p>
           </div>
 
@@ -296,7 +302,7 @@ const LandingPage = () => {
       {/* ═══ SECCIÓN 9 — GARANTÍA ═══ */}
       <section className="py-20 px-4 bg-[#F0FFF4]">
         <div className="max-w-2xl mx-auto text-center">
-          <div className="text-[64px] mb-4">🛡️</div>
+          <div style={{ fontSize: "80px", lineHeight: 1 }} className="mb-4">🛡️</div>
           <h2 className="text-[28px] md:text-[36px] font-black text-slate-900 mb-8 leading-tight">
             Garantía de satisfacción total<br />— 7 días completos
           </h2>
@@ -312,7 +318,7 @@ const LandingPage = () => {
               Sin preguntas.<br />Sin formularios.<br />Sin dramas.
             </p>
             <div className="border-t border-slate-200 my-6" />
-            <p className="font-bold text-[#FF4D8D] text-[16px]">
+            <p className="font-bold text-center" style={{ color: "#FF4D8D", fontSize: "20px" }}>
               O quedas feliz — o te devuelvo tu dinero.<br />Así de simple.
             </p>
             <p className="text-slate-500 italic text-sm mt-4">
@@ -363,10 +369,15 @@ const LandingPage = () => {
               href={CHECKOUT_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="block w-full bg-[#22C55E] hover:bg-[#1eb556] text-white text-lg font-black h-[60px] flex items-center justify-center rounded-xl shadow-lg transition-all hover:scale-[1.02]"
+              className="block w-full text-white text-lg font-black h-[60px] flex items-center justify-center rounded-xl shadow-lg transition-all hover:scale-[1.02] hover:opacity-95"
+              style={{ background: "#22C55E" }}
             >
-              ¡COMPRAR AHORA!
+              ¡COMPRAR AHORA — $7 USD!
             </a>
+
+            <p className="text-center font-semibold mt-3" style={{ color: "#EF4444", fontSize: "13px" }}>
+              ⚠️ Precio de lanzamiento — vence pronto
+            </p>
 
             <p className="text-red-600 text-sm font-semibold mt-4 leading-snug">
               ⚠️ Este precio vence pronto.<br />Cuando termine el lanzamiento vuelve a $32.
