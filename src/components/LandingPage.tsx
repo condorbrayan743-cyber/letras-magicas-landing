@@ -318,7 +318,7 @@ const LandingPage = () => {
               Sin preguntas.<br />Sin formularios.<br />Sin dramas.
             </p>
             <div className="border-t border-slate-200 my-6" />
-            <p className="font-bold text-[#FF4D8D] text-[16px]">
+            <p className="font-bold text-center" style={{ color: "#FF4D8D", fontSize: "20px" }}>
               O quedas feliz — o te devuelvo tu dinero.<br />Así de simple.
             </p>
             <p className="text-slate-500 italic text-sm mt-4">
