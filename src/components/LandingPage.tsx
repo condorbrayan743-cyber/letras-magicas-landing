@@ -27,7 +27,7 @@ const LandingPage = () => {
     <div className="min-h-screen bg-[#FFF0F5] text-slate-800">
       {/* BARRA DE URGENCIA */}
       <div className="bg-[#FF4D8D] text-white text-center py-2 px-4 text-sm font-bold">
-        🔥 ¡OFERTA POR TIEMPO LIMITADO! Acceso de por vida por solo $7.
+        🔥 Solo por lanzamiento: Tu hijo leyendo en 15 días por $7 — después vuelve a $32. ⏰ Precio limitado
       </div>
 
       {/* ═══ SECCIÓN 1 — HERO ═══ */}
