@@ -221,7 +221,7 @@ const LandingPage = () => {
                   <h3 className="font-extrabold text-[18px] text-slate-900 mb-1">{it.title}</h3>
                   <p className="text-slate-600 text-[15px] leading-relaxed">{it.desc}</p>
                 </div>
-                <span className="text-slate-400 line-through font-bold whitespace-nowrap">{it.price}</span>
+                <span className="font-bold whitespace-nowrap" style={{ color: "#888888", fontSize: "16px", textDecoration: "line-through" }}>{it.price}</span>
               </div>
             ))}
           </div>
