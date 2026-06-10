@@ -369,10 +369,15 @@ const LandingPage = () => {
               href={CHECKOUT_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="block w-full bg-[#22C55E] hover:bg-[#1eb556] text-white text-lg font-black h-[60px] flex items-center justify-center rounded-xl shadow-lg transition-all hover:scale-[1.02]"
+              className="block w-full text-white text-lg font-black h-[60px] flex items-center justify-center rounded-xl shadow-lg transition-all hover:scale-[1.02] hover:opacity-95"
+              style={{ background: "#22C55E" }}
             >
-              ¡COMPRAR AHORA!
+              ¡COMPRAR AHORA — $7 USD!
             </a>
+
+            <p className="text-center font-semibold mt-3" style={{ color: "#EF4444", fontSize: "13px" }}>
+              ⚠️ Precio de lanzamiento — vence pronto
+            </p>
 
             <p className="text-red-600 text-sm font-semibold mt-4 leading-snug">
               ⚠️ Este precio vence pronto.<br />Cuando termine el lanzamiento vuelve a $32.
