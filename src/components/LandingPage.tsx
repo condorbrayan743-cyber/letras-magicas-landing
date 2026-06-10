@@ -87,14 +87,12 @@ const LandingPage = () => {
       <section className="py-20 px-4 bg-white">
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="text-[32px] md:text-[36px] font-black text-slate-900 mb-8">Imagina esto...</h2>
-          <p className="text-[18px] md:text-[20px] text-[#444] leading-[1.8]">
+          <p className="leading-[1.8]" style={{ color: "#1a1a1a", fontSize: "22px" }}>
             Tu hijo agarra una ficha solo.<br />
             Sin que se lo pidas.<br />
             Y empieza a leer en voz alta.<br /><br />
-            Sin llantos. Sin "mamá no puedo".<br />
-            Sin frustraciones.<br /><br />
-            Solo él — aprendiendo y disfrutando<br />
-            como si fuera un juego.
+            <strong>Sin llantos. Sin "mamá no puedo". Sin frustraciones.</strong><br /><br />
+            <strong style={{ color: "#FF4D8D" }}>Solo él — aprendiendo y disfrutando como si fuera un juego.</strong>
           </p>
           <div className="w-20 h-[2px] bg-[#FF4D8D] mx-auto my-8" />
           <p className="text-[18px] font-bold text-[#FF4D8D]">
