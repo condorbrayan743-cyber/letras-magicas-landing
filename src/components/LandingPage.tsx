@@ -302,7 +302,7 @@ const LandingPage = () => {
       {/* ═══ SECCIÓN 9 — GARANTÍA ═══ */}
       <section className="py-20 px-4 bg-[#F0FFF4]">
         <div className="max-w-2xl mx-auto text-center">
-          <div className="text-[64px] mb-4">🛡️</div>
+          <div style={{ fontSize: "80px", lineHeight: 1 }} className="mb-4">🛡️</div>
           <h2 className="text-[28px] md:text-[36px] font-black text-slate-900 mb-8 leading-tight">
             Garantía de satisfacción total<br />— 7 días completos
           </h2>
