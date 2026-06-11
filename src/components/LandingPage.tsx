@@ -12,6 +12,7 @@ import extra5 from "@/assets/extra-5.webp";
 
 const CHECKOUT_URL = "https://pay.hotmart.com/A105742687W?checkoutMode=10";
 const PRIMARY_BTN = "inline-block w-full max-w-[400px] bg-[#FF4D8D] hover:bg-[#ff3580] text-white text-lg font-black px-8 py-4 rounded-2xl shadow-lg transition-all hover:scale-[1.02] text-center";
+const SECTION_PAD = "py-10 md:py-16 px-4"; // 40px móvil / 64px desktop
 
 const TrustLine = () => (
   <div className="flex flex-wrap justify-center gap-x-5 gap-y-2 mt-4 text-[13px] text-slate-600">
@@ -31,7 +32,7 @@ const LandingPage = () => {
       </div>
 
       {/* ═══ SECCIÓN 1 — HERO ═══ */}
-      <section className="bg-gradient-to-b from-[#FFE4ED] to-white py-20 px-4">
+      <section className={`bg-gradient-to-b from-[#FFE4ED] to-white ${SECTION_PAD}`}>
         <div className="max-w-4xl mx-auto text-center">
           <span className="inline-block bg-pink-100 text-[#FF4D8D] px-4 py-1 rounded-full text-sm font-bold shadow-sm mb-6">
             ✨ Método 100% Práctico
@@ -46,9 +47,9 @@ const LandingPage = () => {
 
           {/* Caja ancla de precio */}
           <div className="max-w-[420px] mx-auto bg-white border-2 border-[#FF4D8D] rounded-2xl shadow-lg p-6 mb-6">
-            <p className="text-sm text-slate-500 line-through">Valor real del pack: $32.00</p>
+            <p className="text-[16px] text-[#666666] line-through">Valor real del pack: $32.00</p>
             <p className="text-[32px] font-black text-[#FF4D8D] my-1">🔥 HOY SOLO: $7 USD</p>
-            <p className="text-xs text-slate-500">Precio especial de lanzamiento — por tiempo limitado</p>
+            <p className="text-[16px] text-[#666666]">Precio especial de lanzamiento — por tiempo limitado</p>
           </div>
 
           <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer" className={PRIMARY_BTN}>
@@ -59,13 +60,14 @@ const LandingPage = () => {
       </section>
 
       {/* ═══ SECCIÓN 2 — PRUEBA VISUAL INMEDIATA ═══ */}
-      <section className="py-20 px-4 bg-white">
+      {/* Sin padding-top: 0px gap con el botón anterior */}
+      <section className="pt-0 pb-8 px-4 bg-white">
         <div className="max-w-5xl mx-auto text-center">
           <span className="inline-block bg-pink-100 text-[#FF4D8D] px-4 py-1 rounded-full text-sm font-bold mb-6">
             Momentos reales ✨
           </span>
           <div className="max-w-full md:max-w-[75%] mx-auto">
-            <span className="inline-block bg-[#FF4D8D] text-white text-[13px] font-bold px-4 py-1.5 rounded-full mb-4">
+            <span className="inline-block bg-[#FF4D8D] text-white text-[13px] font-bold px-4 py-1.5 rounded-full" style={{ marginBottom: "8px" }}>
               📦 Esto es lo que recibes
             </span>
             <img
@@ -79,35 +81,59 @@ const LandingPage = () => {
             />
           </div>
           <p className="mt-5 text-[16px] text-slate-700 font-semibold">Así se ve en la mesa de tu hijo 👆</p>
-          <p className="text-[14px] text-slate-500">Real · Colorido · Listo para imprimir desde casa</p>
+          <p className="text-[16px] text-[#666666]">Real · Colorido · Listo para imprimir desde casa</p>
         </div>
       </section>
 
       {/* ═══ SECCIÓN 3 — RESULTADO SOÑADO ═══ */}
-      <section className="py-20 px-4 bg-white">
+      {/* 32px arriba (después de imagen) y 32px abajo (antes de +200) */}
+      <section className="bg-white px-4" style={{ paddingTop: "32px", paddingBottom: "32px" }}>
         <div className="max-w-2xl mx-auto text-center">
-          <h2 className="text-[32px] md:text-[36px] font-black text-slate-900 mb-8">Imagina esto...</h2>
-          <p className="leading-[1.8]" style={{ color: "#1a1a1a", fontSize: "22px" }}>
+          <h2 style={{ fontSize: "48px", color: "#1a1a1a", fontWeight: 900, marginBottom: "32px", lineHeight: 1.1 }}>
+            Imagina esto...
+          </h2>
+
+          <p style={{ fontSize: "24px", color: "#333333", fontWeight: 400, lineHeight: 1.8, marginBottom: "24px" }}>
             Tu hijo agarra una ficha solo.<br />
             Sin que se lo pidas.<br />
-            Y empieza a leer en voz alta.<br /><br />
-            <strong>Sin llantos. Sin "mamá no puedo". Sin frustraciones.</strong><br /><br />
-            <strong style={{ color: "#FF4D8D" }}>Solo él — aprendiendo y disfrutando como si fuera un juego.</strong>
+            Y empieza a leer en voz alta.
           </p>
-          <div className="w-20 h-[2px] bg-[#FF4D8D] mx-auto my-8" />
-          <p className="text-[18px] font-bold text-[#FF4D8D]">
+
+          <div
+            style={{
+              display: "block",
+              background: "#FFF0F5",
+              padding: "16px 24px",
+              borderRadius: "12px",
+              fontSize: "26px",
+              color: "#1a1a1a",
+              fontWeight: 800,
+              textAlign: "center",
+              marginBottom: "24px",
+            }}
+          >
+            Sin llantos. Sin "mamá no puedo". Sin frustraciones.
+          </div>
+
+          <p style={{ fontSize: "28px", color: "#FF4D8D", fontWeight: 800, fontStyle: "italic", lineHeight: 1.4 }}>
+            Solo él — aprendiendo y disfrutando como si fuera un juego.
+          </p>
+
+          <div style={{ width: "80px", height: "3px", background: "#FF4D8D", margin: "32px auto" }} />
+
+          <p style={{ fontSize: "20px", color: "#FF4D8D", fontWeight: 700, lineHeight: 1.5 }}>
             Eso es exactamente lo que reportan<br />las mamás que usan Mi Mundo de Letras.
           </p>
         </div>
       </section>
 
       {/* ═══ SECCIÓN 4 — PROBABILIDAD PERCIBIDA ═══ */}
-      <section className="py-20 px-4 bg-[#FFF0F5]">
+      <section className={`bg-[#FFF0F5] ${SECTION_PAD}`} style={{ paddingTop: "32px" }}>
         <div className="max-w-5xl mx-auto">
-          <div className="bg-white rounded-2xl shadow-md p-6 max-w-sm mx-auto text-center mb-12">
-            <p className="text-sm text-slate-500">Familias que ya lo usan</p>
+          <div className="bg-white rounded-2xl shadow-md p-6 max-w-sm mx-auto text-center mb-10">
+            <p className="text-[16px] text-[#666666]">Familias que ya lo usan</p>
             <p className="text-[48px] font-black text-[#FF4D8D] leading-none my-2">+200</p>
-            <p className="text-sm text-slate-500">y creciendo cada semana</p>
+            <p className="text-[16px] text-[#666666]">y creciendo cada semana</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
@@ -116,10 +142,10 @@ const LandingPage = () => {
               { icon: "🎨", title: "100% Lúdico", desc: "Actividades visuales y juegos que mantienen la atención de tu hijo desde el minuto 1." },
               { icon: "📈", title: "Resultados Reales", desc: "Funciona incluso con niños que 'odian sentarse a estudiar'. Progreso visible desde la primera semana." },
             ].map((c) => (
-              <div key={c.title} className="bg-white rounded-2xl shadow-md p-6 text-center">
+              <div key={c.title} className="bg-white rounded-2xl shadow-md text-center" style={{ padding: "24px" }}>
                 <div className="text-5xl mb-3">{c.icon}</div>
                 <h3 className="text-xl font-extrabold mb-2 text-slate-900">{c.title}</h3>
-                <p className="text-slate-600 text-[15px] leading-relaxed">{c.desc}</p>
+                <p style={{ color: "#555555", fontSize: "16px", lineHeight: 1.6 }}>{c.desc}</p>
               </div>
             ))}
           </div>
@@ -127,41 +153,38 @@ const LandingPage = () => {
       </section>
 
       {/* ═══ SECCIÓN 5 — TIEMPO DE DEMORA ═══ */}
-      <section className="py-20 px-4 bg-white">
+      <section className={`bg-white ${SECTION_PAD}`}>
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-[32px] md:text-[36px] font-black text-center text-slate-900 mb-12">
+          <h2 className="text-[32px] md:text-[36px] font-black text-center text-slate-900" style={{ marginBottom: "24px" }}>
             ¿Qué pasa en los primeros 15 días?
           </h2>
 
           <div className="grid md:grid-cols-[1fr_auto_1fr_auto_1fr] gap-4 items-stretch">
-            {/* Paso 1 */}
-            <div className="bg-pink-50 rounded-xl p-6 text-center">
+            <div className="bg-pink-50 rounded-xl text-center" style={{ padding: "24px" }}>
               <Star className="w-10 h-10 mx-auto text-[#FF4D8D] mb-2" />
               <span className="inline-block bg-white text-[#FF4D8D] text-xs font-bold px-3 py-1 rounded-full mb-3">Días 1 al 5</span>
               <h3 className="font-extrabold text-lg mb-2">Reconoce letras</h3>
-              <p className="text-sm text-slate-600">Identifica letras y sílabas jugando con las fichas. Sin presión. Sin memorización forzada.</p>
+              <p style={{ color: "#555555", fontSize: "16px", lineHeight: 1.6 }}>Identifica letras y sílabas jugando con las fichas. Sin presión. Sin memorización forzada.</p>
             </div>
             <ArrowRight className="hidden md:block w-8 h-8 text-[#FF4D8D] self-center mx-auto" />
             <div className="md:hidden w-px h-6 bg-[#FF4D8D] mx-auto" />
-            {/* Paso 2 */}
-            <div className="bg-pink-50 rounded-xl p-6 text-center">
+            <div className="bg-pink-50 rounded-xl text-center" style={{ padding: "24px" }}>
               <BookOpen className="w-10 h-10 mx-auto text-[#FF4D8D] mb-2" />
               <span className="inline-block bg-white text-[#FF4D8D] text-xs font-bold px-3 py-1 rounded-full mb-3">Días 6 al 10</span>
               <h3 className="font-extrabold text-lg mb-2">Forma palabras</h3>
-              <p className="text-sm text-slate-600">Combina sílabas y forma sus primeras palabras solo, sin ayuda de mamá.</p>
+              <p style={{ color: "#555555", fontSize: "16px", lineHeight: 1.6 }}>Combina sílabas y forma sus primeras palabras solo, sin ayuda de mamá.</p>
             </div>
             <ArrowRight className="hidden md:block w-8 h-8 text-[#FF4D8D] self-center mx-auto" />
             <div className="md:hidden w-px h-6 bg-[#FF4D8D] mx-auto" />
-            {/* Paso 3 */}
-            <div className="bg-[#FF4D8D] text-white rounded-xl p-6 text-center">
+            <div className="bg-[#FF4D8D] text-white rounded-xl text-center" style={{ padding: "24px" }}>
               <Trophy className="w-10 h-10 mx-auto mb-2" />
               <span className="inline-block bg-white text-[#FF4D8D] text-xs font-bold px-3 py-1 rounded-full mb-3">Día 15</span>
               <h3 className="font-extrabold text-lg mb-2">Lee en voz alta</h3>
-              <p className="text-sm text-white/95">Te sorprende leyendo frases completas. Tú solo observas y sonríes. 🎉</p>
+              <p style={{ fontSize: "16px", lineHeight: 1.6 }} className="text-white/95">Te sorprende leyendo frases completas. Tú solo observas y sonríes. 🎉</p>
             </div>
           </div>
 
-          <p className="text-center text-slate-500 text-[15px] mt-10 leading-relaxed">
+          <p className="text-center mt-8" style={{ color: "#555555", fontSize: "16px", lineHeight: 1.6 }}>
             No necesitas ser maestra.<br />
             No necesitas preparar nada especial.<br />
             Solo imprime y pon el material sobre la mesa.
@@ -170,12 +193,12 @@ const LandingPage = () => {
       </section>
 
       {/* ═══ SECCIÓN 6 — GALERÍA DEL MATERIAL ═══ */}
-      <section className="py-20 px-4 bg-[#FFF0F5]">
+      <section className={`bg-[#FFF0F5] ${SECTION_PAD}`}>
         <div className="max-w-6xl mx-auto">
           <h2 className="text-[32px] md:text-[36px] font-black text-center text-slate-900 mb-3">
             51 recursos listos para usar
           </h2>
-          <p className="text-center text-slate-600 text-[18px] mb-12">
+          <p className="text-center text-[#444444] text-[18px]" style={{ marginBottom: "24px" }}>
             Cada actividad diseñada para que aprender se sienta como jugar
           </p>
 
@@ -192,7 +215,7 @@ const LandingPage = () => {
                 <div className="aspect-[4/3] overflow-hidden bg-pink-50">
                   <img src={g.img} alt={g.label} width={g.w} height={g.h} className="w-full h-full object-cover" loading="lazy" />
                 </div>
-                <p className="text-center font-bold text-slate-800 py-3 px-2 text-[15px]">{g.label}</p>
+                <p className="text-center font-bold text-slate-800 py-3 px-2 text-[16px]">{g.label}</p>
               </div>
             ))}
           </div>
@@ -200,12 +223,12 @@ const LandingPage = () => {
       </section>
 
       {/* ═══ SECCIÓN 7 — STACK DE VALOR ═══ */}
-      <section className="py-20 px-4 bg-white">
+      <section className={`bg-white ${SECTION_PAD}`}>
         <div className="max-w-3xl mx-auto">
           <h2 className="text-[32px] md:text-[36px] font-black text-center text-slate-900 mb-3">
             ¿Qué incluye tu pack<br />"Mi Mundo de Letras"?
           </h2>
-          <p className="text-center text-slate-600 mb-12">
+          <p className="text-center text-[#444444] text-[18px]" style={{ marginBottom: "24px" }}>
             Todo lo que tu hijo necesita para aprender a leer y escribir — listo para imprimir hoy
           </p>
 
@@ -215,11 +238,11 @@ const LandingPage = () => {
               { title: "Guía Completa Mi Mundo de Letras", desc: "Método paso a paso para aplicar desde el primer día sin necesitar ser maestra ni tener experiencia previa.", price: "$10.00" },
               { title: "Cuaderno de Lectoescritura", desc: "Trazos, sílabas y palabras organizadas por nivel para que tu hijo avance sin frustraciones.", price: "$7.00" },
             ].map((it) => (
-              <div key={it.title} className="bg-white border-l-4 border-[#FF4D8D] rounded-xl shadow-md p-6 flex items-start gap-4">
+              <div key={it.title} className="bg-white border-l-4 border-[#FF4D8D] rounded-xl shadow-md flex items-start gap-4" style={{ padding: "24px" }}>
                 <Check className="w-7 h-7 text-green-600 flex-shrink-0 mt-1" />
                 <div className="flex-1">
                   <h3 className="font-extrabold text-[18px] text-slate-900 mb-1">{it.title}</h3>
-                  <p className="text-slate-600 text-[15px] leading-relaxed">{it.desc}</p>
+                  <p style={{ color: "#555555", fontSize: "16px", lineHeight: 1.6 }}>{it.desc}</p>
                 </div>
                 <span className="font-bold whitespace-nowrap" style={{ color: "#888888", fontSize: "16px", textDecoration: "line-through" }}>{it.price}</span>
               </div>
@@ -228,11 +251,10 @@ const LandingPage = () => {
 
           <div className="border-t border-slate-200 mb-8" />
 
-          {/* Caja resumen de valor */}
-          <div className="bg-gradient-to-br from-[#FFE4ED] to-white rounded-2xl shadow-xl p-10 text-center">
-            <p className="text-sm text-slate-500 mb-1">Si compraras cada cosa por separado:</p>
-            <p className="text-[20px] text-slate-400 line-through mb-6">Valor total real: $32.00</p>
-            <p className="text-sm font-bold text-[#FF4D8D] mb-1">🔥 Precio especial de lanzamiento</p>
+          <div className="bg-gradient-to-br from-[#FFE4ED] to-white rounded-2xl shadow-xl text-center" style={{ padding: "24px" }}>
+            <p className="text-[16px] text-[#666666] mb-1">Si compraras cada cosa por separado:</p>
+            <p className="text-[20px] text-[#666666] line-through mb-6">Valor total real: $32.00</p>
+            <p className="text-[16px] font-bold text-[#FF4D8D] mb-1">🔥 Precio especial de lanzamiento</p>
             <p className="leading-none mb-3">
               <span style={{ fontSize: "64px", fontWeight: 900, color: "#EF4444" }}>$7</span>
               <span className="text-xl text-slate-600 font-bold ml-2">USD</span>
@@ -242,7 +264,7 @@ const LandingPage = () => {
                 ✅ Ahorras $25 — 78% de descuento
               </span>
             </div>
-            <p className="text-slate-500 italic text-sm">Un café cuesta más que esto.</p>
+            <p className="text-[#666666] italic text-[16px]">Un café cuesta más que esto.</p>
           </div>
 
           <div className="flex flex-col items-center mt-8">
@@ -255,12 +277,12 @@ const LandingPage = () => {
       </section>
 
       {/* ═══ SECCIÓN 8 — TESTIMONIOS ═══ */}
-      <section className="py-20 px-4 bg-[#1a1a2e]">
+      <section className={`bg-[#1a1a2e] ${SECTION_PAD}`}>
         <div className="max-w-5xl mx-auto">
           <h2 className="text-[32px] md:text-[36px] font-black text-center text-white mb-3">
             Mamás y maestras que ya lo viven
           </h2>
-          <p className="text-center text-slate-300 mb-6">
+          <p className="text-center text-slate-300 text-[18px] mb-6">
             Capturas reales de mensajes de nuestras clientas ❤️
           </p>
           <div className="flex justify-center mb-10">
@@ -282,7 +304,7 @@ const LandingPage = () => {
               { quote: "Las fichas son hermosas y los niños se enganchan al instante. Lo recomiendo 100% a otras maestras.", who: "Sofía L.", role: "Maestra", color: "bg-purple-500" },
               { quote: "Compré el pack y al día siguiente ya estaba imprimiendo. Mi peque por fin disfruta aprender a leer.", who: "Verónica T.", role: "Mamá", color: "bg-pink-500" },
             ].map((t) => (
-              <div key={t.who} className="bg-white border-l-[3px] border-[#FF4D8D] rounded-xl shadow-md p-5">
+              <div key={t.who} className="bg-white border-l-[3px] border-[#FF4D8D] rounded-xl shadow-md" style={{ padding: "24px" }}>
                 <div className="flex items-center gap-3 mb-3">
                   <div className={`w-11 h-11 rounded-full ${t.color} text-white font-black flex items-center justify-center text-lg`}>
                     {t.who.charAt(0)}
@@ -292,7 +314,7 @@ const LandingPage = () => {
                     <p className="text-xs text-[#FF4D8D] font-semibold">{t.role} ⭐⭐⭐⭐⭐</p>
                   </div>
                 </div>
-                <p className="text-slate-700 italic text-[15px]">"{t.quote}"</p>
+                <p className="text-slate-700 italic text-[16px]">"{t.quote}"</p>
               </div>
             ))}
           </div>
@@ -300,28 +322,53 @@ const LandingPage = () => {
       </section>
 
       {/* ═══ SECCIÓN 9 — GARANTÍA ═══ */}
-      <section className="py-20 px-4 bg-[#F0FFF4]">
+      <section className={`bg-[#F0FFF4] ${SECTION_PAD}`}>
         <div className="max-w-2xl mx-auto text-center">
-          <div style={{ fontSize: "80px", lineHeight: 1 }} className="mb-4">🛡️</div>
-          <h2 className="text-[28px] md:text-[36px] font-black text-slate-900 mb-8 leading-tight">
+          {/* Círculo degradado con escudo */}
+          <div
+            className="mx-auto mb-6 flex items-center justify-center"
+            style={{
+              width: "100px",
+              height: "100px",
+              borderRadius: "50%",
+              background: "linear-gradient(135deg, #FF4D8D, #FF8FAB)",
+              boxShadow: "0 10px 30px rgba(255, 77, 141, 0.35)",
+            }}
+          >
+            <span style={{ fontSize: "48px", lineHeight: 1, color: "white" }}>🛡️</span>
+          </div>
+
+          <h2 className="text-[28px] md:text-[36px] font-black text-slate-900 mb-6 leading-tight">
             Garantía de satisfacción total<br />— 7 días completos
           </h2>
-          <div className="bg-white rounded-2xl shadow-lg p-8 md:p-10">
-            <p className="text-[17px] text-slate-700 leading-[1.8]">
+
+          <div className="bg-white rounded-2xl shadow-lg" style={{ padding: "24px" }}>
+            <p style={{ fontSize: "18px", color: "#333333", lineHeight: 2.0 }}>
               Sé que tu tiempo vale oro.<br />
               Y que confiar en algo nuevo requiere valentía.<br /><br />
               Por eso tienes 7 días completos<br />
               para probarlo sin ningún riesgo.<br /><br />
               Si por cualquier razón el material<br />
-              no cumple tus expectativas —<br />
-              te devuelvo cada centavo.<br /><br />
-              Sin preguntas.<br />Sin formularios.<br />Sin dramas.
+              no cumple tus expectativas —
             </p>
+
+            <p style={{ fontSize: "22px", color: "#1a1a1a", fontWeight: 800, marginTop: "16px", marginBottom: "24px" }}>
+              te devuelvo cada centavo.
+            </p>
+
+            <div style={{ display: "flex", flexDirection: "column", gap: "8px", marginBottom: "16px" }}>
+              <p style={{ fontSize: "20px", color: "#1a1a1a", fontWeight: 700 }}>Sin preguntas.</p>
+              <p style={{ fontSize: "20px", color: "#1a1a1a", fontWeight: 700 }}>Sin formularios.</p>
+              <p style={{ fontSize: "20px", color: "#1a1a1a", fontWeight: 700 }}>Sin dramas.</p>
+            </div>
+
             <div className="border-t border-slate-200 my-6" />
-            <p className="font-bold text-center" style={{ color: "#FF4D8D", fontSize: "20px" }}>
+
+            <p className="text-center" style={{ color: "#FF4D8D", fontSize: "24px", fontWeight: 900, lineHeight: 1.4 }}>
               O quedas feliz — o te devuelvo tu dinero.<br />Así de simple.
             </p>
-            <p className="text-slate-500 italic text-sm mt-4">
+
+            <p style={{ color: "#666666", fontSize: "16px", fontStyle: "italic", marginTop: "16px" }}>
               (La garantía existe porque creo en lo que vendo. Y quiero que tú también lo compruebes sin miedo.)
             </p>
           </div>
@@ -329,16 +376,16 @@ const LandingPage = () => {
       </section>
 
       {/* ═══ SECCIÓN 10 — URGENCIA + OFERTA FINAL ═══ */}
-      <section id="comprar" className="py-20 px-4 bg-gradient-to-br from-[#FF6B9D] to-[#FFB347]">
+      <section id="comprar" className={`bg-gradient-to-br from-[#FF6B9D] to-[#FFB347] ${SECTION_PAD}`}>
         <div className="max-w-2xl mx-auto text-center">
           <span className="inline-block bg-white/90 text-[#FF4D8D] px-4 py-1 rounded-full text-sm font-bold mb-6">
             ⏰ Precio especial de lanzamiento
           </span>
-          <h2 className="text-[32px] md:text-[40px] font-black text-white leading-tight mb-10">
+          <h2 className="text-[32px] md:text-[40px] font-black text-white leading-tight" style={{ marginBottom: "24px" }}>
             ¿Lista para ver a tu hijo<br />leer y escribir con confianza?
           </h2>
 
-          <div className="bg-white rounded-[20px] shadow-2xl p-8 md:p-10 max-w-[500px] mx-auto">
+          <div className="bg-white rounded-[20px] shadow-2xl max-w-[500px] mx-auto" style={{ padding: "24px" }}>
             <p className="font-bold text-slate-800 mb-5">¡Aprovecha el 80% de descuento hoy!</p>
 
             <ul className="text-left space-y-3 mb-6">
@@ -347,19 +394,19 @@ const LandingPage = () => {
                 { name: "Guía Mi Mundo de Letras", price: "$10" },
                 { name: "Cuaderno de Lectoescritura", price: "$7" },
               ].map((it) => (
-                <li key={it.name} className="flex justify-between items-center text-[15px] border-b border-slate-100 pb-2">
+                <li key={it.name} className="flex justify-between items-center text-[16px] border-b border-slate-100 pb-2">
                   <span className="flex items-center gap-2"><Check className="w-5 h-5 text-green-600 flex-shrink-0" /> {it.name}</span>
-                  <span className="line-through text-slate-400 font-bold">{it.price}</span>
+                  <span className="line-through text-[#666666] font-bold">{it.price}</span>
                 </li>
               ))}
             </ul>
 
             <div className="border-t border-slate-200 mb-4" />
 
-            <p className="text-sm text-slate-500">Valor total:</p>
-            <p className="text-[20px] text-slate-400 line-through font-bold mb-4">$32.00</p>
+            <p className="text-[16px] text-[#666666]">Valor total:</p>
+            <p className="text-[20px] text-[#666666] line-through font-bold mb-4">$32.00</p>
 
-            <p className="text-sm font-bold text-[#FF4D8D]">🔥 Tú pagas hoy:</p>
+            <p className="text-[16px] font-bold text-[#FF4D8D]">🔥 Tú pagas hoy:</p>
             <p className="leading-none mb-6">
               <span className="text-[64px] md:text-[72px] font-black text-[#FF4D8D]">$7</span>
               <span className="text-xl text-slate-600 font-bold ml-2">USD</span>
@@ -379,11 +426,11 @@ const LandingPage = () => {
               ⚠️ Precio de lanzamiento — vence pronto
             </p>
 
-            <p className="text-red-600 text-sm font-semibold mt-4 leading-snug">
+            <p className="text-red-600 text-[16px] font-semibold mt-4 leading-snug">
               ⚠️ Este precio vence pronto.<br />Cuando termine el lanzamiento vuelve a $32.
             </p>
 
-            <div className="flex flex-wrap justify-center gap-x-4 gap-y-1 mt-4 text-[12px] text-slate-500">
+            <div className="flex flex-wrap justify-center gap-x-4 gap-y-1 mt-4 text-[16px] text-[#666666]">
               <span>🔒 Pago seguro</span>
               <span>⚡ Descarga inmediata</span>
               <span>🛡️ Garantía 7 días sin preguntas</span>
@@ -393,15 +440,18 @@ const LandingPage = () => {
       </section>
 
       {/* ═══ SECCIÓN 11 — PÁRRAFO DE CIERRE ═══ */}
-      <section className="py-20 px-4 bg-white">
+      <section className={`bg-white ${SECTION_PAD}`}>
         <div className="max-w-xl mx-auto text-center">
-          <p className="text-[18px] text-[#444] leading-[1.8] mb-8">
-            Miles de mamás ya usan este material<br />
-            con sus hijos cada semana.<br /><br />
-            El único requisito es tener una impresora<br />
-            y querer que tu hijo disfrute aprendiendo.<br /><br />
-            Si eso eres tú —<br />
-            ya tienes todo lo que necesitas.
+          <p style={{ fontSize: "22px", color: "#1a1a1a", fontWeight: 700, lineHeight: 1.5, marginBottom: "20px" }}>
+            Miles de mamás ya usan este material<br />con sus hijos cada semana.
+          </p>
+
+          <p style={{ fontSize: "20px", color: "#444444", fontWeight: 400, lineHeight: 1.6, marginBottom: "24px" }}>
+            El único requisito es tener una impresora<br />y querer que tu hijo disfrute aprendiendo.
+          </p>
+
+          <p style={{ fontSize: "28px", color: "#FF4D8D", fontWeight: 900, fontStyle: "italic", lineHeight: 1.4, marginBottom: "32px" }}>
+            Si eso eres tú —<br />ya tienes todo lo que necesitas.
           </p>
 
           <div className="flex flex-col items-center">
@@ -410,16 +460,16 @@ const LandingPage = () => {
             </a>
           </div>
 
-          <p className="text-slate-500 italic text-sm mt-6">
+          <p className="text-center" style={{ fontSize: "14px", color: "#888888", fontStyle: "italic", marginTop: "16px" }}>
             Un café cuesta más que darle a tu hijo<br />las herramientas para leer solo.
           </p>
         </div>
       </section>
 
       {/* ═══ SECCIÓN 12 — FAQ ═══ */}
-      <section className="py-20 px-4 bg-[#FFF0F5]">
+      <section className={`bg-[#FFF0F5] ${SECTION_PAD}`}>
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-[28px] md:text-[32px] font-black text-center text-slate-900 mb-10">
+          <h2 className="text-[28px] md:text-[32px] font-black text-center text-slate-900" style={{ marginBottom: "24px" }}>
             Preguntas Frecuentes
           </h2>
           <div className="space-y-4">
@@ -450,12 +500,12 @@ Sin formularios largos. Sin dar explicaciones. Sin dramas.
 La garantía existe porque creo en lo que vendo. Y en todo el tiempo que llevo vendiendo este pack, los reembolsos han sido casi cero — porque el material habla por sí solo desde el momento en que lo abres.`,
               },
             ].map((f) => (
-              <details key={f.q} className="group bg-white rounded-2xl p-5 shadow-sm">
+              <details key={f.q} className="group bg-white rounded-2xl shadow-sm" style={{ padding: "24px" }}>
                 <summary className="flex justify-between items-center cursor-pointer font-bold text-[17px] text-slate-900">
                   {f.q}
                   <ChevronDown className="w-5 h-5 transition-transform group-open:rotate-180 text-[#FF4D8D]" />
                 </summary>
-                <p className="mt-4 text-slate-700 whitespace-pre-line leading-relaxed">{f.a}</p>
+                <p className="mt-4 whitespace-pre-line" style={{ color: "#444444", fontSize: "16px", lineHeight: 1.6 }}>{f.a}</p>
               </details>
             ))}
           </div>
