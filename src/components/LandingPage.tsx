@@ -335,7 +335,7 @@ const LandingPage = () => {
             <p className="text-[20px] text-[#666666] line-through mb-6">Valor total real: $32.00</p>
             <p className="text-[16px] font-bold text-[#FF4D8D] mb-1">🔥 Precio especial de lanzamiento</p>
             <p className="leading-none mb-3">
-              <span style={{ fontSize: "64px", fontWeight: 900, color: "#EF4444" }}>$7</span>
+              <span className="font-fredoka" style={{ fontSize: "64px", color: "#EF4444" }}>$7</span>
               <span className="text-xl text-slate-600 font-bold ml-2">USD</span>
             </p>
             <div className="flex justify-center mb-2">
