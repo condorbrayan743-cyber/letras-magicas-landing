@@ -2,13 +2,27 @@
 @import "tw-animate-css";
 @source "../src";
 
-html, body { font-family: "Nunito", system-ui, sans-serif; }
+html, body { font-family: "Nunito", system-ui, sans-serif; font-weight: 400; }
+
+.landing-page h1, .landing-page h2, .landing-page h3 {
+  font-family: "Baloo 2", system-ui, sans-serif;
+  font-weight: 800;
+}
+
+.font-fredoka { font-family: "Fredoka One", "Baloo 2", system-ui, sans-serif; font-weight: 400; }
+.font-baloo { font-family: "Baloo 2", system-ui, sans-serif; }
 
 @keyframes bounce-soft {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-10px); }
 }
 .animate-bounce-soft { animation: bounce-soft 3s infinite ease-in-out; }
+
+@keyframes arrow-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(6px); }
+}
+.animate-arrow-bounce { display: inline-block; animation: arrow-bounce 1.4s ease-in-out infinite; }
 
 @custom-variant dark (&:is(.dark *));
 
