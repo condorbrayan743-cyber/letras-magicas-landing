@@ -417,40 +417,57 @@ const LandingPage = () => {
             <span style={{ fontSize: "48px", lineHeight: 1, color: "white" }}>🛡️</span>
           </div>
 
-          <h2 className="text-[28px] md:text-[36px] font-black text-slate-900 mb-6 leading-tight">
+          <h2 style={{ fontFamily: "'Baloo 2', sans-serif", fontSize: "36px", fontWeight: 900, color: "#1a1a1a", marginBottom: "24px", lineHeight: 1.15 }}>
             Garantía de satisfacción total<br />— 7 días completos
           </h2>
 
-          <div className="bg-white rounded-2xl shadow-lg" style={{ padding: "24px" }}>
-            <p style={{ fontSize: "18px", color: "#333333", lineHeight: 2.0 }}>
+          <div className="bg-white rounded-2xl shadow-lg text-left" style={{ padding: "24px" }}>
+            <p style={{ fontFamily: "'Nunito', sans-serif", fontSize: "18px", fontWeight: 400, color: "#444444", lineHeight: 2.0, marginBottom: "16px" }}>
               Sé que tu tiempo vale oro.<br />
-              Y que confiar en algo nuevo requiere valentía.<br /><br />
+              Y que confiar en algo nuevo requiere valentía.
+            </p>
+
+            <p style={{ fontFamily: "'Nunito', sans-serif", fontSize: "18px", fontWeight: 700, color: "#1a1a1a", lineHeight: 1.6, marginBottom: "16px" }}>
               Por eso tienes 7 días completos<br />
-              para probarlo sin ningún riesgo.<br /><br />
+              para probarlo sin ningún riesgo.
+            </p>
+
+            <p style={{ fontFamily: "'Nunito', sans-serif", fontSize: "18px", fontWeight: 400, color: "#444444", lineHeight: 1.6, marginBottom: "8px" }}>
               Si por cualquier razón el material<br />
               no cumple tus expectativas —
             </p>
 
-            <p style={{ fontSize: "22px", color: "#1a1a1a", fontWeight: 800, marginTop: "16px", marginBottom: "24px" }}>
+            <p style={{ fontFamily: "'Baloo 2', sans-serif", fontSize: "24px", fontWeight: 900, color: "#1a1a1a", marginBottom: "20px" }}>
               te devuelvo cada centavo.
             </p>
 
-            <div style={{ display: "flex", flexDirection: "column", gap: "8px", marginBottom: "16px" }}>
-              <p style={{ fontSize: "20px", color: "#1a1a1a", fontWeight: 700 }}>Sin preguntas.</p>
-              <p style={{ fontSize: "20px", color: "#1a1a1a", fontWeight: 700 }}>Sin formularios.</p>
-              <p style={{ fontSize: "20px", color: "#1a1a1a", fontWeight: 700 }}>Sin dramas.</p>
+            <div style={{ display: "flex", flexDirection: "column", gap: "4px", marginBottom: "16px" }}>
+              <p style={{ fontFamily: "'Nunito', sans-serif", fontSize: "20px", fontWeight: 900, color: "#1a1a1a", lineHeight: 1.8, margin: 0 }}>Sin preguntas.</p>
+              <p style={{ fontFamily: "'Nunito', sans-serif", fontSize: "20px", fontWeight: 900, color: "#1a1a1a", lineHeight: 1.8, margin: 0 }}>Sin formularios.</p>
+              <p style={{ fontFamily: "'Nunito', sans-serif", fontSize: "20px", fontWeight: 900, color: "#1a1a1a", lineHeight: 1.8, margin: 0 }}>Sin dramas.</p>
             </div>
 
-            <div className="border-t border-slate-200 my-6" />
+            <div style={{ borderTop: "1px solid #FFB6D9", margin: "16px 0" }} />
 
-            <p className="text-center" style={{ color: "#FF4D8D", fontSize: "24px", fontWeight: 900, lineHeight: 1.4 }}>
+            {/* Caja rosa destacada */}
+            <div style={{ background: "#FFF0F5", borderRadius: "12px", padding: "12px 20px", margin: "8px 0", textAlign: "center" }}>
+              <p style={{ fontFamily: "'Baloo 2', sans-serif", fontSize: "22px", fontWeight: 900, color: "#FF4D8D", margin: 0, lineHeight: 1.3 }}>
+                O quedas feliz — o te devuelvo tu dinero.
+              </p>
+              <p style={{ fontFamily: "'Fredoka One', sans-serif", fontSize: "20px", color: "#FF4D8D", margin: "4px 0 0" }}>
+                Así de simple.
+              </p>
+            </div>
+
+            <p className="text-center" style={{ fontFamily: "'Baloo 2', sans-serif", color: "#FF4D8D", fontSize: "24px", fontWeight: 900, fontStyle: "italic", lineHeight: 1.4, marginTop: "12px" }}>
               O quedas feliz — o te devuelvo tu dinero.<br />Así de simple.
             </p>
 
-            <p style={{ color: "#666666", fontSize: "16px", fontStyle: "italic", marginTop: "16px" }}>
+            <p style={{ fontFamily: "'Nunito', sans-serif", color: "#888888", fontSize: "14px", fontStyle: "italic", marginTop: "16px", textAlign: "center" }}>
               (La garantía existe porque creo en lo que vendo. Y quiero que tú también lo compruebes sin miedo.)
             </p>
           </div>
+
         </div>
       </section>
 
