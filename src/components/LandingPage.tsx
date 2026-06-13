@@ -505,7 +505,7 @@ const LandingPage = () => {
 
             <p className="text-[16px] font-bold text-[#FF4D8D]">🔥 Tú pagas hoy:</p>
             <p className="leading-none mb-6">
-              <span className="text-[64px] md:text-[72px] font-black text-[#FF4D8D]">$7</span>
+              <span className="font-fredoka text-[64px] md:text-[72px] text-[#FF4D8D]">$7</span>
               <span className="text-xl text-slate-600 font-bold ml-2">USD</span>
             </p>
 
