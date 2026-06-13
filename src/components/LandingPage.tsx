@@ -449,6 +449,10 @@ const LandingPage = () => {
 
             <div style={{ borderTop: "1px solid #FFB6D9", margin: "16px 0" }} />
 
+            <p className="text-center" style={{ fontFamily: "'Baloo 2', sans-serif", color: "#FF4D8D", fontSize: "24px", fontWeight: 900, fontStyle: "italic", lineHeight: 1.4, marginTop: "12px" }}>
+              O quedas feliz — o te devuelvo tu dinero.<br />Así de simple.
+            </p>
+
             {/* Caja rosa destacada */}
             <div style={{ background: "#FFF0F5", borderRadius: "12px", padding: "12px 20px", margin: "8px 0", textAlign: "center" }}>
               <p style={{ fontFamily: "'Baloo 2', sans-serif", fontSize: "22px", fontWeight: 900, color: "#FF4D8D", margin: 0, lineHeight: 1.3 }}>
@@ -459,9 +463,6 @@ const LandingPage = () => {
               </p>
             </div>
 
-            <p className="text-center" style={{ fontFamily: "'Baloo 2', sans-serif", color: "#FF4D8D", fontSize: "24px", fontWeight: 900, fontStyle: "italic", lineHeight: 1.4, marginTop: "12px" }}>
-              O quedas feliz — o te devuelvo tu dinero.<br />Así de simple.
-            </p>
 
             <p style={{ fontFamily: "'Nunito', sans-serif", color: "#888888", fontSize: "14px", fontStyle: "italic", marginTop: "16px", textAlign: "center" }}>
               (La garantía existe porque creo en lo que vendo. Y quiero que tú también lo compruebes sin miedo.)
