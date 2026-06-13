@@ -547,9 +547,10 @@ const LandingPage = () => {
             El único requisito es tener una impresora<br />y querer que tu hijo disfrute aprendiendo.
           </p>
 
-          <p style={{ fontSize: "28px", color: "#FF4D8D", fontWeight: 900, fontStyle: "italic", lineHeight: 1.4, marginBottom: "32px" }}>
+          <p style={{ fontFamily: "'Baloo 2', sans-serif", fontSize: "28px", color: "#FF4D8D", fontWeight: 800, fontStyle: "italic", lineHeight: 1.4, marginBottom: "32px" }}>
             Si eso eres tú —<br />ya tienes todo lo que necesitas.
           </p>
+
 
           <div className="flex flex-col items-center">
             <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer" className={PRIMARY_BTN}>
