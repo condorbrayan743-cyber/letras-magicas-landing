@@ -25,7 +25,7 @@ const TrustLine = () => (
 
 const LandingPage = () => {
   return (
-    <div className="min-h-screen bg-[#FFF0F5] text-slate-800">
+    <div className="landing-page min-h-screen bg-[#FFF0F5] text-slate-800">
       {/* BARRA DE URGENCIA */}
       <div className="bg-[#FF4D8D] text-white text-center py-2 px-4 text-sm font-bold">
         🔥 Solo por lanzamiento: Tu hijo leyendo en 15 días por $7 — después vuelve a $32. ⏰ Precio limitado
@@ -85,47 +85,126 @@ const LandingPage = () => {
         </div>
       </section>
 
-      {/* ═══ SECCIÓN 3 — RESULTADO SOÑADO ═══ */}
-      {/* 32px arriba (después de imagen) y 32px abajo (antes de +200) */}
-      <section className="bg-white px-4" style={{ paddingTop: "32px", paddingBottom: "32px" }}>
-        <div className="max-w-2xl mx-auto text-center">
-          <h2 style={{ fontSize: "48px", color: "#1a1a1a", fontWeight: 900, marginBottom: "32px", lineHeight: 1.1 }}>
+      {/* ═══ SECCIÓN 3 — RESULTADO SOÑADO (Imagina esto...) ═══ */}
+      <section className="bg-white" style={{ paddingTop: "48px", paddingBottom: "48px", paddingLeft: "20px", paddingRight: "20px" }}>
+        <div style={{ maxWidth: "560px", margin: "0 auto", textAlign: "center" }}>
+          {/* ELEMENTO 1 — Pill tag */}
+          <span
+            style={{
+              display: "inline-block",
+              background: "#FFF0F5",
+              color: "#FF4D8D",
+              fontFamily: "'Nunito', sans-serif",
+              fontWeight: 900,
+              fontSize: "12px",
+              textTransform: "uppercase",
+              letterSpacing: "0.08em",
+              padding: "6px 18px",
+              borderRadius: "999px",
+              border: "1.5px solid #FFB6D9",
+              marginBottom: "20px",
+            }}
+          >
+            ✨ Esto es real
+          </span>
+
+          {/* ELEMENTO 2 — Título */}
+          <h2 style={{ fontFamily: "'Baloo 2', sans-serif", fontSize: "42px", fontWeight: 900, color: "#1a1a1a", lineHeight: 1.1, marginBottom: "24px" }}>
             Imagina esto...
           </h2>
 
-          <p style={{ fontSize: "24px", color: "#333333", fontWeight: 400, lineHeight: 1.8, marginBottom: "24px" }}>
-            Tu hijo agarra una ficha solo.<br />
-            Sin que se lo pidas.<br />
-            Y empieza a leer en voz alta.
+          {/* ELEMENTO 3 — Escena */}
+          <p style={{ fontFamily: "'Nunito', sans-serif", fontSize: "19px", fontWeight: 400, color: "#555555", lineHeight: 2.0, marginBottom: "20px" }}>
+            Son las 4 de la tarde.<br />
+            Tu hijo se sienta solo a la mesa.<br />
+            Sin que se lo pidas.
           </p>
 
+          {/* ELEMENTO 4 — Línea de acción */}
           <div
             style={{
-              display: "block",
-              background: "#FFF0F5",
-              padding: "16px 24px",
-              borderRadius: "12px",
-              fontSize: "26px",
-              color: "#1a1a1a",
+              background: "#F5F5F5",
+              borderLeft: "4px solid #FF4D8D",
+              borderRadius: "0 12px 12px 0",
+              padding: "14px 20px",
+              textAlign: "left",
+              fontFamily: "'Baloo 2', sans-serif",
+              fontSize: "22px",
               fontWeight: 800,
+              color: "#1a1a1a",
+              marginBottom: "20px",
+              lineHeight: 1.4,
+            }}
+          >
+            Agarra una ficha.<br />
+            Y empieza a leer en voz alta.
+          </div>
+
+          {/* ELEMENTO 5 — Separador */}
+          <div style={{ width: "48px", height: "3px", background: "#FF4D8D", borderRadius: "999px", margin: "0 auto 20px" }} />
+
+          {/* ELEMENTO 6 — Caja de dolor */}
+          <div
+            style={{
+              background: "#FFF0F5",
+              border: "1.5px solid #FFB6D9",
+              borderRadius: "16px",
+              padding: "20px 28px",
+              display: "flex",
+              flexDirection: "column",
+              gap: "4px",
+              marginBottom: "20px",
+            }}
+          >
+            <p style={{ fontFamily: "'Nunito', sans-serif", fontSize: "20px", fontWeight: 900, color: "#CC2066", margin: 0 }}>Sin llantos.</p>
+            <p style={{ fontFamily: "'Nunito', sans-serif", fontSize: "20px", fontWeight: 900, color: "#CC2066", margin: 0 }}>Sin "mamá no puedo".</p>
+            <p style={{ fontFamily: "'Nunito', sans-serif", fontSize: "20px", fontWeight: 900, color: "#CC2066", margin: 0 }}>Sin esa cara de frustración</p>
+            <p style={{ fontFamily: "'Nunito', sans-serif", fontSize: "15px", fontWeight: 700, color: "#AA3366", margin: 0 }}>que te parte el corazón.</p>
+          </div>
+
+          {/* ELEMENTO 7 — Separador */}
+          <div style={{ width: "48px", height: "3px", background: "#FF4D8D", borderRadius: "999px", margin: "0 auto 20px" }} />
+
+          {/* ELEMENTO 8 — Clímax */}
+          <p style={{ fontFamily: "'Fredoka One', sans-serif", fontSize: "38px", color: "#1a1a1a", letterSpacing: "-0.5px", lineHeight: 1.15, margin: 0 }}>
+            Solo él. Leyendo. Sonriendo. Solo.
+          </p>
+          <p style={{ fontFamily: "'Baloo 2', sans-serif", fontSize: "15px", fontWeight: 700, color: "#888888", textTransform: "uppercase", letterSpacing: "0.12em", marginTop: "8px", marginBottom: "20px" }}>
+            sin que tú tengas que hacer nada
+          </p>
+
+          {/* ELEMENTO 9 — Línea de mamá */}
+          <p style={{ fontFamily: "'Nunito', sans-serif", fontSize: "18px", fontWeight: 700, fontStyle: "italic", color: "#FF4D8D", lineHeight: 1.7, marginBottom: "20px" }}>
+            Y tú — mirándolo desde la cocina<br />— con los ojos aguados.
+          </p>
+
+          {/* ELEMENTO 10 — Caja de credibilidad */}
+          <div
+            style={{
+              background: "#F9F9F9",
+              borderRadius: "14px",
+              padding: "18px 24px",
+              display: "flex",
+              flexDirection: "column",
+              gap: "6px",
               textAlign: "center",
               marginBottom: "24px",
             }}
           >
-            Sin llantos. Sin "mamá no puedo". Sin frustraciones.
+            <p style={{ fontFamily: "'Nunito', sans-serif", fontSize: "16px", fontStyle: "italic", color: "#888888", margin: 0 }}>Eso no es un sueño.</p>
+            <p style={{ fontFamily: "'Baloo 2', sans-serif", fontSize: "20px", fontWeight: 800, color: "#1a1a1a", margin: 0 }}>Es lo que pasa en la semana 2.</p>
+            <p style={{ fontFamily: "'Nunito', sans-serif", fontSize: "16px", fontStyle: "italic", color: "#888888", margin: 0 }}>Y empieza con una decisión de</p>
+            <p style={{ fontFamily: "'Fredoka One', sans-serif", fontSize: "28px", color: "#FF4D8D", margin: 0 }}>$7 USD.</p>
           </div>
 
-          <p style={{ fontSize: "28px", color: "#FF4D8D", fontWeight: 800, fontStyle: "italic", lineHeight: 1.4 }}>
-            Solo él — aprendiendo y disfrutando como si fuera un juego.
-          </p>
-
-          <div style={{ width: "80px", height: "3px", background: "#FF4D8D", margin: "32px auto" }} />
-
-          <p style={{ fontSize: "20px", color: "#FF4D8D", fontWeight: 700, lineHeight: 1.5 }}>
-            Eso es exactamente lo que reportan<br />las mamás que usan Mi Mundo de Letras.
+          {/* ELEMENTO 11 — Gancho de scroll */}
+          <p style={{ fontFamily: "'Baloo 2', sans-serif", fontSize: "17px", fontWeight: 800, color: "#FF4D8D", display: "flex", alignItems: "center", justifyContent: "center", gap: "8px", margin: 0 }}>
+            <span className="animate-arrow-bounce">↓</span>
+            Sigue leyendo para ver cómo funciona
           </p>
         </div>
       </section>
+
 
       {/* ═══ SECCIÓN 4 — PROBABILIDAD PERCIBIDA ═══ */}
       <section className={`bg-[#FFF0F5] ${SECTION_PAD}`} style={{ paddingTop: "32px" }}>
@@ -256,7 +335,7 @@ const LandingPage = () => {
             <p className="text-[20px] text-[#666666] line-through mb-6">Valor total real: $32.00</p>
             <p className="text-[16px] font-bold text-[#FF4D8D] mb-1">🔥 Precio especial de lanzamiento</p>
             <p className="leading-none mb-3">
-              <span style={{ fontSize: "64px", fontWeight: 900, color: "#EF4444" }}>$7</span>
+              <span className="font-fredoka" style={{ fontSize: "64px", color: "#EF4444" }}>$7</span>
               <span className="text-xl text-slate-600 font-bold ml-2">USD</span>
             </p>
             <div className="flex justify-center mb-2">
@@ -338,40 +417,58 @@ const LandingPage = () => {
             <span style={{ fontSize: "48px", lineHeight: 1, color: "white" }}>🛡️</span>
           </div>
 
-          <h2 className="text-[28px] md:text-[36px] font-black text-slate-900 mb-6 leading-tight">
+          <h2 style={{ fontFamily: "'Baloo 2', sans-serif", fontSize: "36px", fontWeight: 900, color: "#1a1a1a", marginBottom: "24px", lineHeight: 1.15 }}>
             Garantía de satisfacción total<br />— 7 días completos
           </h2>
 
-          <div className="bg-white rounded-2xl shadow-lg" style={{ padding: "24px" }}>
-            <p style={{ fontSize: "18px", color: "#333333", lineHeight: 2.0 }}>
+          <div className="bg-white rounded-2xl shadow-lg text-left" style={{ padding: "24px" }}>
+            <p style={{ fontFamily: "'Nunito', sans-serif", fontSize: "18px", fontWeight: 400, color: "#444444", lineHeight: 2.0, marginBottom: "16px" }}>
               Sé que tu tiempo vale oro.<br />
-              Y que confiar en algo nuevo requiere valentía.<br /><br />
+              Y que confiar en algo nuevo requiere valentía.
+            </p>
+
+            <p style={{ fontFamily: "'Nunito', sans-serif", fontSize: "18px", fontWeight: 700, color: "#1a1a1a", lineHeight: 1.6, marginBottom: "16px" }}>
               Por eso tienes 7 días completos<br />
-              para probarlo sin ningún riesgo.<br /><br />
+              para probarlo sin ningún riesgo.
+            </p>
+
+            <p style={{ fontFamily: "'Nunito', sans-serif", fontSize: "18px", fontWeight: 400, color: "#444444", lineHeight: 1.6, marginBottom: "8px" }}>
               Si por cualquier razón el material<br />
               no cumple tus expectativas —
             </p>
 
-            <p style={{ fontSize: "22px", color: "#1a1a1a", fontWeight: 800, marginTop: "16px", marginBottom: "24px" }}>
+            <p style={{ fontFamily: "'Baloo 2', sans-serif", fontSize: "24px", fontWeight: 900, color: "#1a1a1a", marginBottom: "20px" }}>
               te devuelvo cada centavo.
             </p>
 
-            <div style={{ display: "flex", flexDirection: "column", gap: "8px", marginBottom: "16px" }}>
-              <p style={{ fontSize: "20px", color: "#1a1a1a", fontWeight: 700 }}>Sin preguntas.</p>
-              <p style={{ fontSize: "20px", color: "#1a1a1a", fontWeight: 700 }}>Sin formularios.</p>
-              <p style={{ fontSize: "20px", color: "#1a1a1a", fontWeight: 700 }}>Sin dramas.</p>
+            <div style={{ display: "flex", flexDirection: "column", gap: "4px", marginBottom: "16px" }}>
+              <p style={{ fontFamily: "'Nunito', sans-serif", fontSize: "20px", fontWeight: 900, color: "#1a1a1a", lineHeight: 1.8, margin: 0 }}>Sin preguntas.</p>
+              <p style={{ fontFamily: "'Nunito', sans-serif", fontSize: "20px", fontWeight: 900, color: "#1a1a1a", lineHeight: 1.8, margin: 0 }}>Sin formularios.</p>
+              <p style={{ fontFamily: "'Nunito', sans-serif", fontSize: "20px", fontWeight: 900, color: "#1a1a1a", lineHeight: 1.8, margin: 0 }}>Sin dramas.</p>
             </div>
 
-            <div className="border-t border-slate-200 my-6" />
+            <div style={{ borderTop: "1px solid #FFB6D9", margin: "16px 0" }} />
 
-            <p className="text-center" style={{ color: "#FF4D8D", fontSize: "24px", fontWeight: 900, lineHeight: 1.4 }}>
+            <p className="text-center" style={{ fontFamily: "'Baloo 2', sans-serif", color: "#FF4D8D", fontSize: "24px", fontWeight: 900, fontStyle: "italic", lineHeight: 1.4, marginTop: "12px" }}>
               O quedas feliz — o te devuelvo tu dinero.<br />Así de simple.
             </p>
 
-            <p style={{ color: "#666666", fontSize: "16px", fontStyle: "italic", marginTop: "16px" }}>
+            {/* Caja rosa destacada */}
+            <div style={{ background: "#FFF0F5", borderRadius: "12px", padding: "12px 20px", margin: "8px 0", textAlign: "center" }}>
+              <p style={{ fontFamily: "'Baloo 2', sans-serif", fontSize: "22px", fontWeight: 900, color: "#FF4D8D", margin: 0, lineHeight: 1.3 }}>
+                O quedas feliz — o te devuelvo tu dinero.
+              </p>
+              <p style={{ fontFamily: "'Fredoka One', sans-serif", fontSize: "20px", color: "#FF4D8D", margin: "4px 0 0" }}>
+                Así de simple.
+              </p>
+            </div>
+
+
+            <p style={{ fontFamily: "'Nunito', sans-serif", color: "#888888", fontSize: "14px", fontStyle: "italic", marginTop: "16px", textAlign: "center" }}>
               (La garantía existe porque creo en lo que vendo. Y quiero que tú también lo compruebes sin miedo.)
             </p>
           </div>
+
         </div>
       </section>
 
@@ -408,7 +505,7 @@ const LandingPage = () => {
 
             <p className="text-[16px] font-bold text-[#FF4D8D]">🔥 Tú pagas hoy:</p>
             <p className="leading-none mb-6">
-              <span className="text-[64px] md:text-[72px] font-black text-[#FF4D8D]">$7</span>
+              <span className="font-fredoka text-[64px] md:text-[72px] text-[#FF4D8D]">$7</span>
               <span className="text-xl text-slate-600 font-bold ml-2">USD</span>
             </p>
 
@@ -450,9 +547,10 @@ const LandingPage = () => {
             El único requisito es tener una impresora<br />y querer que tu hijo disfrute aprendiendo.
           </p>
 
-          <p style={{ fontSize: "28px", color: "#FF4D8D", fontWeight: 900, fontStyle: "italic", lineHeight: 1.4, marginBottom: "32px" }}>
+          <p style={{ fontFamily: "'Baloo 2', sans-serif", fontSize: "28px", color: "#FF4D8D", fontWeight: 800, fontStyle: "italic", lineHeight: 1.4, marginBottom: "32px" }}>
             Si eso eres tú —<br />ya tienes todo lo que necesitas.
           </p>
+
 
           <div className="flex flex-col items-center">
             <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer" className={PRIMARY_BTN}>
