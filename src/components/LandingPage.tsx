@@ -385,74 +385,165 @@ const LandingPage = () => {
       </section>
 
       {/* ═══ SECCIÓN 9 — GARANTÍA ═══ */}
-      <section className={`bg-[#F0FFF4] ${SECTION_PAD}`}>
-        <div className="max-w-2xl mx-auto text-center">
-          {/* Círculo degradado con escudo */}
+      <section style={{ padding: "0 16px" }}>
+        <div
+          style={{
+            maxWidth: "640px",
+            margin: "0 auto",
+            background: "#F0FFF4",
+            borderRadius: "20px",
+            padding: "40px 16px",
+          }}
+        >
+          {/* ELEMENTO 1 — ÍCONO */}
           <div
-            className="mx-auto mb-6 flex items-center justify-center"
             style={{
-              width: "100px",
-              height: "100px",
+              width: "72px",
+              height: "72px",
               borderRadius: "50%",
               background: "linear-gradient(135deg, #FF4D8D, #FF8FAB)",
-              boxShadow: "0 10px 30px rgba(255, 77, 141, 0.35)",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              margin: "0 auto 16px",
             }}
           >
-            <span style={{ fontSize: "48px", lineHeight: 1, color: "white" }}>🛡️</span>
+            <span style={{ fontSize: "36px" }}>🛡️</span>
           </div>
 
-          <h2 style={{ fontFamily: "'Baloo 2', sans-serif", fontSize: "36px", fontWeight: 900, color: "#1a1a1a", marginBottom: "24px", lineHeight: 1.15 }}>
-            Garantía de satisfacción total<br />— 7 días completos
+          {/* ELEMENTO 2 — TÍTULO */}
+          <h2
+            style={{
+              fontFamily: "'Baloo 2', sans-serif",
+              fontSize: "28px",
+              fontWeight: 900,
+              color: "#1a1a1a",
+              lineHeight: 1.15,
+              textAlign: "center",
+              marginBottom: "24px",
+            }}
+          >
+            Garantía total
+            <br />
+            <span style={{ color: "#FF4D8D" }}>7 días — sin preguntas</span>
           </h2>
 
-          <div className="bg-white rounded-2xl shadow-lg text-left" style={{ padding: "24px" }}>
-            <p style={{ fontFamily: "'Nunito', sans-serif", fontSize: "18px", fontWeight: 400, color: "#444444", lineHeight: 2.0, marginBottom: "16px" }}>
-              Sé que tu tiempo vale oro.<br />
-              Y que confiar en algo nuevo requiere valentía.
-            </p>
-
-            <p style={{ fontFamily: "'Nunito', sans-serif", fontSize: "18px", fontWeight: 700, color: "#1a1a1a", lineHeight: 1.6, marginBottom: "16px" }}>
-              Por eso tienes 7 días completos<br />
-              para probarlo sin ningún riesgo.
-            </p>
-
-            <p style={{ fontFamily: "'Nunito', sans-serif", fontSize: "18px", fontWeight: 400, color: "#444444", lineHeight: 1.6, marginBottom: "8px" }}>
-              Si por cualquier razón el material<br />
-              no cumple tus expectativas —
-            </p>
-
-            <p style={{ fontFamily: "'Baloo 2', sans-serif", fontSize: "24px", fontWeight: 900, color: "#1a1a1a", marginBottom: "20px" }}>
-              te devuelvo cada centavo.
-            </p>
-
-            <div style={{ display: "flex", flexDirection: "column", gap: "4px", marginBottom: "16px" }}>
-              <p style={{ fontFamily: "'Nunito', sans-serif", fontSize: "20px", fontWeight: 900, color: "#1a1a1a", lineHeight: 1.8, margin: 0 }}>Sin preguntas.</p>
-              <p style={{ fontFamily: "'Nunito', sans-serif", fontSize: "20px", fontWeight: 900, color: "#1a1a1a", lineHeight: 1.8, margin: 0 }}>Sin formularios.</p>
-              <p style={{ fontFamily: "'Nunito', sans-serif", fontSize: "20px", fontWeight: 900, color: "#1a1a1a", lineHeight: 1.8, margin: 0 }}>Sin dramas.</p>
-            </div>
-
-            <div style={{ borderTop: "1px solid #FFB6D9", margin: "16px 0" }} />
-
-            <p className="text-center" style={{ fontFamily: "'Baloo 2', sans-serif", color: "#FF4D8D", fontSize: "24px", fontWeight: 900, fontStyle: "italic", lineHeight: 1.4, marginTop: "12px" }}>
-              O quedas feliz — o te devuelvo tu dinero.<br />Así de simple.
-            </p>
-
-            {/* Caja rosa destacada */}
-            <div style={{ background: "#FFF0F5", borderRadius: "12px", padding: "12px 20px", margin: "8px 0", textAlign: "center" }}>
-              <p style={{ fontFamily: "'Baloo 2', sans-serif", fontSize: "22px", fontWeight: 900, color: "#FF4D8D", margin: 0, lineHeight: 1.3 }}>
-                O quedas feliz — o te devuelvo tu dinero.
+          {/* ELEMENTO 3 — GRID 2 COLUMNAS */}
+          <div className="grid grid-cols-1 md:grid-cols-2" style={{ gap: "10px", marginBottom: "10px" }}>
+            {/* Tarjeta izquierda — Tu riesgo */}
+            <div style={{ background: "#1a1a1a", borderRadius: "14px", padding: "16px 14px", textAlign: "center" }}>
+              <p style={{ fontFamily: "'Nunito', sans-serif", fontSize: "10px", fontWeight: 900, textTransform: "uppercase", color: "#FF8FAB", letterSpacing: "0.08em", marginBottom: "6px" }}>
+                Tu riesgo
               </p>
-              <p style={{ fontFamily: "'Fredoka One', sans-serif", fontSize: "20px", color: "#FF4D8D", margin: "4px 0 0" }}>
-                Así de simple.
+              <p style={{ fontFamily: "'Baloo 2', sans-serif", fontSize: "18px", fontWeight: 900, color: "#ffffff", lineHeight: 1.4, margin: 0 }}>
+                Confiar en algo nuevo{" "}
+                <span style={{ color: "#FF8FAB" }}>requiere valentía.</span>
               </p>
             </div>
+            {/* Tarjeta derecha — Mi promesa */}
+            <div style={{ background: "#ffffff", border: "1.5px solid #FFB6D9", borderRadius: "14px", padding: "16px 14px", textAlign: "center" }}>
+              <p style={{ fontFamily: "'Nunito', sans-serif", fontSize: "10px", fontWeight: 900, textTransform: "uppercase", color: "#FF4D8D", letterSpacing: "0.08em", marginBottom: "6px" }}>
+                Mi promesa
+              </p>
+              <p style={{ fontFamily: "'Nunito', sans-serif", fontSize: "15px", fontWeight: 700, color: "#333333", lineHeight: 1.5, margin: 0 }}>
+                Por eso tienes{" "}
+                <span style={{ color: "#FF4D8D", fontWeight: 900 }}>7 días completos</span>{" "}
+                para probarlo sin ningún riesgo.
+              </p>
+            </div>
+          </div>
 
+          {/* ELEMENTO 4 — GRID 3 COLUMNAS */}
+          <div className="grid grid-cols-1 md:grid-cols-3" style={{ gap: "10px", marginBottom: "10px" }}>
+            <div style={{ background: "#FFF0F5", border: "1.5px solid #FFB6D9", borderRadius: "14px", padding: "14px 12px", textAlign: "center" }}>
+              <div style={{ fontSize: "26px", marginBottom: "8px" }}>❌</div>
+              <p style={{ fontFamily: "'Nunito', sans-serif", fontSize: "14px", fontWeight: 900, color: "#CC2066", margin: 0 }}>Sin preguntas.</p>
+            </div>
+            <div style={{ background: "#FFF0F5", border: "1.5px solid #FFB6D9", borderRadius: "14px", padding: "14px 12px", textAlign: "center" }}>
+              <div style={{ fontSize: "26px", marginBottom: "8px" }}>📋</div>
+              <p style={{ fontFamily: "'Nunito', sans-serif", fontSize: "14px", fontWeight: 900, color: "#CC2066", margin: 0 }}>Sin formularios.</p>
+            </div>
+            <div style={{ background: "#FFF0F5", border: "1.5px solid #FFB6D9", borderRadius: "14px", padding: "14px 12px", textAlign: "center" }}>
+              <div style={{ fontSize: "26px", marginBottom: "8px" }}>🎭</div>
+              <p style={{ fontFamily: "'Nunito', sans-serif", fontSize: "14px", fontWeight: 900, color: "#CC2066", margin: 0 }}>Sin dramas.</p>
+            </div>
+          </div>
 
-            <p style={{ fontFamily: "'Nunito', sans-serif", color: "#888888", fontSize: "14px", fontStyle: "italic", marginTop: "16px", textAlign: "center" }}>
-              (La garantía existe porque creo en lo que vendo. Y quiero que tú también lo compruebes sin miedo.)
+          {/* ELEMENTO 5 — SEPARADOR */}
+          <div style={{ width: "40px", height: "3px", background: "#FF4D8D", borderRadius: "999px", margin: "14px auto" }} />
+
+          {/* ELEMENTO 6 — CLÍMAX */}
+          <p
+            style={{
+              fontFamily: "'Fredoka One', sans-serif",
+              fontSize: "26px",
+              color: "#1a1a1a",
+              lineHeight: 1.2,
+              textAlign: "center",
+              marginBottom: "4px",
+            }}
+          >
+            Si el material no cumple —
+            <br />
+            te devuelvo cada centavo.
+          </p>
+          <p
+            style={{
+              fontFamily: "'Baloo 2', sans-serif",
+              fontSize: "11px",
+              fontWeight: 700,
+              color: "#aaaaaa",
+              textTransform: "uppercase",
+              letterSpacing: "0.1em",
+              textAlign: "center",
+              marginBottom: "16px",
+            }}
+          >
+            así de fácil, así de rápido
+          </p>
+
+          {/* ELEMENTO 7 — TARJETA DE CIERRE */}
+          <div style={{ background: "#FF4D8D", borderRadius: "14px", padding: "18px", textAlign: "center" }}>
+            <p
+              style={{
+                fontFamily: "'Baloo 2', sans-serif",
+                fontSize: "18px",
+                fontWeight: 900,
+                fontStyle: "italic",
+                color: "#ffffff",
+                lineHeight: 1.4,
+                margin: 0,
+              }}
+            >
+              O quedas feliz con tu hijo leyendo solo.
+            </p>
+            <p
+              style={{
+                fontFamily: "'Fredoka One', sans-serif",
+                fontSize: "22px",
+                color: "#ffffff",
+                marginTop: "4px",
+                lineHeight: 1.3,
+              }}
+            >
+              O te devuelvo tu dinero. Así de simple.
             </p>
           </div>
 
+          {/* ELEMENTO 8 — NOTA FINAL */}
+          <p
+            style={{
+              fontFamily: "'Nunito', sans-serif",
+              fontSize: "12px",
+              fontStyle: "italic",
+              color: "#888888",
+              marginTop: "14px",
+              lineHeight: 1.6,
+              textAlign: "center",
+            }}
+          >
+            (La garantía existe porque creo en lo que vendo. Y quiero que tú también lo compruebes sin miedo.)
+          </p>
         </div>
       </section>
 
