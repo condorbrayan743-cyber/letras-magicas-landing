@@ -9,6 +9,9 @@ import heroShowcase from "@/assets/hero-showcase.webp.asset.json";
 import extra1 from "@/assets/extra-1.webp";
 import extra4 from "@/assets/extra-4.webp";
 import extra5 from "@/assets/extra-5.webp";
+import escenaNino from "@/assets/escena-nino.jpg";
+import accionMama from "@/assets/accion-mama.jpg";
+import mamaCocina from "@/assets/mama-cocina.jpg";
 
 const CHECKOUT_URL = "https://pay.hotmart.com/A105742687W?checkoutMode=10";
 const PRIMARY_BTN = "inline-block w-full max-w-[400px] bg-[#FF4D8D] hover:bg-[#ff3580] text-white text-lg font-black px-8 py-4 rounded-2xl shadow-lg transition-all hover:scale-[1.02] text-center";
@@ -86,108 +89,191 @@ const LandingPage = () => {
       </section>
 
       {/* ═══ SECCIÓN 3 — RESULTADO SOÑADO (Imagina esto...) ═══ */}
-      <section className="bg-white" style={{ padding: "32px 20px" }}>
-        <style>{`@keyframes bb{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}`}</style>
-        <div style={{ maxWidth: "640px", margin: "0 auto", textAlign: "center" }}>
-          {/* ELEMENTO 1 — Pill tag */}
-          <span
-            style={{
-              display: "inline-block",
-              background: "#FFF0F5",
-              color: "#CC2066",
-              fontFamily: "'Nunito', sans-serif",
-              fontSize: "11px",
-              fontWeight: 900,
-              textTransform: "uppercase",
-              letterSpacing: "0.08em",
-              padding: "5px 16px",
-              borderRadius: "999px",
-              border: "1.5px solid #FFB6D9",
-              marginBottom: "16px",
-            }}
-          >
-            ✨ Esto es real
-          </span>
+      <section style={{ background: "#FFF0F5", padding: "48px 20px" }}>
+        <style>{`
+          @keyframes bb{0%,100%{transform:translateY(0)}50%{transform:translateY(4px)}}
+          @keyframes pulseGlow{0%,100%{box-shadow:0 8px 24px -8px rgba(255,77,141,.55)}50%{box-shadow:0 12px 32px -6px rgba(255,77,141,.85)}}
+        `}</style>
+        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          {/* BLOQUE 1 — Encabezado compacto */}
+          <div style={{ textAlign: "center", marginBottom: "24px" }}>
+            <span style={{
+              display: "inline-block", background: "#FFE4EF", color: "#FF4D8D",
+              fontFamily: "'Nunito', sans-serif", fontSize: "11px", fontWeight: 900,
+              textTransform: "uppercase", letterSpacing: "0.12em",
+              padding: "6px 16px", borderRadius: "999px", marginBottom: "10px",
+            }}>
+              ✨ Esto es real
+            </span>
+            <h2 style={{
+              fontFamily: "'Baloo 2', sans-serif", fontSize: "44px", fontWeight: 900,
+              color: "#111827", lineHeight: 1.05, margin: 0,
+            }}>
+              Imagina esto<span style={{ color: "#FF4D8D" }}>...</span>
+            </h2>
+          </div>
 
-          {/* ELEMENTO 2 — Título */}
-          <h2 style={{ fontFamily: "'Baloo 2', sans-serif", fontSize: "36px", fontWeight: 900, color: "#1a1a1a", lineHeight: 1.1, marginBottom: "20px" }}>
-            Imagina esto...
-          </h2>
-
-          {/* ELEMENTO 3 — Grid 2 columnas */}
-          <div className="grid grid-cols-1 md:grid-cols-2" style={{ gap: "10px", marginBottom: "10px" }}>
-            {/* Tarjeta izquierda */}
-            <div style={{ background: "#F9F9F9", borderRadius: "14px", padding: "16px 14px", textAlign: "left", borderLeft: "3px solid #FFB6D9" }}>
-              <p style={{ fontFamily: "'Nunito', sans-serif", fontSize: "10px", fontWeight: 900, textTransform: "uppercase", color: "#FF4D8D", letterSpacing: "0.08em", marginBottom: "6px" }}>
-                La escena
-              </p>
-              <p style={{ fontFamily: "'Nunito', sans-serif", fontSize: "15px", fontWeight: 700, color: "#333", lineHeight: 1.5, margin: 0 }}>
-                Son las 4 de la tarde. Tu hijo se sienta solo. Sin que se lo pidas.
-              </p>
+          {/* BLOQUE 2 — Fila 2 tarjetas anchas */}
+          <div className="grid grid-cols-1 md:grid-cols-2" style={{ gap: "16px", marginBottom: "16px" }}>
+            {/* Tarjeta La Escena */}
+            <div style={{
+              background: "#FFFFFF", borderRadius: "20px", overflow: "hidden",
+              boxShadow: "0 4px 14px -6px rgba(255,77,141,.18)",
+              display: "flex", minHeight: "220px",
+            }}>
+              <img src={escenaNino} alt="Niño leyendo" loading="lazy" width={1024} height={1024}
+                style={{ width: "44%", objectFit: "cover", flexShrink: 0 }} />
+              <div style={{ padding: "20px 22px", display: "flex", flexDirection: "column", justifyContent: "center", flex: 1 }}>
+                <span style={{
+                  display: "inline-block", alignSelf: "flex-start",
+                  background: "#FF4D8D", color: "#fff",
+                  fontFamily: "'Nunito', sans-serif", fontSize: "10px", fontWeight: 900,
+                  textTransform: "uppercase", letterSpacing: "0.1em",
+                  padding: "5px 12px", borderRadius: "999px", marginBottom: "12px",
+                }}>La escena</span>
+                <p style={{ fontFamily: "'Nunito', sans-serif", fontSize: "16px", fontWeight: 700, color: "#111827", lineHeight: 1.55, margin: 0 }}>
+                  Son las 4 de la tarde.<br />
+                  Tu hijo se sienta solo.<br />
+                  Sin que se lo pidas.
+                </p>
+              </div>
             </div>
-            {/* Tarjeta derecha */}
-            <div style={{ background: "#1a1a1a", borderRadius: "14px", padding: "16px 14px", textAlign: "center", display: "flex", flexDirection: "column", justifyContent: "center", gap: "4px" }}>
-              <p style={{ fontFamily: "'Baloo 2', sans-serif", fontSize: "20px", fontWeight: 900, color: "#fff", margin: 0 }}>
-                Agarra una ficha.
+            {/* Tarjeta La Acción */}
+            <div style={{
+              background: "#111827", borderRadius: "20px", overflow: "hidden",
+              boxShadow: "0 4px 14px -6px rgba(17,24,39,.35)",
+              display: "flex", minHeight: "220px",
+            }}>
+              <img src={accionMama} alt="Mamá acompañando" loading="lazy" width={1024} height={1024}
+                style={{ width: "44%", objectFit: "cover", flexShrink: 0 }} />
+              <div style={{ padding: "20px 22px", display: "flex", flexDirection: "column", justifyContent: "center", flex: 1 }}>
+                <p style={{ fontFamily: "'Baloo 2', sans-serif", fontSize: "22px", fontWeight: 900, color: "#FFFFFF", margin: 0, lineHeight: 1.2 }}>
+                  Agarra una ficha.
+                </p>
+                <p style={{ fontFamily: "'Baloo 2', sans-serif", fontSize: "22px", fontWeight: 900, color: "#FF8FAB", margin: "6px 0 0", lineHeight: 1.2 }}>
+                  Y empieza a leer en voz alta.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* BLOQUE 3 — Fila 3 tarjetas pequeñas */}
+          <div className="grid grid-cols-1 md:grid-cols-3" style={{ gap: "16px", marginBottom: "32px" }}>
+            {[
+              { emoji: "😭", text: "Sin llantos." },
+              { emoji: "🤗", text: "Sin mamá no puedo." },
+              { emoji: "💔", text: "Sin esa cara que te parte el corazón." },
+            ].map((it, i) => (
+              <div key={i} style={{
+                background: "#FFFFFF", borderRadius: "20px",
+                padding: "20px 22px", display: "flex", alignItems: "center", gap: "16px",
+                boxShadow: "0 2px 10px -4px rgba(255,77,141,.18)",
+              }}>
+                <div style={{
+                  fontSize: "40px", lineHeight: 1, flexShrink: 0,
+                  width: "60px", height: "60px", borderRadius: "16px",
+                  background: "#FFF0F5", display: "flex", alignItems: "center", justifyContent: "center",
+                }}>{it.emoji}</div>
+                <p style={{ fontFamily: "'Baloo 2', sans-serif", fontSize: "17px", fontWeight: 800, color: "#111827", margin: 0, lineHeight: 1.3 }}>
+                  {it.text}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          {/* BLOQUE 4 — Separador + clímax */}
+          <div style={{ textAlign: "center", marginBottom: "32px" }}>
+            <div style={{ width: "56px", height: "3px", background: "#FF4D8D", borderRadius: "999px", margin: "0 auto 20px" }} />
+            <h3 style={{
+              fontFamily: "'Baloo 2', sans-serif", fontWeight: 900,
+              fontSize: "clamp(28px, 4vw, 44px)", color: "#111827",
+              lineHeight: 1.1, margin: 0, letterSpacing: "-0.5px",
+            }}>
+              Solo <span style={{ color: "#FF4D8D" }}>él</span>. Leyendo. Sonriendo. Solo.
+            </h3>
+            <p style={{
+              fontFamily: "'Nunito', sans-serif", fontSize: "12px", fontWeight: 900,
+              color: "#6B7280", textTransform: "uppercase", letterSpacing: "0.18em",
+              marginTop: "10px",
+            }}>
+              Sin que tú tengas que hacer nada 💗
+            </p>
+          </div>
+
+          {/* BLOQUE 5 — Fila 2 tarjetas cierre */}
+          <div className="grid grid-cols-1 md:grid-cols-2" style={{ gap: "16px", marginBottom: "28px" }}>
+            {/* Recompensa */}
+            <div style={{
+              background: "#FFFFFF", borderRadius: "20px", overflow: "hidden",
+              boxShadow: "0 4px 14px -6px rgba(255,77,141,.18)",
+              display: "flex", minHeight: "240px",
+            }}>
+              <img src={mamaCocina} alt="Mamá en la cocina" loading="lazy" width={1024} height={1024}
+                style={{ width: "46%", objectFit: "cover", flexShrink: 0 }} />
+              <div style={{ padding: "22px 24px", display: "flex", alignItems: "center", justifyContent: "center", flex: 1 }}>
+                <div style={{
+                  background: "#FFF0F5", borderRadius: "20px",
+                  padding: "18px 20px", position: "relative",
+                  border: "1.5px solid #FFD4E5",
+                }}>
+                  <p style={{
+                    fontFamily: "'Baloo 2', sans-serif", fontSize: "17px", fontWeight: 800,
+                    color: "#CC2066", lineHeight: 1.4, margin: 0, textAlign: "center",
+                  }}>
+                    Y tú — mirándolo desde la cocina — con los ojos aguados. 💗
+                  </p>
+                </div>
+              </div>
+            </div>
+            {/* Oferta */}
+            <div style={{
+              background: "linear-gradient(135deg,#FFFFFF 0%,#FFF7FB 100%)",
+              borderRadius: "20px", padding: "28px 24px",
+              boxShadow: "0 4px 14px -6px rgba(255,77,141,.18)",
+              display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center",
+              minHeight: "240px",
+            }}>
+              <div style={{ fontSize: "32px", marginBottom: "4px" }}>🌙☁️</div>
+              <p style={{ fontFamily: "'Nunito', sans-serif", fontSize: "14px", fontStyle: "italic", color: "#6B7280", margin: "2px 0" }}>
+                Eso no es un sueño.
               </p>
-              <p style={{ fontFamily: "'Baloo 2', sans-serif", fontSize: "20px", fontWeight: 900, color: "#FF8FAB", margin: 0 }}>
-                Y empieza a leer en voz alta.
+              <p style={{ fontFamily: "'Baloo 2', sans-serif", fontSize: "22px", fontWeight: 900, color: "#111827", margin: "2px 0 8px" }}>
+                Pasa en la semana 2.
+              </p>
+              <div style={{ width: "32px", height: "2px", background: "#FF4D8D", borderRadius: "999px", margin: "4px 0 10px" }} />
+              <p style={{ fontFamily: "'Nunito', sans-serif", fontSize: "13px", color: "#6B7280", margin: 0 }}>Empieza con</p>
+              <p style={{
+                fontFamily: "'Fredoka One', sans-serif", fontSize: "52px",
+                color: "#FF4D8D", margin: "2px 0 0", lineHeight: 1,
+              }}>
+                $7 <span style={{ fontSize: "26px" }}>USD</span>
               </p>
             </div>
           </div>
 
-          {/* ELEMENTO 4 — Grid 3 columnas (dolor) */}
-          <div className="grid grid-cols-1 md:grid-cols-3" style={{ gap: "10px", marginBottom: "10px" }}>
-            <div style={{ background: "#FFF0F5", border: "1.5px solid #FFB6D9", borderRadius: "14px", padding: "14px 12px", textAlign: "center" }}>
-              <div style={{ fontSize: "22px", marginBottom: "4px" }}>😢</div>
-              <p style={{ fontFamily: "'Nunito', sans-serif", fontSize: "14px", fontWeight: 900, color: "#CC2066", margin: 0 }}>Sin llantos.</p>
-            </div>
-            <div style={{ background: "#FFF0F5", border: "1.5px solid #FFB6D9", borderRadius: "14px", padding: "14px 12px", textAlign: "center" }}>
-              <div style={{ fontSize: "22px", marginBottom: "4px" }}>🙅</div>
-              <p style={{ fontFamily: "'Nunito', sans-serif", fontSize: "14px", fontWeight: 900, color: "#CC2066", margin: 0 }}>Sin mamá no puedo.</p>
-            </div>
-            <div style={{ background: "#FFF0F5", border: "1.5px solid #FFB6D9", borderRadius: "14px", padding: "14px 12px", textAlign: "center" }}>
-              <div style={{ fontSize: "22px", marginBottom: "4px" }}>💔</div>
-              <p style={{ fontFamily: "'Nunito', sans-serif", fontSize: "14px", fontWeight: 900, color: "#CC2066", margin: 0 }}>Sin esa cara</p>
-              <p style={{ fontFamily: "'Nunito', sans-serif", fontSize: "11px", fontWeight: 700, color: "#AA3366", margin: 0 }}>que te parte el corazón.</p>
-            </div>
+          {/* BLOQUE 6 — CTA + scroll cue */}
+          <div style={{ textAlign: "center" }}>
+            <a href={CHECKOUT_URL} style={{
+              display: "inline-block", background: "#FF4D8D", color: "#FFFFFF",
+              fontFamily: "'Baloo 2', sans-serif", fontWeight: 900, fontSize: "18px",
+              letterSpacing: "0.04em", padding: "16px 38px", borderRadius: "999px",
+              textDecoration: "none", animation: "pulseGlow 2.4s ease-in-out infinite",
+            }}>
+              QUIERO EMPEZAR AHORA
+            </a>
+            <p style={{
+              fontFamily: "'Nunito', sans-serif", fontSize: "14px", fontWeight: 700,
+              color: "#6B7280", marginTop: "14px", display: "flex",
+              alignItems: "center", justifyContent: "center", gap: "6px",
+            }}>
+              <span style={{ display: "inline-block", animation: "bb 1.4s ease-in-out infinite" }}>↓</span>
+              Sigue leyendo para ver cómo funciona
+            </p>
           </div>
-
-          {/* ELEMENTO 5 — Separador */}
-          <div style={{ width: "40px", height: "3px", background: "#FF4D8D", borderRadius: "999px", margin: "14px auto" }} />
-
-          {/* ELEMENTO 6 — Clímax */}
-          <p style={{ fontFamily: "'Fredoka One', sans-serif", fontSize: "32px", color: "#1a1a1a", letterSpacing: "-0.5px", lineHeight: 1.15, marginBottom: "4px" }}>
-            Solo él. Leyendo. Sonriendo. Solo.
-          </p>
-          <p style={{ fontFamily: "'Baloo 2', sans-serif", fontSize: "11px", fontWeight: 700, color: "#aaaaaa", textTransform: "uppercase", letterSpacing: "0.12em", marginBottom: "14px" }}>
-            sin que tú tengas que hacer nada
-          </p>
-
-          {/* ELEMENTO 7 — Grid 2 columnas (fondo) */}
-          <div className="grid grid-cols-1 md:grid-cols-2" style={{ gap: "10px", marginBottom: "14px" }}>
-            {/* Tarjeta izquierda — mamá */}
-            <div style={{ background: "#FFF0F5", borderRadius: "14px", padding: "16px", textAlign: "center", border: "1.5px solid #FFB6D9" }}>
-              <p style={{ fontFamily: "'Nunito', sans-serif", fontSize: "15px", fontWeight: 700, fontStyle: "italic", color: "#CC2066", lineHeight: 1.6, margin: 0 }}>
-                Y tú — mirándolo desde la cocina — con los ojos aguados.
-              </p>
-            </div>
-            {/* Tarjeta derecha — credibilidad */}
-            <div style={{ background: "#F9F9F9", borderRadius: "14px", padding: "16px", textAlign: "center", display: "flex", flexDirection: "column", gap: "4px", justifyContent: "center" }}>
-              <p style={{ fontFamily: "'Nunito', sans-serif", fontSize: "12px", fontStyle: "italic", color: "#888888", margin: 0 }}>Eso no es un sueño.</p>
-              <p style={{ fontFamily: "'Baloo 2', sans-serif", fontSize: "16px", fontWeight: 900, color: "#1a1a1a", margin: 0 }}>Pasa en la semana 2.</p>
-              <p style={{ fontFamily: "'Nunito', sans-serif", fontSize: "12px", fontStyle: "italic", color: "#888888", margin: 0 }}>Empieza con</p>
-              <p style={{ fontFamily: "'Fredoka One', sans-serif", fontSize: "26px", color: "#FF4D8D", margin: 0 }}>$7 USD.</p>
-            </div>
-          </div>
-
-          {/* ELEMENTO 8 — Gancho de scroll */}
-          <p style={{ fontFamily: "'Baloo 2', sans-serif", fontSize: "15px", fontWeight: 800, color: "#FF4D8D", display: "flex", alignItems: "center", justifyContent: "center", gap: "6px", margin: 0 }}>
-            <span style={{ display: "inline-block", animation: "bb 1.4s ease-in-out infinite" }}>↓</span>
-            Sigue leyendo para ver cómo funciona
-          </p>
         </div>
       </section>
+
+
 
 
       {/* ═══ SECCIÓN 4 — PROBABILIDAD PERCIBIDA ═══ */}
