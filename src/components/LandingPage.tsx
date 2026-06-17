@@ -9,6 +9,9 @@ import heroShowcase from "@/assets/hero-showcase.webp.asset.json";
 import extra1 from "@/assets/extra-1.webp";
 import extra4 from "@/assets/extra-4.webp";
 import extra5 from "@/assets/extra-5.webp";
+import escenaNino from "@/assets/escena-nino.jpg";
+import accionMama from "@/assets/accion-mama.jpg";
+import mamaCocina from "@/assets/mama-cocina.jpg";
 
 const CHECKOUT_URL = "https://pay.hotmart.com/A105742687W?checkoutMode=10";
 const PRIMARY_BTN = "inline-block w-full max-w-[400px] bg-[#FF4D8D] hover:bg-[#ff3580] text-white text-lg font-black px-8 py-4 rounded-2xl shadow-lg transition-all hover:scale-[1.02] text-center";
