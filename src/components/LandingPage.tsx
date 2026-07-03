@@ -1,4 +1,5 @@
-import { ChevronDown, ShieldCheck, Mail, CreditCard, Clock, Palette, TrendingUp, Star, BookOpen, Trophy, ArrowRight, Check } from "lucide-react";
+import { useEffect, useState } from "react";
+import { ChevronDown, ShieldCheck, Mail, CreditCard, Clock, Palette, TrendingUp, Star, BookOpen, Trophy, ArrowRight, Check, X } from "lucide-react";
 import pack1 from "@/assets/pack-1.webp";
 import pack2 from "@/assets/pack-2.webp";
 import pack3 from "@/assets/pack-3.webp";
