@@ -559,27 +559,35 @@ const LandingPage = () => {
               La historia detrás del pack
             </span>
             <h2 className="text-[32px] md:text-[40px] font-black text-slate-900 leading-tight">
-              Por qué creé <span className="text-[#FF4D8D]">Mi Mundo de Letras</span>
+              No lo hice para vender. Lo hice porque lo necesitaba.
             </h2>
           </div>
 
           <div className="space-y-5 text-[17px] md:text-[18px] text-slate-700 leading-relaxed">
-            <p>
-              Investigué a fondo qué materiales realmente funcionan para enseñar a leer y escribir,
-              porque quería algo <strong>práctico, sin complicaciones</strong>, y que cualquier padre,
-              madre o maestro pudiera usar sin preparación previa.
-            </p>
-            <p>
-              Cada hoja sigue una progresión pensada para que el aprendizaje sea gradual:
-              primero <strong>reconocimiento de letras</strong>, luego <strong>trazo guiado</strong>,
-              después <strong>práctica libre</strong> — todo listo para imprimir y usar el mismo día
-              que lo descargas.
-            </p>
-            <p>
-              Así nació <em>Mi Mundo de Letras</em>: un pack pensado para que enseñar a leer deje de
-              ser una batalla, y se convierta en un momento que disfrutan juntos.
-            </p>
+            <p>Busqué. Comparé. Probé decenas de hojas sueltas que no llevaban a ningún lado.</p>
+            <p>Lo que encontré no era práctico, no seguía un orden, o simplemente no funcionaba. Así que decidí crear el material que yo mismo hubiera querido encontrar desde el principio.</p>
+            <p className="font-bold text-slate-900">Sin relleno. Sin complicaciones. Sin necesitar ser experto para usarlo.</p>
           </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
+            <div className="bg-pink-50 rounded-xl p-5 text-center">
+              <div className="text-3xl mb-2">🎯</div>
+              <p className="font-bold text-slate-900 text-[15px] mb-1">Progresión real</p>
+              <p className="text-[15px] text-slate-600 leading-snug">De reconocer letras, a trazarlas, a escribirlas solo. Un paso a la vez.</p>
+            </div>
+            <div className="bg-pink-50 rounded-xl p-5 text-center">
+              <div className="text-3xl mb-2">🖨️</div>
+              <p className="font-bold text-slate-900 text-[15px] mb-1">Listo desde el día uno</p>
+              <p className="text-[15px] text-slate-600 leading-snug">Imprime y usa hoy mismo, sin preparar nada.</p>
+            </div>
+            <div className="bg-pink-50 rounded-xl p-5 text-center">
+              <div className="text-3xl mb-2">❤️</div>
+              <p className="font-bold text-slate-900 text-[15px] mb-1">Pensado para disfrutarse</p>
+              <p className="text-[15px] text-slate-600 leading-snug">Que enseñar a leer deje de sentirse como una batalla.</p>
+            </div>
+          </div>
+
+          <p className="text-center mt-8 text-[18px] font-bold text-slate-900">Así nació Mi Mundo de Letras.</p>
 
           {/* Bloque de garantía visual destacado */}
           <div
