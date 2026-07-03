@@ -27,13 +27,90 @@ const TrustLine = () => (
   </div>
 );
 
+const GALLERY_ITEMS = [
+  { img: pack2, label: "Lectura de sílabas", w: 768, h: 681 },
+  { img: pack5, label: "Numeración inicial", w: 784, h: 662 },
+  { img: extra1, label: "Trazos y escritura", w: 938, h: 1041 },
+  { img: extra4, label: "Tarjetas de vocabulario", w: 944, h: 879 },
+  { img: extra5, label: "Juegos de memoria", w: 896, h: 1198 },
+  { img: pack3, label: "Actividades a color", w: 1169, h: 800 },
+];
+
+const MARQUEE_TEXT = "Método práctico de lectoescritura • Descarga inmediata • Garantía de 7 días • Listo para imprimir";
+
+const Marquee = () => (
+  <div style={{ background: "#1a1a1a", color: "#FFE4ED", overflow: "hidden", whiteSpace: "nowrap", padding: "8px 0", borderTop: "1px solid #FF4D8D", borderBottom: "1px solid #FF4D8D" }}>
+    <style>{`@keyframes ml-mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}`}</style>
+    <div style={{ display: "inline-block", animation: "ml-mq 28s linear infinite", fontWeight: 700, fontSize: "14px", letterSpacing: "0.02em" }}>
+      {Array.from({ length: 6 }).map((_, i) => (
+        <span key={i} style={{ paddingRight: "48px" }}>{MARQUEE_TEXT} <span style={{ color: "#FF4D8D" }}>•</span></span>
+      ))}
+    </div>
+  </div>
+);
+
+const Countdown = () => {
+  const [t, setT] = useState({ h: 23, m: 59, s: 59 });
+  useEffect(() => {
+    const KEY = "mml_countdown_end";
+    let end = Number(typeof window !== "undefined" ? window.localStorage.getItem(KEY) : 0);
+    const now = Date.now();
+    if (!end || end < now) {
+      end = now + 24 * 60 * 60 * 1000;
+      window.localStorage.setItem(KEY, String(end));
+    }
+    const tick = () => {
+      const diff = Math.max(0, end - Date.now());
+      const h = Math.floor(diff / 3600000);
+      const m = Math.floor((diff % 3600000) / 60000);
+      const s = Math.floor((diff % 60000) / 1000);
+      setT({ h, m, s });
+    };
+    tick();
+    const id = setInterval(tick, 1000);
+    return () => clearInterval(id);
+  }, []);
+  const pad = (n: number) => String(n).padStart(2, "0");
+  const Box = ({ v, l }: { v: string; l: string }) => (
+    <div style={{ background: "#1a1a1a", color: "#fff", borderRadius: "12px", padding: "10px 14px", minWidth: "72px", textAlign: "center" }}>
+      <div className="font-fredoka" style={{ fontSize: "32px", lineHeight: 1, color: "#FF4D8D" }}>{v}</div>
+      <div style={{ fontSize: "10px", letterSpacing: "0.15em", textTransform: "uppercase", marginTop: "4px", color: "#ffb6d9" }}>{l}</div>
+    </div>
+  );
+  return (
+    <div style={{ margin: "0 auto 16px" }}>
+      <p style={{ textAlign: "center", fontWeight: 800, color: "#EF4444", marginBottom: "10px", fontSize: "14px", letterSpacing: "0.05em", textTransform: "uppercase" }}>
+        ⏰ Precio de lanzamiento termina en
+      </p>
+      <div style={{ display: "flex", justifyContent: "center", gap: "8px" }}>
+        <Box v={pad(t.h)} l="Horas" />
+        <Box v={pad(t.m)} l="Min" />
+        <Box v={pad(t.s)} l="Seg" />
+      </div>
+    </div>
+  );
+};
+
 const LandingPage = () => {
+  const [selectedIdx, setSelectedIdx] = useState(0);
+  const [lightbox, setLightbox] = useState(false);
+  const selected = GALLERY_ITEMS[selectedIdx];
+
+  useEffect(() => {
+    if (!lightbox) return;
+    const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") setLightbox(false); };
+    window.addEventListener("keydown", onKey);
+    document.body.style.overflow = "hidden";
+    return () => { window.removeEventListener("keydown", onKey); document.body.style.overflow = ""; };
+  }, [lightbox]);
+
   return (
     <div className="landing-page min-h-screen bg-[#FFF0F5] text-slate-800">
       {/* BARRA DE URGENCIA */}
       <div className="bg-[#FF4D8D] text-white text-center py-2 px-4 text-sm font-bold">
         🔥 Solo por lanzamiento: Tu hijo leyendo en 15 días por $7 — después vuelve a $32. ⏰ Precio limitado
       </div>
+      <Marquee />
 
       {/* ═══ SECCIÓN 1 — HERO ═══ */}
       <section className={`bg-gradient-to-b from-[#FFE4ED] to-white ${SECTION_PAD}`}>
