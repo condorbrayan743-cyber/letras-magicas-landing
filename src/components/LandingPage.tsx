@@ -908,7 +908,7 @@ Si abres el material y sientes que no es lo que esperabas, escríbeme directamen
 
 Sin formularios largos. Sin dar explicaciones. Sin dramas.
 
-La garantía existe porque creo en lo que vendo. Y en todo el tiempo que llevo vendiendo este pack, los reembolsos han sido casi cero — porque el material habla por sí solo desde el momento en que lo abres.`,
+La garantía existe porque creo en lo que vendo — quiero que lo compruebes tú mismo sin miedo, y si no es lo que esperabas, te devuelvo cada centavo.`,
               },
             ].map((f) => (
               <details key={f.q} className="group bg-white rounded-2xl shadow-sm" style={{ padding: "24px" }}>
