@@ -429,23 +429,71 @@ const LandingPage = () => {
             Cada actividad diseñada para que aprender se sienta como jugar
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            {[
-              { img: pack2, label: "Lectura de sílabas", w: 768, h: 681 },
-              { img: pack5, label: "Numeración inicial", w: 784, h: 662 },
-              { img: extra1, label: "Trazos y escritura", w: 938, h: 1041 },
-              { img: extra4, label: "Tarjetas de vocabulario", w: 944, h: 879 },
-              { img: extra5, label: "Juegos de memoria", w: 896, h: 1198 },
-              { img: pack3, label: "Actividades a color", w: 1169, h: 800 },
-            ].map((g) => (
-              <div key={g.label} className="bg-white rounded-xl shadow-md overflow-hidden flex flex-col">
-                <div className="aspect-[4/3] overflow-hidden bg-pink-50">
-                  <img src={g.img} alt={g.label} width={g.w} height={g.h} className="w-full h-full object-cover" loading="lazy" />
-                </div>
-                <p className="text-center font-bold text-slate-800 py-3 px-2 text-[16px]">{g.label}</p>
+          {/* Galería interactiva: imagen principal + miniaturas + lightbox */}
+          <div className="max-w-3xl mx-auto">
+            <button
+              type="button"
+              onClick={() => setLightbox(true)}
+              className="block w-full bg-white rounded-2xl shadow-lg overflow-hidden cursor-zoom-in transition-transform hover:scale-[1.01]"
+              aria-label={`Ampliar imagen: ${selected.label}`}
+            >
+              <div className="aspect-[4/3] overflow-hidden bg-pink-50">
+                <img
+                  key={selected.img}
+                  src={selected.img}
+                  alt={selected.label}
+                  width={selected.w}
+                  height={selected.h}
+                  className="w-full h-full object-cover animate-fade-in"
+                  loading="lazy"
+                />
               </div>
-            ))}
+              <p className="text-center font-bold text-slate-800 py-3 px-2 text-[16px]">
+                {selected.label} <span className="text-[#FF4D8D] text-[13px]">🔍 Clic para ampliar</span>
+              </p>
+            </button>
+
+            <div className="grid grid-cols-3 sm:grid-cols-6 gap-2 mt-4">
+              {GALLERY_ITEMS.map((g, i) => (
+                <button
+                  key={g.label}
+                  type="button"
+                  onClick={() => setSelectedIdx(i)}
+                  aria-label={`Ver ${g.label}`}
+                  aria-current={i === selectedIdx}
+                  className={`rounded-lg overflow-hidden bg-pink-50 border-2 transition-all ${i === selectedIdx ? "border-[#FF4D8D] shadow-md scale-[1.03]" : "border-transparent opacity-80 hover:opacity-100"}`}
+                >
+                  <img src={g.img} alt="" width={g.w} height={g.h} className="w-full aspect-square object-cover" loading="lazy" />
+                </button>
+              ))}
+            </div>
           </div>
+
+          {lightbox && (
+            <div
+              onClick={() => setLightbox(false)}
+              role="dialog"
+              aria-modal="true"
+              className="fixed inset-0 z-50 flex items-center justify-center bg-black/85 p-4 animate-fade-in"
+            >
+              <button
+                type="button"
+                onClick={() => setLightbox(false)}
+                aria-label="Cerrar"
+                className="absolute top-4 right-4 bg-white text-slate-900 rounded-full p-2 shadow-lg hover:scale-105 transition"
+              >
+                <X className="w-6 h-6" />
+              </button>
+              <img
+                src={selected.img}
+                alt={selected.label}
+                width={selected.w}
+                height={selected.h}
+                className="max-w-full max-h-[90vh] w-auto h-auto object-contain rounded-xl shadow-2xl"
+                onClick={(e) => e.stopPropagation()}
+              />
+            </div>
+          )}
         </div>
       </section>
 
