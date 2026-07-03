@@ -1,10 +1,11 @@
-import { ChevronDown, ShieldCheck, Mail, CreditCard, Clock, Palette, TrendingUp, Star, BookOpen, Trophy, ArrowRight, Check } from "lucide-react";
+import { useEffect, useState } from "react";
+import { ChevronDown, ShieldCheck, Mail, CreditCard, Clock, Palette, TrendingUp, Star, BookOpen, Trophy, ArrowRight, Check, X } from "lucide-react";
 import pack1 from "@/assets/pack-1.webp";
 import pack2 from "@/assets/pack-2.webp";
 import pack3 from "@/assets/pack-3.webp";
 import pack5 from "@/assets/pack-5.webp";
 import pack7 from "@/assets/foto-3.webp";
-import testimonios from "@/assets/testimonios.png";
+
 import heroShowcase from "@/assets/hero-showcase.webp.asset.json";
 import extra1 from "@/assets/extra-1.webp";
 import extra4 from "@/assets/extra-4.webp";
@@ -26,13 +27,90 @@ const TrustLine = () => (
   </div>
 );
 
+const GALLERY_ITEMS = [
+  { img: pack2, label: "Lectura de sílabas", w: 768, h: 681 },
+  { img: pack5, label: "Numeración inicial", w: 784, h: 662 },
+  { img: extra1, label: "Trazos y escritura", w: 938, h: 1041 },
+  { img: extra4, label: "Tarjetas de vocabulario", w: 944, h: 879 },
+  { img: extra5, label: "Juegos de memoria", w: 896, h: 1198 },
+  { img: pack3, label: "Actividades a color", w: 1169, h: 800 },
+];
+
+const MARQUEE_TEXT = "Método práctico de lectoescritura • Descarga inmediata • Garantía de 7 días • Listo para imprimir";
+
+const Marquee = () => (
+  <div style={{ background: "#1a1a1a", color: "#FFE4ED", overflow: "hidden", whiteSpace: "nowrap", padding: "8px 0", borderTop: "1px solid #FF4D8D", borderBottom: "1px solid #FF4D8D" }}>
+    <style>{`@keyframes ml-mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}`}</style>
+    <div style={{ display: "inline-block", animation: "ml-mq 28s linear infinite", fontWeight: 700, fontSize: "14px", letterSpacing: "0.02em" }}>
+      {Array.from({ length: 6 }).map((_, i) => (
+        <span key={i} style={{ paddingRight: "48px" }}>{MARQUEE_TEXT} <span style={{ color: "#FF4D8D" }}>•</span></span>
+      ))}
+    </div>
+  </div>
+);
+
+const Countdown = () => {
+  const [t, setT] = useState({ h: 23, m: 59, s: 59 });
+  useEffect(() => {
+    const KEY = "mml_countdown_end";
+    let end = Number(typeof window !== "undefined" ? window.localStorage.getItem(KEY) : 0);
+    const now = Date.now();
+    if (!end || end < now) {
+      end = now + 24 * 60 * 60 * 1000;
+      window.localStorage.setItem(KEY, String(end));
+    }
+    const tick = () => {
+      const diff = Math.max(0, end - Date.now());
+      const h = Math.floor(diff / 3600000);
+      const m = Math.floor((diff % 3600000) / 60000);
+      const s = Math.floor((diff % 60000) / 1000);
+      setT({ h, m, s });
+    };
+    tick();
+    const id = setInterval(tick, 1000);
+    return () => clearInterval(id);
+  }, []);
+  const pad = (n: number) => String(n).padStart(2, "0");
+  const Box = ({ v, l }: { v: string; l: string }) => (
+    <div style={{ background: "#1a1a1a", color: "#fff", borderRadius: "12px", padding: "10px 14px", minWidth: "72px", textAlign: "center" }}>
+      <div className="font-fredoka" style={{ fontSize: "32px", lineHeight: 1, color: "#FF4D8D" }}>{v}</div>
+      <div style={{ fontSize: "10px", letterSpacing: "0.15em", textTransform: "uppercase", marginTop: "4px", color: "#ffb6d9" }}>{l}</div>
+    </div>
+  );
+  return (
+    <div style={{ margin: "0 auto 16px" }}>
+      <p style={{ textAlign: "center", fontWeight: 800, color: "#EF4444", marginBottom: "10px", fontSize: "14px", letterSpacing: "0.05em", textTransform: "uppercase" }}>
+        ⏰ Precio de lanzamiento termina en
+      </p>
+      <div style={{ display: "flex", justifyContent: "center", gap: "8px" }}>
+        <Box v={pad(t.h)} l="Horas" />
+        <Box v={pad(t.m)} l="Min" />
+        <Box v={pad(t.s)} l="Seg" />
+      </div>
+    </div>
+  );
+};
+
 const LandingPage = () => {
+  const [selectedIdx, setSelectedIdx] = useState(0);
+  const [lightbox, setLightbox] = useState(false);
+  const selected = GALLERY_ITEMS[selectedIdx];
+
+  useEffect(() => {
+    if (!lightbox) return;
+    const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") setLightbox(false); };
+    window.addEventListener("keydown", onKey);
+    document.body.style.overflow = "hidden";
+    return () => { window.removeEventListener("keydown", onKey); document.body.style.overflow = ""; };
+  }, [lightbox]);
+
   return (
     <div className="landing-page min-h-screen bg-[#FFF0F5] text-slate-800">
       {/* BARRA DE URGENCIA */}
       <div className="bg-[#FF4D8D] text-white text-center py-2 px-4 text-sm font-bold">
         🔥 Solo por lanzamiento: Tu hijo leyendo en 15 días por $7 — después vuelve a $32. ⏰ Precio limitado
       </div>
+      <Marquee />
 
       {/* ═══ SECCIÓN 1 — HERO ═══ */}
       <section className={`bg-gradient-to-b from-[#FFE4ED] to-white ${SECTION_PAD}`}>
@@ -351,23 +429,71 @@ const LandingPage = () => {
             Cada actividad diseñada para que aprender se sienta como jugar
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            {[
-              { img: pack2, label: "Lectura de sílabas", w: 768, h: 681 },
-              { img: pack5, label: "Numeración inicial", w: 784, h: 662 },
-              { img: extra1, label: "Trazos y escritura", w: 938, h: 1041 },
-              { img: extra4, label: "Tarjetas de vocabulario", w: 944, h: 879 },
-              { img: extra5, label: "Juegos de memoria", w: 896, h: 1198 },
-              { img: pack3, label: "Actividades a color", w: 1169, h: 800 },
-            ].map((g) => (
-              <div key={g.label} className="bg-white rounded-xl shadow-md overflow-hidden flex flex-col">
-                <div className="aspect-[4/3] overflow-hidden bg-pink-50">
-                  <img src={g.img} alt={g.label} width={g.w} height={g.h} className="w-full h-full object-cover" loading="lazy" />
-                </div>
-                <p className="text-center font-bold text-slate-800 py-3 px-2 text-[16px]">{g.label}</p>
+          {/* Galería interactiva: imagen principal + miniaturas + lightbox */}
+          <div className="max-w-3xl mx-auto">
+            <button
+              type="button"
+              onClick={() => setLightbox(true)}
+              className="block w-full bg-white rounded-2xl shadow-lg overflow-hidden cursor-zoom-in transition-transform hover:scale-[1.01]"
+              aria-label={`Ampliar imagen: ${selected.label}`}
+            >
+              <div className="aspect-[4/3] overflow-hidden bg-pink-50">
+                <img
+                  key={selected.img}
+                  src={selected.img}
+                  alt={selected.label}
+                  width={selected.w}
+                  height={selected.h}
+                  className="w-full h-full object-cover animate-fade-in"
+                  loading="lazy"
+                />
               </div>
-            ))}
+              <p className="text-center font-bold text-slate-800 py-3 px-2 text-[16px]">
+                {selected.label} <span className="text-[#FF4D8D] text-[13px]">🔍 Clic para ampliar</span>
+              </p>
+            </button>
+
+            <div className="grid grid-cols-3 sm:grid-cols-6 gap-2 mt-4">
+              {GALLERY_ITEMS.map((g, i) => (
+                <button
+                  key={g.label}
+                  type="button"
+                  onClick={() => setSelectedIdx(i)}
+                  aria-label={`Ver ${g.label}`}
+                  aria-current={i === selectedIdx}
+                  className={`rounded-lg overflow-hidden bg-pink-50 border-2 transition-all ${i === selectedIdx ? "border-[#FF4D8D] shadow-md scale-[1.03]" : "border-transparent opacity-80 hover:opacity-100"}`}
+                >
+                  <img src={g.img} alt="" width={g.w} height={g.h} className="w-full aspect-square object-cover" loading="lazy" />
+                </button>
+              ))}
+            </div>
           </div>
+
+          {lightbox && (
+            <div
+              onClick={() => setLightbox(false)}
+              role="dialog"
+              aria-modal="true"
+              className="fixed inset-0 z-50 flex items-center justify-center bg-black/85 p-4 animate-fade-in"
+            >
+              <button
+                type="button"
+                onClick={() => setLightbox(false)}
+                aria-label="Cerrar"
+                className="absolute top-4 right-4 bg-white text-slate-900 rounded-full p-2 shadow-lg hover:scale-105 transition"
+              >
+                <X className="w-6 h-6" />
+              </button>
+              <img
+                src={selected.img}
+                alt={selected.label}
+                width={selected.w}
+                height={selected.h}
+                className="max-w-full max-h-[90vh] w-auto h-auto object-contain rounded-xl shadow-2xl"
+                onClick={(e) => e.stopPropagation()}
+              />
+            </div>
+          )}
         </div>
       </section>
 
@@ -425,50 +551,76 @@ const LandingPage = () => {
         </div>
       </section>
 
-      {/* ═══ SECCIÓN 8 — TESTIMONIOS ═══ */}
-      <section className={`bg-[#1a1a2e] ${SECTION_PAD}`}>
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-[32px] md:text-[36px] font-black text-center text-white mb-3">
-            Mamás y maestras que ya lo viven
-          </h2>
-          <p className="text-center text-slate-300 text-[18px] mb-6">
-            Capturas reales de mensajes de nuestras clientas ❤️
-          </p>
-          <div className="flex justify-center mb-10">
-            <span className="inline-block bg-[#FF4D8D] text-white font-bold px-5 py-2 rounded-full text-sm">
-              🎉 +200 familias ya están viendo resultados
+      {/* ═══ SECCIÓN 8 — POR QUÉ CREÉ MI MUNDO DE LETRAS ═══ */}
+      <section className={`bg-white ${SECTION_PAD}`}>
+        <div className="max-w-3xl mx-auto">
+          <div className="text-center mb-8">
+            <span className="inline-block bg-pink-100 text-[#FF4D8D] px-4 py-1 rounded-full text-sm font-bold mb-4">
+              La historia detrás del pack
             </span>
+            <h2 className="text-[32px] md:text-[40px] font-black text-slate-900 leading-tight">
+              Por qué creé <span className="text-[#FF4D8D]">Mi Mundo de Letras</span>
+            </h2>
           </div>
 
-          <div className="mb-12 rounded-2xl overflow-hidden shadow-2xl max-w-3xl mx-auto">
-            <img src={testimonios} alt="Capturas reales de mensajes de mamás y maestras" width={2000} height={1545} className="w-full h-auto block" loading="lazy" />
+          <div className="space-y-5 text-[17px] md:text-[18px] text-slate-700 leading-relaxed">
+            <p>
+              Investigué a fondo qué materiales realmente funcionan para enseñar a leer y escribir,
+              porque quería algo <strong>práctico, sin complicaciones</strong>, y que cualquier padre,
+              madre o maestro pudiera usar sin preparación previa.
+            </p>
+            <p>
+              Cada hoja sigue una progresión pensada para que el aprendizaje sea gradual:
+              primero <strong>reconocimiento de letras</strong>, luego <strong>trazo guiado</strong>,
+              después <strong>práctica libre</strong> — todo listo para imprimir y usar el mismo día
+              que lo descargas.
+            </p>
+            <p>
+              Así nació <em>Mi Mundo de Letras</em>: un pack pensado para que enseñar a leer deje de
+              ser una batalla, y se convierta en un momento que disfrutan juntos.
+            </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-5">
-            {[
-              { quote: "Mi hijo de 5 años lloraba con las tareas. Con este pack ahora él mismo me pide hacer las actividades. ¡Ya lee solo!", who: "Laura M.", role: "Mamá", color: "bg-rose-500" },
-              { quote: "Como maestra, me ahorra horas de planificación. Los recursos son visualmente hermosos y efectivos.", who: "Andrea R.", role: "Maestra", color: "bg-orange-500" },
-              { quote: "En dos semanas mi hija ya reconoce todas las letras. El material es divertido y muy fácil de imprimir.", who: "Camila S.", role: "Mamá", color: "bg-emerald-500" },
-              { quote: "¡Excelente inversión! Lo uso con mis tres hijos y a todos les encanta. Vale muchísimo más de lo que cuesta.", who: "Patricia G.", role: "Mamá", color: "bg-sky-500" },
-              { quote: "Las fichas son hermosas y los niños se enganchan al instante. Lo recomiendo 100% a otras maestras.", who: "Sofía L.", role: "Maestra", color: "bg-purple-500" },
-              { quote: "Compré el pack y al día siguiente ya estaba imprimiendo. Mi peque por fin disfruta aprender a leer.", who: "Verónica T.", role: "Mamá", color: "bg-pink-500" },
-            ].map((t) => (
-              <div key={t.who} className="bg-white border-l-[3px] border-[#FF4D8D] rounded-xl shadow-md" style={{ padding: "24px" }}>
-                <div className="flex items-center gap-3 mb-3">
-                  <div className={`w-11 h-11 rounded-full ${t.color} text-white font-black flex items-center justify-center text-lg`}>
-                    {t.who.charAt(0)}
-                  </div>
-                  <div>
-                    <p className="font-bold text-slate-900 leading-tight">{t.who}</p>
-                    <p className="text-xs text-[#FF4D8D] font-semibold">{t.role} ⭐⭐⭐⭐⭐</p>
-                  </div>
-                </div>
-                <p className="text-slate-700 italic text-[16px]">"{t.quote}"</p>
-              </div>
-            ))}
+          {/* Bloque de garantía visual destacado */}
+          <div
+            className="mt-10 text-center"
+            style={{
+              background: "linear-gradient(135deg, #F0FFF4 0%, #ffffff 100%)",
+              border: "2px solid #86EFAC",
+              borderRadius: "24px",
+              padding: "32px 24px",
+              boxShadow: "0 10px 30px -12px rgba(34,197,94,0.25)",
+            }}
+          >
+            <div
+              style={{
+                width: "88px",
+                height: "88px",
+                borderRadius: "50%",
+                background: "linear-gradient(135deg, #22C55E, #86EFAC)",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                margin: "0 auto 16px",
+                boxShadow: "0 8px 20px -6px rgba(34,197,94,0.55)",
+              }}
+              aria-hidden="true"
+            >
+              <ShieldCheck className="text-white" style={{ width: "48px", height: "48px" }} />
+            </div>
+            <h3 className="font-black text-slate-900 mb-3" style={{ fontSize: "26px", lineHeight: 1.2 }}>
+              🛡️ Pruébalo sin riesgo
+            </h3>
+            <p className="text-slate-700 max-w-xl mx-auto" style={{ fontSize: "17px", lineHeight: 1.6 }}>
+              Si en <strong className="text-[#16A34A]">7 días</strong> sientes que no es lo que
+              esperabas, te devolvemos tu dinero.
+              <br />
+              <span className="text-slate-600">Sin preguntas, sin complicaciones.</span>
+            </p>
           </div>
         </div>
       </section>
+
 
       {/* ═══ SECCIÓN 9 — GARANTÍA ═══ */}
       <section style={{ padding: "0 16px" }}>
@@ -644,6 +796,7 @@ const LandingPage = () => {
           </h2>
 
           <div className="bg-white rounded-[20px] shadow-2xl max-w-[500px] mx-auto" style={{ padding: "24px" }}>
+            <Countdown />
             <p className="font-bold text-slate-800 mb-5">¡Aprovecha el 80% de descuento hoy!</p>
 
             <ul className="text-left space-y-3 mb-6">
@@ -756,7 +909,7 @@ Si abres el material y sientes que no es lo que esperabas, escríbeme directamen
 
 Sin formularios largos. Sin dar explicaciones. Sin dramas.
 
-La garantía existe porque creo en lo que vendo. Y en todo el tiempo que llevo vendiendo este pack, los reembolsos han sido casi cero — porque el material habla por sí solo desde el momento en que lo abres.`,
+La garantía existe porque creo en lo que vendo — quiero que lo compruebes tú mismo sin miedo, y si no es lo que esperabas, te devuelvo cada centavo.`,
               },
             ].map((f) => (
               <details key={f.q} className="group bg-white rounded-2xl shadow-sm" style={{ padding: "24px" }}>
