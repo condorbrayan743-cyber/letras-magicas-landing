@@ -551,50 +551,76 @@ const LandingPage = () => {
         </div>
       </section>
 
-      {/* ═══ SECCIÓN 8 — TESTIMONIOS ═══ */}
-      <section className={`bg-[#1a1a2e] ${SECTION_PAD}`}>
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-[32px] md:text-[36px] font-black text-center text-white mb-3">
-            Mamás y maestras que ya lo viven
-          </h2>
-          <p className="text-center text-slate-300 text-[18px] mb-6">
-            Capturas reales de mensajes de nuestras clientas ❤️
-          </p>
-          <div className="flex justify-center mb-10">
-            <span className="inline-block bg-[#FF4D8D] text-white font-bold px-5 py-2 rounded-full text-sm">
-              🎉 +200 familias ya están viendo resultados
+      {/* ═══ SECCIÓN 8 — POR QUÉ CREÉ MI MUNDO DE LETRAS ═══ */}
+      <section className={`bg-white ${SECTION_PAD}`}>
+        <div className="max-w-3xl mx-auto">
+          <div className="text-center mb-8">
+            <span className="inline-block bg-pink-100 text-[#FF4D8D] px-4 py-1 rounded-full text-sm font-bold mb-4">
+              La historia detrás del pack
             </span>
+            <h2 className="text-[32px] md:text-[40px] font-black text-slate-900 leading-tight">
+              Por qué creé <span className="text-[#FF4D8D]">Mi Mundo de Letras</span>
+            </h2>
           </div>
 
-          <div className="mb-12 rounded-2xl overflow-hidden shadow-2xl max-w-3xl mx-auto">
-            <img src={testimonios} alt="Capturas reales de mensajes de mamás y maestras" width={2000} height={1545} className="w-full h-auto block" loading="lazy" />
+          <div className="space-y-5 text-[17px] md:text-[18px] text-slate-700 leading-relaxed">
+            <p>
+              Investigué a fondo qué materiales realmente funcionan para enseñar a leer y escribir,
+              porque quería algo <strong>práctico, sin complicaciones</strong>, y que cualquier padre,
+              madre o maestro pudiera usar sin preparación previa.
+            </p>
+            <p>
+              Cada hoja sigue una progresión pensada para que el aprendizaje sea gradual:
+              primero <strong>reconocimiento de letras</strong>, luego <strong>trazo guiado</strong>,
+              después <strong>práctica libre</strong> — todo listo para imprimir y usar el mismo día
+              que lo descargas.
+            </p>
+            <p>
+              Así nació <em>Mi Mundo de Letras</em>: un pack pensado para que enseñar a leer deje de
+              ser una batalla, y se convierta en un momento que disfrutan juntos.
+            </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-5">
-            {[
-              { quote: "Mi hijo de 5 años lloraba con las tareas. Con este pack ahora él mismo me pide hacer las actividades. ¡Ya lee solo!", who: "Laura M.", role: "Mamá", color: "bg-rose-500" },
-              { quote: "Como maestra, me ahorra horas de planificación. Los recursos son visualmente hermosos y efectivos.", who: "Andrea R.", role: "Maestra", color: "bg-orange-500" },
-              { quote: "En dos semanas mi hija ya reconoce todas las letras. El material es divertido y muy fácil de imprimir.", who: "Camila S.", role: "Mamá", color: "bg-emerald-500" },
-              { quote: "¡Excelente inversión! Lo uso con mis tres hijos y a todos les encanta. Vale muchísimo más de lo que cuesta.", who: "Patricia G.", role: "Mamá", color: "bg-sky-500" },
-              { quote: "Las fichas son hermosas y los niños se enganchan al instante. Lo recomiendo 100% a otras maestras.", who: "Sofía L.", role: "Maestra", color: "bg-purple-500" },
-              { quote: "Compré el pack y al día siguiente ya estaba imprimiendo. Mi peque por fin disfruta aprender a leer.", who: "Verónica T.", role: "Mamá", color: "bg-pink-500" },
-            ].map((t) => (
-              <div key={t.who} className="bg-white border-l-[3px] border-[#FF4D8D] rounded-xl shadow-md" style={{ padding: "24px" }}>
-                <div className="flex items-center gap-3 mb-3">
-                  <div className={`w-11 h-11 rounded-full ${t.color} text-white font-black flex items-center justify-center text-lg`}>
-                    {t.who.charAt(0)}
-                  </div>
-                  <div>
-                    <p className="font-bold text-slate-900 leading-tight">{t.who}</p>
-                    <p className="text-xs text-[#FF4D8D] font-semibold">{t.role} ⭐⭐⭐⭐⭐</p>
-                  </div>
-                </div>
-                <p className="text-slate-700 italic text-[16px]">"{t.quote}"</p>
-              </div>
-            ))}
+          {/* Bloque de garantía visual destacado */}
+          <div
+            className="mt-10 text-center"
+            style={{
+              background: "linear-gradient(135deg, #F0FFF4 0%, #ffffff 100%)",
+              border: "2px solid #86EFAC",
+              borderRadius: "24px",
+              padding: "32px 24px",
+              boxShadow: "0 10px 30px -12px rgba(34,197,94,0.25)",
+            }}
+          >
+            <div
+              style={{
+                width: "88px",
+                height: "88px",
+                borderRadius: "50%",
+                background: "linear-gradient(135deg, #22C55E, #86EFAC)",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                margin: "0 auto 16px",
+                boxShadow: "0 8px 20px -6px rgba(34,197,94,0.55)",
+              }}
+              aria-hidden="true"
+            >
+              <ShieldCheck className="text-white" style={{ width: "48px", height: "48px" }} />
+            </div>
+            <h3 className="font-black text-slate-900 mb-3" style={{ fontSize: "26px", lineHeight: 1.2 }}>
+              🛡️ Pruébalo sin riesgo
+            </h3>
+            <p className="text-slate-700 max-w-xl mx-auto" style={{ fontSize: "17px", lineHeight: 1.6 }}>
+              Si en <strong className="text-[#16A34A]">7 días</strong> sientes que no es lo que
+              esperabas, te devolvemos tu dinero.
+              <br />
+              <span className="text-slate-600">Sin preguntas, sin complicaciones.</span>
+            </p>
           </div>
         </div>
       </section>
+
 
       {/* ═══ SECCIÓN 9 — GARANTÍA ═══ */}
       <section style={{ padding: "0 16px" }}>
