@@ -796,6 +796,7 @@ const LandingPage = () => {
           </h2>
 
           <div className="bg-white rounded-[20px] shadow-2xl max-w-[500px] mx-auto" style={{ padding: "24px" }}>
+            <Countdown />
             <p className="font-bold text-slate-800 mb-5">¡Aprovecha el 80% de descuento hoy!</p>
 
             <ul className="text-left space-y-3 mb-6">
