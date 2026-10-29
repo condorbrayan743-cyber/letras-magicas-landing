@@ -7,6 +7,8 @@ import pack5 from "@/assets/pack-5.webp";
 import pack7 from "@/assets/foto-3.webp";
 
 import heroShowcase from "@/assets/hero-showcase.webp.asset.json";
+import heroKitMockup from "@/assets/hero-kit-mockup.webp.asset.json";
+import heroNinoMaterial from "@/assets/hero-nino-material.webp.asset.json";
 import extra1 from "@/assets/extra-1.webp";
 import extra4 from "@/assets/extra-4.webp";
 import extra5 from "@/assets/extra-5.webp";
@@ -125,6 +127,28 @@ const LandingPage = () => {
             Sin preparar nada. Sin improvisar.<br />
             Tú imprimes — el material hace el resto.
           </p>
+
+          {/* Mockups del producto: kit completo + tarjeta flotante */}
+          <div className="relative max-w-[560px] mx-auto mb-10 px-6 md:px-0">
+            <img
+              src={heroKitMockup.url}
+              alt="Kit completo de alfabetización Mi Mundo de Letras: cuadernos de vocales, sílabas, conteo y formación de palabras"
+              width={928}
+              height={1149}
+              loading="lazy"
+              decoding="async"
+              className="w-full h-auto rounded-3xl shadow-xl border-2 border-[#FFB6D9] md:translate-x-6"
+            />
+            <img
+              src={heroNinoMaterial.url}
+              alt="Niño practicando lectura con el material impreso de Mi Mundo de Letras"
+              width={1024}
+              height={1024}
+              loading="lazy"
+              decoding="async"
+              className="absolute -bottom-6 -left-2 md:-left-10 w-[38%] max-w-[220px] h-auto rounded-xl shadow-lg border-2 border-white -rotate-6"
+            />
+          </div>
 
           {/* Caja ancla de precio */}
           <div className="max-w-[420px] mx-auto bg-white border-2 border-[#FF4D8D] rounded-2xl shadow-lg p-6 mb-6">
