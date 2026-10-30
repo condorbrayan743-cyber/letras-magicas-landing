@@ -155,17 +155,33 @@ const LandingPage = () => {
             />
           </div>
 
-          {/* Caja ancla de precio */}
-          <div className="max-w-[420px] mx-auto bg-white border-2 border-[#FF4D8D] rounded-2xl shadow-lg p-6 mb-6">
-            <p className="text-[16px] text-[#666666] line-through">Valor real del pack: $32.00</p>
-            <p className="text-[32px] font-black text-[#FF4D8D] my-1">🔥 HOY SOLO: $7 USD</p>
-            <p className="text-[16px] text-[#666666]">Precio especial de lanzamiento — por tiempo limitado</p>
+          {/* Compra rápida — integrada al fondo, sin tarjeta */}
+          <div className="max-w-[440px] mx-auto px-4 mb-6">
+            <h2 className="text-xl md:text-2xl font-black text-slate-900 mb-2">
+              Recurso de alfabetización pedagógica
+            </h2>
+            <p className="flex items-center justify-center gap-2 text-[15px] text-slate-700 mb-4">
+              <span className="text-[#F5A623] text-lg tracking-tight">★★★★★</span>
+              <span className="font-semibold">Recomendado por madres y maestros</span>
+            </p>
+            <p className="text-[14px] text-slate-400 line-through">Precio anterior: $20.00 USD</p>
+            <p className="text-[32px] md:text-[36px] font-black text-[#FF4D8D] my-1">¡AHORA POR: $7 USD!</p>
+            <ul className="text-left inline-block mt-3 mb-5 space-y-1.5 text-[15px] text-slate-700">
+              <li className="flex items-center gap-2"><span className="text-green-600 font-bold">✔️</span> Fácil de imprimir y usar en casa</li>
+              <li className="flex items-center gap-2"><span className="text-green-600 font-bold">✔️</span> Más de 200 actividades interactivas</li>
+            </ul>
+            <div>
+              <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer" className={PRIMARY_BTN}>
+                QUIERO OBTENER LA GUÍA DE ALFABETIZACIÓN
+              </a>
+            </div>
+            <p className="text-[13px] text-slate-500 mt-3">Acceso inmediato después del pago</p>
+            <div className="flex flex-wrap justify-center gap-x-4 gap-y-1 mt-2 text-[13px] text-slate-600">
+              <span>🔒 Pago seguro</span>
+              <span>⚡ Un solo pago</span>
+              <span>🛡️ Garantía de 7 días</span>
+            </div>
           </div>
-
-          <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer" className={PRIMARY_BTN}>
-            ¡QUIERO EL PACK POR $7!
-          </a>
-          <TrustLine />
         </div>
       </section>
 
