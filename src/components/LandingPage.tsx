@@ -120,13 +120,19 @@ const LandingPage = () => {
           <span className="inline-block bg-pink-100 text-[#FF4D8D] px-4 py-1 rounded-full text-sm font-bold shadow-sm mb-6">
             ✨ Método 100% Práctico
           </span>
-          <h1 className="text-[36px] md:text-[56px] font-black text-slate-900 leading-[1.1] mb-5">
-            Tu hijo leyendo y escribiendo con <span className="text-[#FF4D8D]">Confianza</span> en 15 días
-          </h1>
-          <p className="text-[18px] md:text-[20px] text-[#444] max-w-2xl mx-auto mb-8 leading-relaxed">
-            Sin preparar nada. Sin improvisar.<br />
-            Tú imprimes — el material hace el resto.
-          </p>
+          {/* Tarjeta de impacto — título + descripción */}
+          <div className="bg-white rounded-3xl shadow-xl px-6 py-8 md:px-12 md:py-10 mb-10 max-w-3xl mx-auto">
+            <h1 className="text-2xl md:text-4xl font-black text-slate-900 leading-[1.15] mb-5">
+              Tu hijo leerá y escribirá con <span className="text-[#FF4D8D]">fluidez</span> en <span className="text-[#FF4D8D]">pocas semanas</span>.
+            </h1>
+            <div className="w-16 h-1 bg-[#FFB6D9] rounded-full mx-auto mb-5" />
+            <p className="text-[16px] md:text-[18px] text-[#444] leading-relaxed">
+              Un sistema paso a paso, visual y progresivo de los primeros sonidos a la comprensión. Ideal para niños de 4 a 8 años. Sin preparar nada, sin improvisar.
+            </p>
+            <p className="text-[16px] md:text-[18px] font-bold text-slate-900 mt-4">
+              Tú imprimes — <span className="text-[#FF4D8D]">el material hace el resto.</span>
+            </p>
+          </div>
 
           {/* Mockups del producto: kit completo + tarjeta flotante */}
           <div className="relative max-w-[560px] mx-auto mb-10 px-6 md:px-0">
