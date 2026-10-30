@@ -9,7 +9,6 @@ import pack3 from "@/assets/pack-3.webp";
 import pack5 from "@/assets/pack-5.webp";
 import pack7 from "@/assets/foto-3.webp";
 
-import heroShowcase from "@/assets/hero-showcase.webp.asset.json";
 import heroKitMockup from "@/assets/hero-kit-mockup.webp.asset.json";
 import heroNinoMaterial from "@/assets/hero-nino-material.webp.asset.json";
 import extra1 from "@/assets/extra-1.webp";
