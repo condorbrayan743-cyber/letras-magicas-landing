@@ -1,3 +1,6 @@
+import cardIlus1 from "@/assets/card-ilus-1.jpg";
+import cardIlus2 from "@/assets/card-ilus-2.jpg";
+import cardIlus3 from "@/assets/card-ilus-3.jpg";
 import { useEffect, useState } from "react";
 import { ChevronDown, ShieldCheck, Mail, CreditCard, Clock, Palette, TrendingUp, Star, BookOpen, Trophy, ArrowRight, Check, X } from "lucide-react";
 import pack1 from "@/assets/pack-1.webp";
@@ -185,29 +188,50 @@ const LandingPage = () => {
         </div>
       </section>
 
-      {/* ═══ SECCIÓN 2 — PRUEBA VISUAL INMEDIATA ═══ */}
-      {/* Sin padding-top: 0px gap con el botón anterior */}
-      <section className="pt-0 pb-8 px-4 bg-white">
-        <div className="max-w-5xl mx-auto text-center">
-          <span className="inline-block bg-pink-100 text-[#FF4D8D] px-4 py-1 rounded-full text-sm font-bold mb-6">
-            Momentos reales ✨
-          </span>
-          <div className="max-w-full md:max-w-[75%] mx-auto">
-            <span className="inline-block bg-[#FF4D8D] text-white text-[13px] font-bold px-4 py-1.5 rounded-full" style={{ marginBottom: "8px" }}>
-              📦 Esto es lo que recibes
-            </span>
-            <img
-              src={heroShowcase.url}
-              alt="Vista del pack Mi Mundo de Letras con material colorido listo para imprimir"
-              width={1376}
-              height={768}
-              className="w-full h-auto"
-              style={{ borderRadius: "16px", boxShadow: "0 20px 60px rgba(0,0,0,0.15)", border: "2px solid #FFB6D9" }}
-              loading="eager"
-            />
+      {/* ═══ SECCIÓN 2 — ACTIVIDADES PARA APRENDER JUNTOS ═══ */}
+      <section className="relative overflow-hidden px-4 py-12 md:py-16" style={{ background: "#FFFBF7" }}>
+        <div className="mx-auto max-w-6xl text-center">
+          <h2 className="font-baloo text-[24px] leading-tight sm:text-[30px] md:text-[38px]" style={{ color: "#1F3B73", fontWeight: 800 }}>
+            ¿Buscas actividades para acompañar a tu hijo<br className="hidden sm:block" /> en sus primeros pasos en la
+          </h2>
+          <div className="mt-1 flex items-center justify-center gap-2 sm:gap-4">
+            <span aria-hidden className="hidden text-3xl sm:inline" style={{ color: "#FFD23F" }}>⟩</span>
+            <p className="font-fredoka text-[38px] leading-none sm:text-[56px] md:text-[72px]">
+              <span style={{ color: "#FF6B8F" }}>lectura</span>{" "}
+              <span style={{ color: "#B98AE6" }}>y la</span>{" "}
+              <span style={{ color: "#3FB2EE" }}>escritura?</span>
+            </p>
+            <span aria-hidden className="hidden text-3xl sm:inline" style={{ color: "#FFD23F" }}>⟨</span>
           </div>
-          <p className="mt-5 text-[16px] text-slate-700 font-semibold">Así se ve en la mesa de tu hijo 👆</p>
-          <p className="text-[16px] text-[#666666]">Real · Colorido · Listo para imprimir desde casa</p>
+          <p className="mx-auto mt-6 max-w-3xl text-[16px] leading-relaxed md:text-[19px]" style={{ color: "#3D4A63" }}>
+            Aprender es un proceso que se construye poco a poco. Contar con actividades adecuadas para cada etapa puede hacer que la práctica en casa sea más sencilla, organizada y divertida.
+          </p>
+
+          <div className="mt-8 grid grid-cols-1 gap-5 text-left md:grid-cols-3">
+            {[
+              { img: cardIlus1, bg: "#FDE7EF", num: "#FF7A99", t: "Encontrar actividades adecuadas puede ser todo un reto", d: "Entre tantas opciones, no siempre es fácil saber qué ejercicios elegir para practicar las letras, los sonidos y las primeras sílabas." },
+              { img: cardIlus2, bg: "#EEE6FB", num: "#B98AE6", t: "La práctica necesita variedad y motivación", d: "Las actividades visuales, los juegos y los ejercicios breves pueden ayudar a mantener el interés de los niños mientras exploran nuevas habilidades." },
+              { img: cardIlus3, bg: "#E3F1FD", num: "#3FB2EE", t: "Aprender también puede ser divertido", d: "Con fichas de alfabetización diseñadas para aprender haciendo, los niños pueden practicar letras, sílabas y primeras palabras mediante actividades visuales y entretenidas." },
+            ].map((c, i) => (
+              <div key={i} className="rounded-3xl p-6 shadow-[0_8px_24px_-12px_rgba(31,59,115,0.18)]" style={{ background: c.bg }}>
+                <img src={c.img} alt={c.t} width={992} height={672} loading="lazy" className="mx-auto h-auto w-full max-w-[300px] rounded-2xl" />
+                <div className="mt-4 flex items-start gap-3">
+                  <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full font-baloo text-lg font-extrabold text-white" style={{ background: c.num }}>{i + 1}</span>
+                  <h3 className="font-baloo text-[20px] leading-tight md:text-[22px]" style={{ color: "#1F3B73", fontWeight: 800 }}>{c.t}</h3>
+                </div>
+                <p className="mt-3 text-[16px] leading-relaxed md:pl-[52px]" style={{ color: "#4A5568" }}>{c.d}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-10 flex items-center justify-center gap-3 sm:gap-6">
+            <span aria-hidden className="text-2xl sm:text-3xl">⭐</span>
+            <div>
+              <p className="text-[16px] md:text-[20px]" style={{ color: "#3D4A63" }}>Pequeñas actividades, nuevas oportunidades para aprender.</p>
+              <p className="font-baloo text-[19px] leading-tight md:text-[28px]" style={{ color: "#1F3B73", fontWeight: 800 }}>Y muchos momentos para disfrutar juntos del proceso.</p>
+            </div>
+            <span aria-hidden className="text-2xl sm:text-3xl">⭐</span>
+          </div>
         </div>
       </section>
 
