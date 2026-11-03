@@ -164,3 +164,101 @@ html, body { font-family: "Nunito", system-ui, sans-serif; font-weight: 400; }
     color: var(--color-foreground);
   }
 }
+
+/* Scoped educational-pack palette; other landing sections retain their styles. */
+.pack-contents {
+  --pack-background: oklch(0.953 0.024 298);
+  --pack-surface: oklch(1 0 0);
+  --pack-heading: oklch(0.288 0.041 263);
+  --pack-text: oklch(0.531 0.035 266);
+  --pack-primary: oklch(0.578 0.218 291);
+  --pack-decoration: oklch(0.714 0.136 309);
+  --pack-yellow: oklch(0.953 0.074 94);
+  --pack-pink: oklch(0.923 0.037 350);
+  --pack-blue: oklch(0.941 0.030 246);
+  --pack-shadow: 0 8px 24px color-mix(in oklab, var(--pack-primary) 10%, transparent);
+  background: var(--pack-background);
+  color: var(--pack-heading);
+  padding: 40px 20px 32px;
+  font-family: "Nunito", system-ui, sans-serif;
+  text-align: center;
+  letter-spacing: 0;
+}
+.pack-contents-inner { max-width: 1040px; margin: 0 auto; }
+.pack-eyebrow { display: inline-block; padding: 8px 22px; border-radius: 999px; background: color-mix(in oklab, var(--pack-primary) 10%, var(--pack-background)); color: var(--pack-primary); font-size: 15px; font-weight: 900; }
+.pack-heading-wrap { position: relative; margin-top: 12px; }
+.landing-page .pack-contents h2, .landing-page .pack-contents h3 { font-family: "Nunito", system-ui, sans-serif; font-weight: 900; }
+.pack-contents h2 { font-size: 40px; line-height: 1.18; max-width: 880px; margin: 0 auto; }
+.pack-contents mark { background: var(--pack-yellow); color: inherit; border-radius: 6px; padding: 0 8px; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+.pack-description { color: var(--pack-text); font-size: 18px; line-height: 1.55; max-width: 850px; margin: 16px auto 0; }
+.pack-benefits { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin: 28px 0 32px; }
+.pack-benefit { display: flex; justify-content: center; align-items: center; gap: 16px; padding: 20px 16px; background: var(--pack-surface); border-radius: 24px; box-shadow: var(--pack-shadow); min-width: 0; }
+.pack-benefit strong { font-size: 44px; line-height: 1.1; font-weight: 900; color: var(--pack-primary); }
+.pack-benefit p { color: var(--pack-text); font-size: 16px; line-height: 1.3; margin-top: 5px; max-width: 155px; }
+.pack-benefit-illustration { font-size: 62px; line-height: 1; flex-shrink: 0; }
+.pack-alphabet { position: relative; width: 66px; height: 72px; flex-shrink: 0; background: var(--pack-yellow); border: 2px solid var(--pack-decoration); border-radius: 6px; transform: rotate(-12deg); }
+.pack-alphabet::before { content: ""; position: absolute; inset: 1px -6px -1px 6px; background: var(--pack-blue); border: 2px solid var(--pack-decoration); border-radius: 6px; transform: rotate(6deg); }
+.pack-alphabet span { position: absolute; inset: -2px -10px 2px 10px; display: grid; place-items: center; border: 2px solid var(--pack-decoration); border-radius: 6px; background: var(--pack-surface); color: var(--pack-decoration); font-size: 48px; font-weight: 900; transform: rotate(10deg); }
+.pack-contents h3 { font-size: 28px; line-height: 1.25; margin: 0; }
+.pack-gallery-description { margin-top: 10px; }
+.pack-rays { position: absolute; top: 50%; width: 38px; height: 40px; }
+.pack-rays-left { left: 0; transform: rotate(180deg); }
+.pack-rays-right { right: 0; }
+.pack-rays i { display: block; width: 28px; height: 6px; border-radius: 999px; background: var(--pack-yellow); margin: 5px; }
+.pack-rays i:first-child { transform: rotate(-22deg); }
+.pack-rays i:last-child { transform: rotate(22deg); }
+.pack-carousel { position: relative; margin-top: 24px; padding: 12px 44px 2px; border: 2px dashed var(--pack-decoration); border-radius: 22px; background: var(--pack-surface); box-shadow: var(--pack-shadow); }
+.pack-carousel-viewport { overflow: hidden; touch-action: pan-y pinch-zoom; }
+.pack-carousel-track { display: flex; }
+.pack-carousel-slide { flex: 0 0 100%; min-width: 0; height: 470px; display: flex; align-items: center; justify-content: center; padding: 8px; }
+.pack-activity-image { display: block; width: 100%; height: 100%; object-fit: contain; }
+.pack-carousel .pack-carousel-arrow { position: absolute; top: calc(50% - 20px); color: var(--pack-primary); background: color-mix(in oklab, var(--pack-primary) 8%, var(--pack-surface)); border-radius: 999px; }
+.pack-carousel .pack-carousel-arrow:hover { background: var(--pack-background); }
+.pack-carousel-prev { left: 6px; }
+.pack-carousel-next { right: 6px; }
+.pack-carousel-indicators { display: flex; justify-content: center; flex-wrap: wrap; gap: 0; }
+.pack-carousel .pack-carousel-dot { width: 30px; height: 36px; padding: 0; border-radius: 999px; }
+.pack-carousel-dot span { width: 8px; height: 8px; border-radius: 999px; background: color-mix(in oklab, var(--pack-primary) 25%, var(--pack-surface)); }
+.pack-carousel-dot[aria-current="true"] span { background: var(--pack-primary); width: 18px; }
+.pack-carousel .pack-carousel-dot:hover { background: var(--pack-background); }
+.pack-swipe-hint { color: var(--pack-text); font-size: 16px; margin-top: 14px; }
+.pack-closing { display: flex; justify-content: center; align-items: center; gap: 14px; margin-top: 26px; }
+.pack-closing p { font-size: 23px; line-height: 1.3; font-weight: 900; }
+.pack-closing > span { font-size: 26px; }
+.pack-decoration-yellow { color: var(--pack-yellow); }
+.pack-decoration-pink { color: var(--pack-pink); }
+.pack-decoration-blue { color: var(--pack-blue); }
+@media (max-width: 767px) {
+  .pack-contents { padding: 28px 16px 28px; }
+  .pack-contents h2 { font-size: 29px; line-height: 1.22; }
+  .pack-description { font-size: 16px; margin-top: 14px; }
+  .pack-benefits { gap: 8px; margin: 22px 0 26px; }
+  .pack-benefit { flex-direction: column; gap: 10px; padding: 16px 6px; border-radius: 16px; }
+  .pack-benefit strong { font-size: 30px; }
+  .pack-benefit p { font-size: 14px; line-height: 1.35; }
+  .pack-benefit-illustration { font-size: 44px; height: 48px; }
+  .pack-alphabet { width: 40px; height: 48px; margin-right: 8px; }
+  .pack-alphabet span { font-size: 30px; }
+  .pack-contents h3 { font-size: 23px; }
+  .pack-rays { display: none; }
+  .pack-carousel { padding: 8px 30px 2px; border-radius: 16px; margin-top: 20px; }
+  .pack-carousel-slide { height: 360px; padding: 0; }
+  .pack-carousel .pack-carousel-arrow { width: 30px; height: 36px; }
+  .pack-carousel-prev { left: 1px; }
+  .pack-carousel-next { right: 1px; }
+  .pack-carousel .pack-carousel-dot { width: 28px; }
+  .pack-swipe-hint { font-size: 14px; }
+  .pack-closing { gap: 8px; margin-top: 22px; }
+  .pack-closing p { font-size: 20px; }
+  .pack-closing > span { font-size: 18px; }
+}
+@media (min-width: 768px) and (max-width: 1000px) {
+  .pack-benefit { gap: 10px; padding: 18px 12px; }
+  .pack-benefit-illustration { font-size: 50px; }
+  .pack-benefit strong { font-size: 38px; }
+  .pack-contents h2 { font-size: 36px; max-width: 700px; }
+  .pack-rays { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pack-contents *, .pack-contents *::before, .pack-contents *::after { animation: none; transition: none; }
+}
