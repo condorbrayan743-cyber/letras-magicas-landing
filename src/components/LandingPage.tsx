@@ -235,30 +235,6 @@ const LandingPage = () => {
       {/* ═══ SECCIÓN 3 — DENTRO DEL PACK ═══ */}
       <PackContentsSection />
 
-      {/* ═══ SECCIÓN 4 — PROBABILIDAD PERCIBIDA ═══ */}
-      <section className={`bg-[#FFF0F5] ${SECTION_PAD}`} style={{ paddingTop: "32px" }}>
-        <div className="max-w-5xl mx-auto">
-          <div className="bg-white rounded-2xl shadow-md p-6 max-w-sm mx-auto text-center mb-10">
-            <p className="text-[16px] text-[#666666]">Familias que ya lo usan</p>
-            <p className="text-[48px] font-black text-[#FF4D8D] leading-none my-2">+200</p>
-            <p className="text-[16px] text-[#666666]">y creciendo cada semana</p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            {[
-              { icon: "⏰", title: "Ahorra Horas", desc: "Material listo para imprimir. Olvídate de buscar en internet o preparar actividades desde cero." },
-              { icon: "🎨", title: "100% Lúdico", desc: "Actividades visuales y juegos que mantienen la atención de tu hijo desde el minuto 1." },
-              { icon: "📈", title: "Resultados Reales", desc: "Funciona incluso con niños que 'odian sentarse a estudiar'. Progreso visible desde la primera semana." },
-            ].map((c) => (
-              <div key={c.title} className="bg-white rounded-2xl shadow-md text-center" style={{ padding: "24px" }}>
-                <div className="text-5xl mb-3">{c.icon}</div>
-                <h3 className="text-xl font-extrabold mb-2 text-slate-900">{c.title}</h3>
-                <p style={{ color: "#555555", fontSize: "16px", lineHeight: 1.6 }}>{c.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* ═══ SECCIÓN 5 — TIEMPO DE DEMORA ═══ */}
       <section className={`bg-white ${SECTION_PAD}`}>
